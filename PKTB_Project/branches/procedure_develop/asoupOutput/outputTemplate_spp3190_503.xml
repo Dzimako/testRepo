@@ -1,0 +1,60 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>№ п/п</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Номер вагона</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>РПС</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Вес</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Ст. назначения</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Получатель</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Оператор</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+
+</reportOutputTemplate>

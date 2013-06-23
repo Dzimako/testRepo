@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.digdes.pktb.persistence.model.impl.ReportRightsImpl" table="REPORT_RIGHTS">
+
+        <id name="rightsId" type="java.lang.Long">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+
+        <many-to-one name="user" column="USER_ID" class="com.digdes.pktb.persistence.model.impl.UserImpl"/>
+        <many-to-one name="report" column="REPORT_ID" class="com.digdes.pktb.persistence.model.impl.ReportImpl"/>
+        <many-to-one name="userGroup" column="USERGROUP_ID" class="com.digdes.pktb.persistence.model.impl.UserGroupImpl"/>
+    </class>
+
+</hibernate-mapping>

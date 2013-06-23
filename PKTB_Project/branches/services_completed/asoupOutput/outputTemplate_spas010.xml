@@ -1,0 +1,106 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>№ п/п</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>№ поезда по прибытию / отправлению / в системе 'Экпресс'</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Идентификатор поезда</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Наименование поезда</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Станция</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Время из расписания</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Время фактическое</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Перевозчик</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Начало маршрута</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Конец маршрута</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Отправления с начальной станции</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Прибытия на конечную станцию</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Прибытия на станцию</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Отправления со станции</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+
+</reportOutputTemplate>

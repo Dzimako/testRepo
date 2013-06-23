@@ -1,0 +1,66 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Идентификатор поезда</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Станция начала маршрута</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Станция конца маршрута следования</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Станция совершения операции</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Номер поезда из расписания</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Дата совершения операции с поездом из расписания</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Номер поезда</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Дата совершения операции с поездом</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+
+</reportOutputTemplate>

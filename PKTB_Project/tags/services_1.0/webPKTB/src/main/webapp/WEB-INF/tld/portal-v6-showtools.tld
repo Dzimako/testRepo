@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+                            http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"  
+        version="2.0">
+    <description>
+		This tag library contains tags for showtools
+		
+		All tags in the library are designed 
+		to be used in themes and skins only. There is NO portlet support for these tags.
+		
+		@ibm-taglibrary @since 6.0
+	</description>
+	<tlib-version>6.0</tlib-version>
+    <short-name>portal-showtools</short-name>
+    <uri>http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/portal-showtools</uri>
+
+    <tag>
+		<description>
+			This tag is used for shou tools. It generates a URL to trigger a 
+			Delete portlet action of the actual rendered portlet
+			
+			Can only be used in the Control.jsp
+			
+			@ibm-api @since 5.1
+		</description>
+		<name>portletDelete</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletDeleteTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletDeleteTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				This parameter specifies the ThemeTemplate which will
+				be taken for rendering the requested page
+			</description>
+            <name>themeTemplate</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the ContentNode to be used for the move operation.
+				Expected value is a string representation of the ObjectID
+			</description>
+            <name>contentNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the LayoutNode to be used for the move operation.
+				Expected value is a string representation of the ObjectID
+			</description>
+            <name>layoutNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+		<description>
+			This tag is used for shou tools. It generates a URL to trigger a 
+			MoveDown action of the current rendered portlet
+			
+			Can only be used in the Control.jsp
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>portletMoveDown</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletMoveDownTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletMoveDownTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				This parameter specifies the ThemeTemplate which will
+				be taken for rendering the requested page
+			</description>
+            <name>themeTemplate</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the ContentNode to be used for the move operation.
+				Expected value is a string representation of the ObjectID
+			</description>
+            <name>contentNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the LayoutNode to be used for the move operation.
+				Expected value is a string representation of the ObjectID
+			</description>
+            <name>layoutNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+		<description>
+			This tag is used for shou tools. It generates a URL to trigger a 
+			MoveLeft action of the current rendered portlet
+			
+			Can only be used in the Control.jsp
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>portletMoveLeft</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletMoveLeftTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletMoveLeftTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				This parameter specifies the ThemeTemplate which will
+				be taken for rendering the requested page
+			</description>
+            <name>themeTemplate</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the ContentNode to be used for the move operation.
+				Expected value is a string representation of the ObjectID
+			</description>
+            <name>contentNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the LayoutNode to be used for the move operation.
+				Expected value is a string representation of the ObjectID
+			</description>
+            <name>layoutNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+		<description>
+			This tag is used for shou tools. It generates a URL to trigger a 
+			MoveRight action of the current rendered portlet
+			
+			Can only be used in the Control.jsp
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>portletMoveRight</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletMoveRightTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletMoveRightTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				This parameter specifies the ThemeTemplate which will
+				be taken for rendering the requested page
+			</description>
+            <name>themeTemplate</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the ContentNode to be used for the move operation.
+				Expected value is a string representation of the ObjectID
+			</description>
+            <name>contentNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the LayoutNode to be used for the move operation.
+				Expected value is a string representation of the ObjectID
+			</description>
+            <name>layoutNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+		<description>
+			This tag is used for shou tools. It generates a URL to trigger a 
+			MoveUp action of the current rendered portlet
+			
+			Can only be used in the Control.jsp
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>portletMoveUp</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletMoveUpTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletMoveUpTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				This parameter specifies the ThemeTemplate which will
+				be taken for rendering the requested page
+			</description>
+            <name>themeTemplate</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the ContentNode to be used for the move operation.
+				Expected value is a string representation of the ObjectID
+			</description>
+            <name>contentNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the LayoutNode to be used for the move operation.
+				Expected value is a string representation of the ObjectID
+			</description>
+            <name>layoutNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+</taglib>

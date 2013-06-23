@@ -1,0 +1,102 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>№ п/п</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Контейнер</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>КОП</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Ст. опер.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Дата опер.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Соб.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Сост.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Ст. назн.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Принадл. конт.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Код типа конт.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Код разм. конт.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Место опер.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Отправка</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Вид погрузки</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+
+</reportOutputTemplate>

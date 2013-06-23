@@ -1,0 +1,181 @@
+<reportOutputTemplate>
+	<title>Выходной отчет</title>
+
+	<parameters>
+		<parameter>
+			<key>rwCodeName</key>
+			<label>Дорога: </label>
+		</parameter>
+		<parameter>
+			<key>period</key>
+			<label>Период запроса: </label>
+		</parameter>
+		<parameter>
+			<key>razlozhenie</key>
+			<label>Разложение: </label>
+		</parameter>
+		<parameter>
+			<key>operation</key>
+			<label>Объект операции: </label>
+		</parameter>
+		<parameter>
+			<key>oper</key>
+			<label>Операция: </label>
+		</parameter>
+		<parameter>
+			<key>vidT</key>
+			<label>Вид тяги: </label>
+		</parameter>
+		<parameter>
+			<key>rodS</key>
+			<label>Род службы серий: </label>
+		</parameter>
+	</parameters>
+
+    <tables>
+        <table>
+			<headers>
+                <rows>
+                    <row>
+                        <headerCells>
+							<headerCell>
+                                <rowspan>6</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Серия</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>6</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Состав</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>9</colspan>
+                                <headerText>ИНВЕНТАРНОЕ НАЛИЧИЕ ОАО "РЖД" (часы, минуты)</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>6</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Парк лок. ОАО "РЖД" в СНГ (заезды) Всего</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>5</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Всего</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>5</colspan>
+                                <headerText>Парк в распоряжении дороги</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>3</colspan>
+                                <headerText>Парк вне распоряжения дороги</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>4</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Всего</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>4</colspan>
+                                <headerText>В том числе</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>4</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Всего</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>В том числе</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>3</colspan>
+                                <headerText>Экспл. парк (ЭП)</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>3</colspan>
+                                <headerText>Неэкспл.парк (НЭП)</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>3</colspan>
+                                <headerText>Консерв. (запас)</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>3</colspan>
+                                <headerText>Аренда на путях необщ. пользов.</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Всего ЭП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>В том числе</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Рабочий</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Аренда на пут. общ. пользов.</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+</reportOutputTemplate>

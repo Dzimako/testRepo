@@ -1,0 +1,329 @@
+@padding: .4em;
+@margin: .4em;
+@jquery: #A6C9E2;
+@jqueryRed: #D40513;//#A6C9E2;
+@theme-color-gray: #313131;
+@theme-color-red: #D40513;
+@theme-color-blue: #5B7794;
+@theme-color-lightgray: #AAA;
+@theme-font-size: 13px;
+
+@import "pktbAdminConsole.less";
+
+.pktb {
+    font-size: @theme-font-size;
+    color: @theme-color-gray;
+    font-family: Helvetica;
+
+// Общие
+    table tr td { vertical-align: top; }
+    .separator {
+        clear: both;
+        margin: @margin;
+        border-top: 1px solid @theme-color-lightgray;
+    }
+    &.unselectable {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .clear, .clear-fix { clear: both; float: none; padding: 0 !important; margin: 0; }
+    .input {
+        border: 1px solid @theme-color-lightgray;
+        padding: 2px;
+        margin: @padding 0;
+        vertical-align: baseline;
+        outline: 0;
+    }
+    select.input { padding: 0; }
+    .input-wrapper {
+        padding-right: 2px;
+        margin-right: 4px;
+        .input { width: 100%; }
+    }
+    .wide {
+        width: 100%;
+    }
+    .half {
+        width: 50%;
+    }
+    .tall {
+        height: 100%;
+    }
+
+// Лейаут
+    table {
+        border-collapse: collapse;
+        table-layout:fixed;
+        td { overflow: hidden; }
+    }
+    .resizer1,   {
+        cursor: e-resize;
+        width: 2px;
+        background: url("../img/resizer-w.png") no-repeat 50% 50%
+    }
+    .resizer2 {
+        cursor: n-resize;
+        height: 2px;
+        background: url("../img/resizer-h.png") no-repeat 50% 50%
+    }
+
+// Юзер
+    .user {
+        padding: @padding;
+        margin-bottom: @margin;
+        color: @theme-color-gray;
+        .actions {
+            float: right;
+            white-space: nowrap;
+            a { float: left; }
+        }
+    }
+
+// Дерево
+    .jstree {
+        overflow-y: scroll;
+    //height: 30em;
+
+        &.jstree-default.jstree-focused{ background: none; }
+        a { color: #313131; font-family: Tahoma, sans-serif; }
+    // Иконки
+
+        a .jstree-icon, .folder-icon, .report-icon { background: url("../img/tree.png"); }
+        .folder-node a .jstree-icon, .folder-icon { background-position: 0 0; }
+        .report-node a .jstree-icon, .report-icon { background-position: 0 64px; }
+        .report-node-unavailable a .jstree-icon { background-position: 0 32px; }
+        .folder-node a.jstree-clicked .jstree-icon { background-position: 0 80px; }
+        .report-node a.jstree-clicked .jstree-icon { background-position: 0 48px; }
+        .report-node-unavailable a.jstree-clicked .jstree-icon { background-position: 0 16px; }
+
+    // Отделка
+        .jstree-hovered {
+            background: none;
+            border: 1px dotted @theme-color-blue;
+        }
+        .jstree-clicked {
+            background: @theme-color-blue;
+            border: 1px solid @theme-color-blue;
+            color: white;
+        }
+
+        ins {
+            vertical-align: top;
+            float: left;
+        }
+        ul {
+            clear: left;
+        }
+        .folder-node a, .report-node a, .report-node-unavailable a{
+            white-space: normal;
+            height: auto;
+            display: inline-block;
+            *display: inline;
+            zoom:1;
+        }
+
+    }
+    .favourites {
+        padding: @padding;
+        .favourites-report {
+            border: 1px solid white;
+            cursor: pointer;
+            line-height: 16px;
+            padding: 1px;
+            &:hover {
+                border: 1px dotted #5B7794;
+            }
+            &.favourites-report-clicked {
+                background: #5B7794;
+                border: 1px solid #5B7794;
+                color: white;
+                .favourites-report-icon {
+                    background-position: 0 48px;
+                }
+            }
+            .favourites-report-icon {
+                margin-right: 2px;
+                float: left;
+                display: block;
+                width: 16px;
+                height: 16px;
+                background: url("../img/tree.png");
+                background-position: 0 64px;
+            }
+            .favourites-report-name {
+                line-height: 16px;
+            }
+        }
+    }
+
+    .east .tree-container {
+        .all {
+            padding: 0;
+        }
+    // Кусок в pktb.css
+    //padding: 0;
+    //overflow: hidden;
+    //box-sizing: border-box;
+        .tree {
+        //padding: @padding;
+            padding: 0.4em 1.8em 0.4em 0.4em
+        }
+    }
+
+
+// Отчет
+    .report {
+    // Табы
+        .tabs {
+            * {
+                padding: @padding;
+                float: left;
+                cursor: pointer;
+                border: 0;
+                text-decoration: underline;
+            }
+            .selected {
+                color: @theme-color-red;
+                text-decoration: none;
+
+            }
+
+        }
+        .params {
+            width: auto;
+            table-layout: auto;
+            zoom: 1;
+            border: 0;
+            td {
+                width: auto;
+                zoom: 1;
+                border: 0;
+            //font-weight: bold;
+            }
+        }
+        .retrieveReport {
+            border: 0 !important;
+            td {
+                border: 0 !important;
+            }
+        }
+        .HIDDEN { display: none; }
+        .name {
+            padding: @margin 0;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            color: lighten(@theme-color-gray, 25%);
+        }
+        .filter {
+            padding: @padding;
+
+        // Фильтры
+            .filterItem {
+                margin: 0 @margin @margin 0;
+                zoom:1;
+                display: inline-block;
+                *display: inline;
+                vertical-align: top;
+                label {
+                    display: block;
+                    color: lighten(@theme-color-gray, 15%);
+                    font-weight: bold;
+                }
+
+                .input { vertical-align: top; }
+                .datePickerInput_withTime { margin-right: 2px;}
+                .ui-datepicker-trigger { padding-top: 6px; }
+            }
+            .usersAndGroup{
+                color: #575757;
+                display: block;
+                text-align: left;
+                table{
+
+                    th{
+                        font-weight: 16px;
+                        font-weight: bold;
+                    }
+                    td {
+                        width: 200px;
+                    }
+                }
+                .groups {
+                    td {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .pktb-reportPlaceholderSubmit{
+                margin-right: 50px;
+            }
+
+        }
+        .body {
+            padding: @padding;
+            .anonymous-rights-message{
+                color: #717171;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 0.4em 0;
+                text-align: center;
+            }
+            .export {
+                padding: @padding 0;
+                text-align: rigth;
+                * {
+                    float: none;
+                    text-align: right;
+                    margin: 0;
+                    border-radius: 4px;
+                }
+            }
+            .error {
+                .stackTrace {
+                    magin: 0;
+                }
+            }
+            table {
+                table-layout: fixed;
+            }
+        }
+        .retrieveReport-wrapper{
+            margin-bottom: 10px;
+        }
+    }
+
+// Статистика
+    .globalStatistics { cursor: pointer; }
+
+
+// Правка jQuery UI
+    .ui-widget-content { color: @theme-color-gray; }
+    .ui-state-default {
+        color: @theme-color-gray;
+
+        &.ui-state-active a { color: @theme-color-red; }
+        a { color: @theme-color-gray; }
+    }
+    .ui-tabs-nav .ui-icon {
+        float: left;
+        position: relative;
+        left: -3px;
+        margin: -1px;
+    }
+
+    * {
+        outline: none !important;
+    }
+
+    .reportsTreeExpandCollapse {
+        padding: .4em;
+        text-align: right;
+    }
+
+}

@@ -1,0 +1,49 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Дорога расчета:</label>
+            <type>SELECT</type>
+            <key>p1</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_dor_cod_2</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Дорога приписки:</label>
+            <type>SELECT</type>
+            <key>p2</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_dor_cod_2</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Депо приписки:</label>
+            <type>SELECT</type>
+            <key>p3</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_pasp_depo_9</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Признак периода выборки:</label>
+            <type>SELECT</type>
+            <key>p4</key>
+            <filterValues>
+                <filterValue>
+                    <label>Отчетные сутки</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Текущие сутки</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+    </filters>
+</reportInputTemplate>

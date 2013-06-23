@@ -1,0 +1,164 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>3</rowspan>
+                                <colspan/>
+                                <headerText>№№ п/п</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>3</rowspan>
+                                <colspan/>
+                                <headerText>наименование показателей</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>3</rowspan>
+                                <colspan/>
+                                <headerText>всего вагонов</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>3</rowspan>
+                                <colspan/>
+                                <headerText>из них приватных</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan>12</colspan>
+                                <headerText>в том числе</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan>2</colspan>
+                                <headerText>крытые</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan>2</colspan>
+                                <headerText>платформа</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan>2</colspan>
+                                <headerText>полувагоны</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan>2</colspan>
+                                <headerText>цистерны</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan>2</colspan>
+                                <headerText>рефрижераторные</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan>2</colspan>
+                                <headerText>прочие</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>всего</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>из них приват.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>всего</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>из них приват.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>всего</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>из них приват.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>всего</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>из них приват.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>всего</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>из них приват.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>всего</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>из них приват.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+
+</reportOutputTemplate>

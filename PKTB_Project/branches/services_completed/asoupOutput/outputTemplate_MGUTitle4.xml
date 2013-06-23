@@ -1,0 +1,60 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>CTAHЦИЯ ПOДГOT.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>CTAHЦИЯ OTЦEПKИ</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>ДATA OTЦEПKИ</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>HOMEP ПOEЗДA</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>ИHДEKC ПOEЗДA</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>KOHEЧHAЯ CTAHЦ.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>OTЦEПЛEH BAГOH №</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+
+</reportOutputTemplate>

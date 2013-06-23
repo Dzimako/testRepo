@@ -1,0 +1,84 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Индекс поезда</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Номер поезда</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Станция отправления</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Дата и время</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Кол-во вагонов</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Серия локомотива</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Номер локомотива</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Время явки бригады</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Дорога приписки</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Депо приписки</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan/>
+                                <headerText>Таб. номер работника</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+
+</reportOutputTemplate>

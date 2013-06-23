@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>pktb-project</artifactId>
+    <groupId>pktbProject</groupId>
+    <version>0.1</version>
+  </parent>
+    
+  <groupId>pktbProject</groupId>
+  <artifactId>persistence</artifactId>
+  <version>0.1</version>
+
+  <name>Persistence</name>
+  <description>Model, DAO and services of HR-Competition</description>
+  <url>www.digdes.ru</url>
+    
+  <dependencies>
+    
+  </dependencies>
+</project>

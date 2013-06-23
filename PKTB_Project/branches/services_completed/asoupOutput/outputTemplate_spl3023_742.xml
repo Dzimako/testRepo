@@ -1,0 +1,163 @@
+<reportOutputTemplate>
+	<title>Выходной отчет</title>
+
+	<parameters>
+		<parameter>
+			<key>rwCodeName</key>
+			<label>Дорога: </label>
+		</parameter>
+		<parameter>
+			<key>period</key>
+			<label>Период запроса: </label>
+		</parameter>
+		<parameter>
+			<key>razlozhenie</key>
+			<label>Разложение: </label>
+		</parameter>
+		<parameter>
+			<key>operation</key>
+			<label>Объект операции: </label>
+		</parameter>
+		<parameter>
+			<key>oper</key>
+			<label>Операция: </label>
+		</parameter>
+		<parameter>
+			<key>vidT</key>
+			<label>Вид тяги: </label>
+		</parameter>
+		<parameter>
+			<key>rodS</key>
+			<label>Род службы серий: </label>
+		</parameter>
+	</parameters>
+
+    <tables>
+        <table>
+			<headers>
+                <rows>
+                    <row>
+                        <headerCells>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>3</colspan>
+                                <headerText>Локомотив</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>5</colspan>
+                                <headerText>Начало состояния</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>5</colspan>
+                                <headerText>Окончание состояния</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Cерия</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Составность</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Приписка</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Продолжительность</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Дата и время</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Дислокация</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Автоответ абонента</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Дата и время</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Следующее состояние</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Дислокация</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Автоответ абонента</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Объект</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Напр.</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Объект</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Напр.</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+</reportOutputTemplate>

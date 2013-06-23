@@ -1,0 +1,83 @@
+<reportOutputTemplate>
+	<title>Выходной отчет</title>
+
+	<parameters>
+		<parameter>
+			<key>out3</key>
+			<label> </label>
+		</parameter>
+		<parameter>
+			<key>out4</key>
+			<label> </label>
+		</parameter>
+		<parameter>
+			<key>out5</key>
+			<label> </label>
+		</parameter>
+		<parameter>
+			<key>out6</key>
+			<label> </label>
+		</parameter>
+	</parameters>
+
+    <tables>
+        <table>
+			<headers>
+                <rows>
+                    <row>
+                        <headerCells>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Депо приписки</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Табел. номер</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Состояние бригады</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Код сообщения</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Дата и время свер. операции</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Дата и время передачи сообщения</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Время задержки, мин</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Автоответ абонента</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+</reportOutputTemplate>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+    <bean name="/reports/*.action" class="com.digdes.pktb.controllers.ReportsController">
+        <property name="reportsService" ref="reportService"/>
+        <property name="rzdReportsService" ref="rzdReportsService"/>
+        <property name="reportStatService" ref="reportStatService"/>
+        <property name="userService" ref="userService"/>
+    </bean>
+
+</beans>

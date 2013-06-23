@@ -1,0 +1,100 @@
+<reportInputTemplate>
+    <title>Входной отчет</title>
+
+    <request>
+        <databaseOptions>
+            <dataSource>jdbc/pktb2</dataSource>
+            <procedureName>SPP3246</procedureName>
+        </databaseOptions>
+    </request>
+
+    <filters>
+        <filter>
+            <label>Дорога:</label>
+            <type>HIDDEN</type>
+            <key>DOR_RASCH</key>
+            <paramOrderNum>1</paramOrderNum>
+            <paramType>in</paramType>
+            <userDefaultRW>true</userDefaultRW>
+            <paramDataType>12</paramDataType>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>Период</label>
+            <key>p2</key>
+            <paramOrderNum>2</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>Отчетные сутки</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Текущие сутки</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Произвольный период</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>DATEPICKER</type>
+            <label>Начальная дата и время</label>
+            <paramOrderNum>3</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <defaultValue>0</defaultValue>
+            <switchParameter>
+                <relativeFilterKey>p2</relativeFilterKey>
+                <switchType>SELECT</switchType>
+                <valueKeys>
+                    <valueKey>3</valueKey>
+                </valueKeys>
+            </switchParameter>
+            <showTime>true</showTime>
+            <dateParamKeys>
+                <dateKey>RDDate</dateKey>
+                <dateFormat>yyyy-mm-dd-HH.MM.ss</dateFormat>
+            </dateParamKeys>
+        </filter>
+        <filter>
+            <type>DATEPICKER</type>
+            <label>Конечная дата и время</label>
+            <paramOrderNum>4</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <defaultValue>0</defaultValue>
+            <switchParameter>
+                <relativeFilterKey>p2</relativeFilterKey>
+                <switchType>SELECT</switchType>
+                <valueKeys>
+                    <valueKey>3</valueKey>
+                </valueKeys>
+            </switchParameter>
+            <showTime>true</showTime>
+            <dateParamKeys>
+                <dateKey>RDDate2</dateKey>
+                <dateFormat>yyyy-mm-dd-HH.MM.ss</dateFormat>
+            </dateParamKeys>
+        </filter>
+
+        <filter>
+            <type>HIDDEN</type>
+            <key>P1</key>
+            <paramOrderNum>5</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>5</paramDataType>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P2</key>
+            <paramOrderNum>6</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>4</paramDataType>
+        </filter>
+    </filters>
+
+</reportInputTemplate>

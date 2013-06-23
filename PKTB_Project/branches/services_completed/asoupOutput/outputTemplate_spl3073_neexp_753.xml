@@ -1,0 +1,125 @@
+<reportOutputTemplate>
+	<title>Выходной отчет</title>
+
+	<parameters>
+		<parameter>
+			<key>rwCodeName</key>
+			<label>Дорога: </label>
+		</parameter>
+		<parameter>
+			<key>period</key>
+			<label>Период запроса: </label>
+		</parameter>
+		<parameter>
+			<key>razlozhenie</key>
+			<label>Разложение: </label>
+		</parameter>
+		<parameter>
+			<key>operation</key>
+			<label>Объект операции: </label>
+		</parameter>
+		<parameter>
+			<key>oper</key>
+			<label>Операция: </label>
+		</parameter>
+		<parameter>
+			<key>vidT</key>
+			<label>Вид тяги: </label>
+		</parameter>
+		<parameter>
+			<key>rodS</key>
+			<label>Род службы серий: </label>
+		</parameter>
+	</parameters>
+
+    <tables>
+        <table>
+			<headers>
+                <rows>
+                    <row>
+                        <headerCells>
+							<headerCell>
+                                <rowspan>4</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Серия</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>4</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Состав</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>6</colspan>
+                                <headerText>НЕЭКСПЛУАТИРУЕМЫЙ ПАРК (НЭП) (часы, минуты)</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>3</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Всего НЭП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>5</colspan>
+                                <headerText>Исправные</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Всего испр. НЭП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>4</colspan>
+                                <headerText>В том числе</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>ТО-2, экипировка и их ожид. без бригад</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Перемещ. испр. после рем.</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Стац. установки</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>ОЖ: зап. в экспл., убыт. в действ. сост., рем. отд. секц., испыт.</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+</reportOutputTemplate>

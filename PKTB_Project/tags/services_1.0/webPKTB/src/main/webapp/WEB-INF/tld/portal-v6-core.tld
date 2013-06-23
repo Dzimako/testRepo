@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+                            http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"  
+        version="2.0">
+    <description>
+		This tag library contains core tags for WebSphere Portal Server
+		
+		All tags in the library are designed 
+		to be used in themes and skins only. There is NO portlet support for these tags.
+		
+		@ibm-taglibrary @since 6.0
+	</description>
+	<tlib-version>6.0</tlib-version>
+    <short-name>portal-core</short-name>
+    <uri>http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/portal-core</uri>
+
+   	<tag>
+        <description>
+        	Creates a cacheable URL to a dynamic theme resource, such as a 
+        	CSS JSP file. The browser and locale information are included in 
+        	the URL path.
+        	
+        	@ibm-api @since 6.0
+        </description>
+        <name>cacheProxyUrl</name>
+        <tag-class>com.ibm.wps.cacheproxy.CacheProxyUrlTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+        	<description>The unmodified URL to the resource that should be cached</description>
+            <name>forwardurl</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+   
+    <tag>
+        <description>@ibm-api @since 5.1</description>
+		<name>constants</name>
+        <tag-class>com.ibm.wps.engine.tags.ConstantsTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.ConstantsTag$TEI</tei-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <description>
+			@ibm-api @since 5.1
+		</description>
+		<name>defineObjects</name>
+        <tag-class>com.ibm.wps.engine.tags.DefineObjectsTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.DefineObjectsTag$TEI</tei-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <description>
+			Used to render the content of the current page	
+			@ibm-api @since 5.1
+		</description>
+		<name>pageRender</name>
+        <tag-class>com.ibm.wps.engine.tags2.PageRenderTag</tag-class>
+        <body-content>JSP</body-content>
+    </tag>
+
+    <tag>
+		<description>
+			Renderes the scrren which is currently set in the portal's state
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>screenRender</name>
+        <tag-class>com.ibm.wps.engine.tags2.ScreenRenderTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+		<description>
+			Stores a base URL which can be used instead of full, newly-coded 
+			URLs on each occurrence of a URL in the markup. This enables shorter 
+			URLs and can improve the page serving performance. This tag should 
+			occur only in the header section of the markup - it is not allowed 
+			to occur outside of the header section. Theme JSPs are responsible 
+			for the header section, using Head.jsp by default
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>stateBase</name>
+        <tag-class>com.ibm.wps.engine.tags.StateBaseTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+</taglib>

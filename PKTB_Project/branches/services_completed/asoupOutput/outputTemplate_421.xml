@@ -1,0 +1,93 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+    <parameters>
+        <parameter>
+            <key>title</key>
+            <label>Название отчета</label>
+        </parameter>
+        <parameter>
+            <key>vidT</key>
+            <label>Вид тяги</label>
+        </parameter>
+        <parameter>
+            <key>dateStart</key>
+            <label>Дата начала</label>
+        </parameter>
+        <parameter>
+            <key>dateEnd</key>
+            <label>Дата конца</label>
+        </parameter>
+        <parameter>
+            <key>rwName</key>
+            <label>Дорога</label>
+        </parameter>
+        <parameter>
+            <key>error</key>
+            <label>Ошибка</label>
+        </parameter>
+    </parameters>
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>№ п/п</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Дорога и отделение по результатам операции</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>3</colspan>
+                                <headerText>Перестановки</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Операции с нарушением цепочек</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Итого нарушений</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>в пределах одной дороги</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>cо своей дороги на другую</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>c другой дороги на свою</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+</reportOutputTemplate>

@@ -1,0 +1,107 @@
+<reportOutputTemplate>
+	<title>Выходной отчет</title>
+
+	<parameters>
+		<parameter>
+			<key>attr1</key>
+			<label>Единица выдачи: </label>
+		</parameter>
+		<parameter>
+			<key>dor</key>
+			<label>Депо: </label>
+		</parameter>
+		<parameter>
+			<key>date</key>
+			<label>По состоянию на: </label>
+		</parameter>
+		<parameter>
+			<key>raspDor</key>
+			<label> </label>
+		</parameter>
+	</parameters>
+
+    <tables>
+        <table>
+			<headers>
+                <rows>
+                    <row>
+                        <headerCells>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>№ п/п</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Серия</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Ном. гол. секции</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>состав</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>состояние</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>номер поезда</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>индекс поезда</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>дислокация</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>дата и время операции</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Номер 2 секции</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Номер 3 секции</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Номер 4 секции</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+</reportOutputTemplate>

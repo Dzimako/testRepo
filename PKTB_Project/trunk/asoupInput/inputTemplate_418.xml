@@ -1,0 +1,129 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Вид тяги</label>
+            <type>SELECT</type>
+            <key>vidT</key>
+            <filterValues>
+                <filterValue>
+                    <label>Электровозы</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Тепловозы</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Дорога приписки</label>
+            <type>SELECT</type>
+            <key>dorPr</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_dor_cod_with_condition</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Депо приписки</label>
+            <type>SELECT</type>
+            <key>depoP</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_naim_depo_2</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Вид ремонта</label>
+            <type>SELECT</type>
+            <key>W4</key>
+            <filterValues>
+                <filterValue>
+                    <label>TO-2</label>
+                    <paramValue>107</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>TO-3</label>
+                    <paramValue>306</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>TP-1</label>
+                    <paramValue>305</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>TP-2</label>
+                    <paramValue>304</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>TP-3</label>
+                    <paramValue>303</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Пробег</label>
+            <type>INPUT</type>
+            <key>W5</key>
+        </filter>
+
+
+        <filter>
+            <label>Размерность пробега</label>
+            <type>SELECT</type>
+            <key>razmer107</key>
+            <!--зависит от селекта Вид ремонта-->
+            <changeKeyOptions>
+                <relativeFilterKey>W4</relativeFilterKey>
+                <valueKeyDependencies>
+                    <valueKeyDependency>
+                        <relativeFilterValue>107</relativeFilterValue>
+                        <keyToSwitch>razmer107</keyToSwitch>
+                    </valueKeyDependency>
+                    <valueKeyDependency>
+                        <relativeFilterValue>306</relativeFilterValue>
+                        <keyToSwitch>razmer306</keyToSwitch>
+                    </valueKeyDependency>
+                    <valueKeyDependency>
+                        <relativeFilterValue>305</relativeFilterValue>
+                        <keyToSwitch>razmer305</keyToSwitch>
+                    </valueKeyDependency>
+                    <valueKeyDependency>
+                        <relativeFilterValue>304</relativeFilterValue>
+                        <keyToSwitch>razmer304</keyToSwitch>
+                    </valueKeyDependency>
+                    <valueKeyDependency>
+                        <relativeFilterValue>303</relativeFilterValue>
+                        <keyToSwitch>razmer303</keyToSwitch>
+                    </valueKeyDependency>
+                </valueKeyDependencies>
+            </changeKeyOptions>
+            <filterValues>
+                <filterValue>
+                    <label>Километры</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Часы</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Сортировка</label>
+            <type>SELECT</type>
+            <key>W7</key>
+            <filterValues>
+                <filterValue>
+                    <label>по пробегу</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>по серии</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+    </filters>
+</reportInputTemplate>

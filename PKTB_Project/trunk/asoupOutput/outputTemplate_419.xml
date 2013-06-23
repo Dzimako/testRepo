@@ -1,0 +1,71 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+    <parameters>
+        <parameter>
+            <key>nameDoroga</key>
+            <label>Дорога</label>
+        </parameter>
+        <parameter>
+            <key>requestTime</key>
+            <label>Дата запроса</label>
+        </parameter>
+        <parameter>
+            <key>namePredp</key>
+            <label>Предприятие локомотивного хозяйства</label>
+        </parameter>
+        <parameter>
+            <key>vidT</key>
+            <label>Вид тяги</label>
+        </parameter>
+        <parameter>
+            <key>serLok</key>
+            <label>Серия локомотива</label>
+        </parameter>
+        <parameter>
+            <key>nameCodeRem</key>
+            <label>Вид ремонта или ТО</label>
+        </parameter>
+    </parameters>
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Депо</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Серия</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Вид ТО или ТР</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Вид движения или работы</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Норматив простоя (для ТО-4 ч/1 колесную пару)</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+</reportOutputTemplate>

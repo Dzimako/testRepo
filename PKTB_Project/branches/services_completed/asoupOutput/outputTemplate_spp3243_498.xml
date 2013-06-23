@@ -1,0 +1,13 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+
+    <tables>
+        <table>
+            <headers>
+                <rows/>
+            </headers>
+        </table>
+    </tables>
+
+</reportOutputTemplate>

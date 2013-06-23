@@ -1,0 +1,23 @@
+<reportInputTemplate>
+    <title>Входной отчет</title>
+
+
+    ModeMarshal
+
+    <tables>
+        <table>
+            <columns>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>1</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+            </columns>
+        </table>
+    </tables>
+</reportInputTemplate>

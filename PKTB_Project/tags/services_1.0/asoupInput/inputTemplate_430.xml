@@ -1,0 +1,170 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Дорога приписки</label>
+            <type>SELECT</type>
+            <key>P1</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_dor_cod_4</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Депо приписки</label>
+            <type>SELECT</type>
+            <key>P2</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_pasp_depo_7</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Табельный номер</label>
+            <type>INPUT</type>
+            <key>P3</key>
+        </filter>
+        <filter>
+            <label>Должностной признаки</label>
+            <type>SELECT</type>
+            <key>P4</key>
+            <switchParameter>
+                <relativeFilterKey>P3</relativeFilterKey>
+                <switchType>NO_INPUT_TEXT</switchType>
+            </switchParameter>
+            <filterValues>
+                <filterValue>
+                    <label>Машинист</label>
+                    <paramValue>11</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Помощник</label>
+                    <paramValue>21</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Маш-инстр</label>
+                    <paramValue>41</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Другие</label>
+                    <paramValue>31</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Код серии локомотива</label>
+            <type>SELECT</type>
+            <key>P5</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_ser_loc_rs_kod_ser_mnem_ser</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>-Выберите серию-</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Все серии</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Электровозы</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Эл/воз. пост.</label>
+                    <paramValue>11</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Эл/воз. перем.</label>
+                    <paramValue>12</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Эл/воз. двойн.</label>
+                    <paramValue>13</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Электропоезда</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Эл/поезда пост.</label>
+                    <paramValue>21</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Эл/поезда перем.</label>
+                    <paramValue>22</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Эл/поезда двойн.</label>
+                    <paramValue>23</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Тепловозы</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Тепловозы электр</label>
+                    <paramValue>31</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Тепловозы гидравл.</label>
+                    <paramValue>32</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Паровозы</label>
+                    <paramValue>4</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Самоходные</label>
+                    <paramValue>5</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Дизельпоезда</label>
+                    <paramValue>6</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Путевые машины</label>
+                    <paramValue>7</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Код объекта КИП</label>
+            <type>INPUT</type>
+            <key>P6</key>
+        </filter>
+        <filter>
+            <label>Признак объекта КИП</label>
+            <type>SELECT</type>
+            <key>P7</key>
+            <filterValues>
+                <filterValue>
+                    <label>все объекты</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>участок</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>станция</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>перегон</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+    </filters>
+</reportInputTemplate>

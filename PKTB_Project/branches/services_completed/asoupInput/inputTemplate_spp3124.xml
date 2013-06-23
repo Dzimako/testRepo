@@ -1,0 +1,186 @@
+<reportInputTemplate>
+    <title>Входной отчет</title>
+
+
+    <filters>
+        <filter>
+            <type>SELECT</type>
+            <label>Причина бросания:</label>
+            <key>p1</key>
+            <paramOrderNum>1</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>Все.</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Без причины</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>01.Неприем поезда ст. назначения по вине грузополучателя, владельца п/путей</label>
+                    <paramValue>01</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>02.Неприем поезда погранпереходом</label>
+                    <paramValue>02</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>03.Превышение норм. времени на таможенный и санитарный досмотр</label>
+                    <paramValue>03</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>04.Для накопления судовой партии</label>
+                    <paramValue>04</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>05.Превышение установленных размеров движения</label>
+                    <paramValue>05</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>06.Неприем поезда соседним отделением железной дороги</label>
+                    <paramValue>06</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>07.Неприем поезда соседней железной дорогой (за искл. кодов 01,02,05)</label>
+                    <paramValue>07</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>08.Неприем поезда железнодорожными станциями в пути следования</label>
+                    <paramValue>08</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>09.Нарушение плана формирования поездов</label>
+                    <paramValue>09</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>10.Неправильная регулировка движения поездов диспетчером</label>
+                    <paramValue>10</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>11.Отказы технических средств по локомотивному хозяйству</label>
+                    <paramValue>11</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>12.Отсутствие локомотива</label>
+                    <paramValue>12</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>13.Отсутствие локомотивной бригады</label>
+                    <paramValue>13</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14.Отказы технических средств по хозяйству пути и сооружения</label>
+                    <paramValue>14</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>15.Несвоевременная очистка путей и стрелок от загрязнения</label>
+                    <paramValue>15</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>16.Передержка проводимых и предоставление неплановых окон по службе П</label>
+                    <paramValue>16</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>17.Перерыв напряжения в контактной сети, в т.ч. из-за отключения др. организациями</label>
+                    <paramValue>17</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>18.отказы технических средств по хозяйству энергоснабжения</label>
+                    <paramValue>18</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>19.Передержка проводимых и предоставление неплановых окон по службе Э</label>
+                    <paramValue>19</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20.Отказ технических средств по хозяйству автоматики и телемеханики</label>
+                    <paramValue>20</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>21.Передержка проводимых и предоставление неплановых окон по службе Ш</label>
+                    <paramValue>21</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>22.Отказ технических средств по хозяйству связи</label>
+                    <paramValue>22</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>23.Метеорологические условия</label>
+                    <paramValue>23</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>24.Угроза террористических актов</label>
+                    <paramValue>24</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>25.Техногенные катастрофы</label>
+                    <paramValue>25</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P1</key>
+            <paramOrderNum>2</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>5</paramDataType>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P2</key>
+            <paramOrderNum>3</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>4</paramDataType>
+        </filter>
+    </filters>
+
+    <tables>
+        <table>
+            <columns>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>1</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>2</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>3</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>4</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+            </columns>
+        </table>
+    </tables>
+</reportInputTemplate>

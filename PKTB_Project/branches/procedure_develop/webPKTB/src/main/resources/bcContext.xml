@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- Service for Business Component  -->
+    <bean id="springContext" class="com.digdes.pktb.persistence.SpringContext"/>
+
+    <bean id="servicesContext" class="org.springframework.context.support.ClassPathXmlApplicationContext">
+        <constructor-arg>
+            <list>
+                <value type="java.lang.String">portalServices.xml</value>
+                <value type="java.lang.String">daoContext.xml</value>
+                <value type="java.lang.String">applicationContext.xml</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+     <bean id="rolesProviderService" class="com.digdes.pktb.rolemodel.services.impl.RolesProviderImpl">
+        <property name="userRoleDao" ref="userRoleDao"/>
+        <property name="railwayDao" ref="railwayDao"/>
+         <property name="reportDao" ref="reportDao"/>
+         <property name="reportRightsDao" ref="reportRightsDao"/>
+         <property name="userDao" ref="userDao"/>
+        <property name="pumaHome" ref="pumaHome" />
+    </bean>
+
+</beans>

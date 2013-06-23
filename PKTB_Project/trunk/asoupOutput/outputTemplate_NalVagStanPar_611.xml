@@ -1,0 +1,54 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>№</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Станция</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Всего вагонов в отстое</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Количество на путях отстоя</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan/>
+                                <colspan>2</colspan>
+                                <headerText>Количество не на путях отстоя</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Среднее время нахождения вагонов в отстое (вагоно-часы)</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+
+</reportOutputTemplate>

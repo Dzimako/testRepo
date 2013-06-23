@@ -1,0 +1,245 @@
+<reportInputTemplate><!--входной шаблон-->
+    <request>
+        <databaseOptions> <!--опции для подключения к базе данных-->
+            <dataSource></dataSource><!--адресс базы данных из которой получать отчет-->
+            <filterDBkey></filterDBkey><!--ключ фильтра в базе данных(название столбца в БД)-->
+            <databaseTable></databaseTable><!--название_таблицы.название_схемы-->
+            <procedureName></procedureName><!--название процедуры-->
+        </databaseOptions>
+        <serviceOption>
+            <serviceUID></serviceUID><!--UID сервиса, который нужно вызвать для получения данных-->
+        </serviceOption>
+    </request>
+
+    <dictionaries>
+        <dictionary>
+            <dataSource></dataSource>
+            <!--адресс базы данных из которой получать отчет-->
+            <filterDBkey></filterDBkey>
+            <!--ключ фильтра в базе данных(название столбца в БД)-->
+            <databaseTable></databaseTable>
+            <!--название_таблицы.название_схемы-->
+            <procedureName></procedureName>
+            <!--название процедуры-->
+            <dictionaryKey></dictionaryKey>
+            <!--Для внутреннего использования-->
+            <exceptions>    <!--Спикок исколючений-->
+                <exception>
+                    <key></key>
+                    <value></value>
+                </exception>
+            </exceptions>
+        </dictionary>
+    </dictionaries>
+
+    <possibleRequests>
+        <possibleRequest>
+            <databaseOptions> <!--опции для подключения к базе данных-->
+                <requestKey></requestKey>
+                <dataSource></dataSource><!--адресс базы данных из которой получать отчет-->
+                <filterDBkey></filterDBkey><!--ключ фильтра в базе данных(название столбца в БД)-->
+                <databaseTable></databaseTable><!--название_таблицы.название_схемы-->
+                <procedureName></procedureName><!--название процедуры-->
+            </databaseOptions>
+            <parameters>
+                <parameter>
+                    <key></key>		<!--ключ фильтра - название параметра в запросе, он же уникальный идентификатор-->
+                    <paramOrderNum></paramOrderNum>  <!--порядковый номер параметра в вызове процедуре. Для select'ов со вножественными значениями-->
+                    <defaultValue></defaultValue>  <!--значение которое отображается по умолчанию(можно поставить какой-нибудь флаг чтоб тащить его от пользователя)-->
+                    <paramType></paramType>     <!--указывается входной или выходной этот параметр в процедуре in|out|inout-->
+                    <paramDataType></paramDataType>  <!--указывается тип данных параметра, для вызова процедуры-->
+                </parameter>
+            </parameters>
+        </possibleRequest>
+    </possibleRequests>
+
+    <importDictionaries>   <!--Импорт словарей по их ключам-->
+        <dictionaryKey></dictionaryKey>
+    </importDictionaries>
+
+    <filters> <!--набор фильтров-->
+		<filter> <!--конкретный фильтр-->
+			<label></label>	<!--Название фильтра-->
+			<type></type>   <!--Тип элемента html для этого фильтра  -  expexted values SELECT, INPUT, CHECKBOX, DATEPICKER-->
+			<key></key>		<!--ключ фильтра - название параметра в запросе, он же уникальный идентификатор-->
+            <paramOrderNum></paramOrderNum>  <!--порядковый номер параметра в вызове процедуре. Для select'ов со вножественными значениями-->
+            <paramType></paramType>     <!--указывается входной или выходной этот параметр в процедуре in|out|inout-->
+            <paramDataType></paramDataType>  <!--указывается тип данных параметра, для вызова процедуры-->
+            <validation>          <!--Валидация на клиенте перед отправкой запроса-->
+                <type></type>      <!--NO_TEXT = проверяет не пустой ли текст; NOT_SELECTED = проверяет выбран ли селект-->
+            </validation>
+            <changeKeyOptions>      <!--условия при которых ключ фильтра будет меняться-->
+                    <relativeFilterKey></relativeFilterKey>       <!--ключ фильтра от изменения которого будет меняться ключ текущего фильтра-->
+                    <valueKeyDependencies>                         <!--список зависимостей ключей текущего фильтра от значений зависимого-->
+                        <relativeFilterValue></relativeFilterValue>   <!--значение фильтра от которого зависит текущий-->
+                        <keyToSwitch></keyToSwitch>                    <!--ключ текущего фильтра при указанном выше значении другого фильтра-->
+                    </valueKeyDependencies>
+            </changeKeyOptions>
+			<requestAdress>	<!--адресс для запроса значений(содержимого фильтра). Если ничего не указано то только статические данные, в противном случае стат данные + динамические.-->
+				<databaseOptions> <!--опции для подключения к базе данных-->
+					<dataSource></dataSource> <!--адресс базы данных из которой получать отчет-->
+				</databaseOptions>
+				<request>
+					<filterDBkey></filterDBkey><!--ключ фильтра в базе данных(название столбца в БД)-->
+					<databaseTable></databaseTable> <!--название_таблицы.название_схемы-->
+                    <procedureName></procedureName><!--название процедуры-->
+				</request>
+                <serviceOption>
+                    <serviceUID></serviceUID>  <!--UID сервиса, который нужно вызвать для получения данных-->
+                </serviceOption>
+			</requestAdress>
+            <userDefaultRW>true</userDefaultRW> <!--устанавливать для фильтра по умолчанию значение == дороге пользователя-->
+			<relativeFilterKeys> <!--ключи фильтра от значения которого зависит набор значений данного фильтра-->
+				<relativeFilterKey>
+                    <filterKey></filterKey>
+                    <paramName></paramName>
+				</relativeFilterKey>
+			</relativeFilterKeys>
+			<switchParameter><!--условия при которых отображается текущий фильтр (если ничего не указано, то отображается всегда)-->
+				<relativeFilterKey></relativeFilterKey>
+                <switchType></switchType>  <!--тип включения. Например NO_INPUT_TEXT = включение текущего фильтра только в том случае если в зависимом фильтре не введен никакой текст-->
+				<includeValueKeys>              <!--список значений зависимого фильтра при которых текущий фильтр отображается-->
+					<includeKey></includeKey>
+                </includeValueKeys>
+                <excludeValueKeys>             <!--список значений зависимого фильтра при которых текущий фильтр не отображается-->
+                    <excludeKey></excludeKey>
+                </excludeValueKeys>
+			</switchParameter>
+            <showTime>true</showTime>   <!--показывать ли время в датапикере, если не нужно показывать атрибут не ставить, если показывать то нужно ввести любое значение-->
+            <dateParamKeys>         <!--для фильтров типа DATEPICKER указываются имена параметров для отправки: -->
+                <dateKey></dateKey>   <!--всей даты-->
+                <yearKey></yearKey>    <!--года-->
+                <monthKey></monthKey>   <!--месяца-->
+                <dayKey></dayKey>        <!--дня-->
+                <hourKey></hourKey>        <!--часа-->
+                <minuteKey></minuteKey>     <!--минуты-->
+                <dateFormat></dateFormat>    <!--Формат даты-->
+            </dateParamKeys>
+            <currentTime>true</currentTime>  <!--по умолчанию заполняется сегодняшняя дата-->
+			<defaultValue></defaultValue>  <!--значение которое отображается по умолчанию(можно поставить какой-нибудь флаг чтоб тащить его от пользователя)-->
+			<filterValues>	<!--набор значений фильтров (указываются здесь если значения статические)-->
+				<filterValue>	<!--конкретное значение фильтра-->
+					<label></label>	<!--отображаемое название значения-->
+					<paramValue></paramValue>	<!--значение параметра для запроса-->
+
+
+                    <selectParams>  <!--Параметры когда select возвращает множество значений-->
+                        <paramItem>
+                            <key></key> <!--Ключ-->
+                            <paramValue></paramValue>  <!--Значение-->
+                        </paramItem>
+                        <paramItem>
+                            <key></key>
+                            <paramValue></paramValue>
+                        </paramItem>
+                    </selectParams>
+
+					<dependencyGroups>		<!--параметры на случай зависимости статического набора значений от какого-то другого фильтра-->
+						<dependencyGroup>
+							<filterKey></filterKey>	<!--ключ фильтра от которого зависит набор данных в текущем фильтре.-->
+							<valueKey></valueKey>		<!--ключ значения фильтра от которого зависит набор данных в текущем фильтре. Т.е. если в relativeFilterKey выбран параметр со значением key, то это значение здесь отображается-->
+						</dependencyGroup>
+					</dependencyGroups>
+				</filterValue>
+			</filterValues>
+		</filter>
+	</filters>
+    <tables>                         <!--Список таблиц которые будут отображены на выходе-->
+        <table>                          <!--описание отдельной таблицы-->
+            <inputResultSet>        <!--resultSet данные которого будут использоваться при построении таблицы-->
+                <key></key>          <!--ключ resultSet  по которому в possibleRequests вытаскиваются данные для запроса-->
+            </inputResultSet>
+            <outputResultSet>        <!--resultSet который будет сформирован по результатам обработки таблицы-->
+                <key></key>
+            </outputResultSet>
+            <columns>                        <!--список столбцов выходной таблицы-->
+                <column>                         <!--описание конкретного столбца-->
+                    <operator>                       <!--Описание оператора выполняемого при заполнении этого столбца-->
+                        <operatorKey></operatorKey>      <!--Название оператора. Например, +, -, *, / и т.д.-->
+                        <arguments>                          <!--список аргументов над которыми следует выполнять эти действия-->
+                            <argument>                           <!--описание конкретного аргумента-->
+                                <defaultValue></defaultValue>        <!--фиксированное текстовое значение-->
+                                <operator></operator>                    <!--оператор(такой же элемент как и непосредственно в column)-->
+                                <columnNumber></columnNumber>                <!--номер столбца в ResultSet-->
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+            </columns>
+            <rowFunctions>                 <!--набор функций после выполнения которых будет возвращаться не отдельное значение, а целая строка-->
+                <rowFunction>                  <!--Описание отдельной функции-->
+                    <resultSetToUse>           <!--resultSet который будет использоваться для обработки данных этой функцией-->
+                        <key></key>
+                    </resultSetToUse>
+                    <operator></operator>      <!--оператор который описывает сущность функции(название и аргументы)-->
+                    <columns></columns>       <!--см. <columns/> из <table>-->
+                    <rowFunctions>
+                        <rowFunction></rowFunction>
+                    </rowFunctions>
+                </rowFunction>
+            </rowFunctions>
+        </table>
+    </tables>
+</reportInputTemplate>
+
+
+<reportOutputTemplate><!--выходной шаблон-->
+	<title></title>	<!--название выходных данных-->
+	<parameters>	<!--параметры отображаемые перед таблицей выходных данных-->
+		<parameter>	<!--описание конкретного параметра-->
+			<label></label> <!--название параметра-->
+			<key></key>		<!--ключ для идентификации параметра-->
+			<value></value>	<!--значение параметра-->
+		</parameter>
+	</parameters>
+	<tables>  <!--набор таблиц для выходных данных-->
+		<table>	<!--описание конкретной таблицы выходных данных-->
+			<headers> <!--заголовки таблицы-->
+				<rows>  <!--строки заголовков-->
+					<row> <!--описание строки-->
+						<headerCells> <!--ячейки заголовков в этой строке-->
+							<headerCell> <!--описание ячейки-->
+								<rowspan></rowspan> <!--аналогичный атрибут из html-->
+								<colspan></colspan>	<!--аналогичный атрибут из html-->
+								<headerText></headerText> <!--заголовок ячейки-->
+								<headerKey></headerKey> <!--ключ для идентификации столбца-->
+							</headerCell>
+						</headerCells>
+					</row>
+				</rows>
+			</headers>
+			<bodyTemplate> <!--фиксированные строки внутри таблицы(т.е. не в заголовках)-->
+				<rows> <!--строки-->
+					<row> <!--описание строки-->
+						<numOfRowInTable></numOfRowInTable>	<!--номер строки в таблице-->
+						<rowCells> <!--если нужно указать кастомные ячейки в создаваемой строке, то задаём этот параметр-->
+							<rowCell>
+								<numOfCellInRow></numOfCellInRow> <!--номер ячейки в строке-->
+								<rowspan></rowspan> <!--аналогичный атрибут из html-->
+								<colspan></colspan>	<!--аналогичный атрибут из html-->
+								<cellText></cellText>	<!--текст который нужно вставить в ячейку-->
+							</rowCell>
+						</rowCells>
+						<actions>	<!--действия которые нужно произвести для вычисления данных текущей строки-->
+							<action>	<!--описание конкретного действия-->
+								<actionType></actionType> <!--тип экшена. Пока встречались только суммы => expected value SUM-->
+								<includePairsRows>
+									<includePairsRow>
+										<numOfRowToBegin></numOfRowToBegin> <!--начиная с какой строки суммировать-->
+										<numOfRowToEnd></numOfRowToEnd>	<!--на какой строке закончить суммирование-->
+									</includePairsRow>
+								</includePairsRows>
+								<includePairsCols>
+									<includePairsCol>
+										<numOfColToBegin></numOfColToBegin> <!--начиная с какого столбца суммировать-->
+										<numOfColToEnd></numOfColToEnd>	<!--заканчивая каким столбцом суммировать-->
+									</includePairsCol>
+								</includePairsCols>
+							</action>
+						</actions>
+					</row>
+				</rows>
+			</bodyTemplate>
+		</table>
+	</tables>
+</reportOutputTemplate>

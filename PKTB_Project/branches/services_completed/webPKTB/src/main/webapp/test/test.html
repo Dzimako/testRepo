@@ -1,0 +1,301 @@
+ <!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--link type="text/css" rel="stylesheet" href="css/demo_table_jui.css"/-->
+    <!--link type="text/css" rel="stylesheet" href="css/jquery.dataTables.css"/-->
+    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables_themeroller.css"/>
+    <link rel="stylesheet" href="../css/jquery-ui-1.8.23.custom.css" type="text/css" media="all" />
+    <link type="text/css" rel="stylesheet" href="../css/TableTools_JUI.css"/>
+    <link type="text/css" rel="stylesheet/less" href="../less/pktb1.less"/>
+    <link type="text/css" rel="stylesheet" href="../css/pktb.css" />
+
+
+    <script src="http://lesscss.googlecode.com/files/less-1.3.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/lib/datatables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../js/lib/jstree/jquery.jstree.js"></script>
+    <script type="text/javascript" src="../js/lib/json2.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery.bgiframe.js"></script>
+    <script type="text/javascript" src="https://raw.github.com/malsup/blockui/master/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery-ui-timepicker-addon.js"></script>
+
+    <script type="text/javascript" src="../js/helpers.js"></script>
+    <script type="text/javascript" src="../js/pktb.js"></script>
+    <script type="text/javascript" src="../js/pktbAdminConsole.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var vars = {
+                ns: '',
+                cr: '.',
+                userServiceURL: 'users.json',
+                cn: 'aaa',
+                currentUser: {userId: 0, railway:{code: 0}}
+            }
+            pktb.init(vars)
+            pktbAdminConsole(vars)
+        })
+
+    </script>
+
+
+</head>
+<body>
+<div id="pktb" class="pktb">
+<!-- -->
+
+<div id="userRightsDialog" class="userRightsDialog" style="display: none">
+    <table class="wide">
+        <tbody>
+        <tr>
+            <td>
+                <div id="rightsReportTreeContainer" class="rightsReportTreeContainer ui-widget-content ui-corner-all">
+                    <div id="userRightsTree" class="userRightsTree"></div>
+                </div>
+            </td>
+            <td style="width: 3em; vertical-align: middle; text-align: center;">
+                <button id="giveRights" disabled="disabled" data-jquery-ui="button: {text: false, icons: {primary: 'ui-icon-arrowthick-1-e'}}">Добавить права</button>
+             </td>
+            <td>
+                <div class="listContainer ui-widget-content ui-corner-all">
+                    <ul id="availibleList" class="availibleList"></ul>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="adminConsole" class="adminConsole" style="display: none" title="Консоль администратора">
+    <table class="wide">
+        <tbody>
+        <tr>
+            <td class="half">
+                <div id="railwayListGroupListRadioContainer"
+                     class="railwayListGroupListRadioContainer"
+                     data-jquery-ui="buttonset: {}">
+                    <input type="radio"
+                           id="railwayListRadio"
+                           name="railwayListGroupListRadio"
+                           checked="checked"/><label for="railwayListRadio">Список дорог</label>
+                    <input type="radio"
+                           id="groupListRadio"
+                           name="railwayListGroupListRadio"/><label for="groupListRadio">Список групп</label>
+                </div>
+            </td>
+            <td class="half">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="railwayListGroupListContainer" class="listContainer railwayListGroupListContainer ui-widget-content ui-corner-all">
+                    <ul id="railwayList" class="railwayList"></ul>
+                    <ul id="groupList" class="groupList" style="display: none;"></ul>
+                </div>
+            </td>
+            <td>
+                <div id="userListContainer" class="listContainer userListContainer ui-widget-content ui-corner-all">
+                    <ul id="userList" class="userList"></ul>
+                </div>
+                <form id="editRailwayForm"
+                      class="editRailwayForm ui-widget-content ui-corner-all">
+                    <label>Название</label>
+                    <input name="name" class="input" >
+                    <label>Код</label>
+                    <input name="code" size="3" class="input" >
+                </form>
+                <form id="editGroupForm"
+                      class="editGroupForm ui-widget-content ui-corner-all">
+                    <label>Название</label>
+                    <input name="name" class="input" >
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="addRailwayButton" class="addRailwayButton"  data-jquery-ui="button: {icons: {primary: 'ui-icon-plusthick'}}">Добавить</button>
+                <button id="addGroupButton" class="addGroupButton" style="display: none" data-jquery-ui="button: {icons: {primary: 'ui-icon-plusthick'}}">Добавить</button>
+            </td>
+            <td>
+                <form id="addUserForm" action="#" class="addUserForm">
+                    <input id="addUserDisplayNameInput"
+                           name="displayName"
+                           placeholder="Имя пользователя"
+                           class="addUserDisplayNameInput ui-widget-content ui-corner-all"
+                           disabled="disabled">
+
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<button id="bang">BANG!!!</button>
+<button id="bang2">BANG BANG!!!</button>
+<table style="width:100%">
+        <tbody>
+        <tr>
+            <td class="east" width="400px">
+                <div class="user ui-widget-content ui-corner-all">
+                    <div class="actions">
+                        <a href="#" class="overall-statistics" title="Общая статистика"><span class="ui-icon ui-icon-calculator"></span></a>
+                        <a href="#" class="showAdminConsole" title="Консоль администратора"><span class="ui-icon ui-icon-wrench"></span></a>
+                    </div>
+
+                    <span class="username">digdes | Северная (28)</span>
+
+
+
+
+
+
+                </div>
+
+
+                <div id="allOrFavourites" class="tree-container ">
+                    <ul>
+                        <li><a href="#tree">Все</a></li>
+                        <li><a href="#favourites"><span class="ui-icon ui-icon-star""></span>Избранное</a></li>
+                    </ul>
+                    <div id="tree" class="tree"></div>
+                    <div id="favourites" class="favourites"></div>
+                </div>
+
+                <form class="create-report-folder" style="display: none">
+                    <input type="hidden" name="parentReportId" value="0">
+                    <fieldset>
+                        <legend>Добавление узла</legend>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><label>Папка</label></td>
+                                <td class="where">Корневая папка</td>
+                            </tr>
+                            <tr>
+                                <td><label>Тип</label></td>
+                                <td>
+                                    <label><input type="radio" name="folder" value="true" checked="checked">Папка</label>
+                                    <label><input type="radio" name="folder" value="false">Отчет</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Название</label></td>
+                                <td><input name="name"></td>
+                            </tr>
+                            <tr>
+                                <td><label>UID</label></td>
+                                <td><input name="uid"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><button type="submit">Добавить</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </form>
+            </td>
+            <td class="resizer1"></td>
+            <td>
+                <table style="width: 100%" class="report adminRights">
+                    <tbody>
+                        <tr>
+                            <td>
+
+                                <div class="ui-widget-content ui-corner-all">
+                                    <div class="tabs">
+                                        <div class="reportFilter selected">Отчет</div>
+                                        <div class="edit" style="display: none">Редактировать</div>
+                                        <div class="statistics">Статистика</div>
+                                        <div class="rights">Права</div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="name">Отчет не выбран</div>
+                                    <div class="filter ">
+
+
+
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resizer2"></td>
+                        </tr>
+                        <tr>
+                            <td>
+
+
+
+                                <div class="body ui-widget-content ui-corner-all">
+                                    <table class="dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>as da sd</th>
+                                                <th>22d asdweqwe2</th>
+                                                <th>ggggggggg gggggg</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>a<b>a</b>a</td>
+                                                <td>29.11.12&lt;BR&gt;00-57</td>
+                                                <td>29.11.12&lt;BR&gt;00-57</td>
+                                                 
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+<div style="">
+<table class="dataTablesLookALike">
+    <thead>
+    <tr>
+        <th>as da sd</th>
+        <th>22d asdweqwe2</th>
+        <th>ggggggggg gggggg</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>a<b>a</b>a</td>
+        <td>29.11.12&lt;BR&gt;00-57</td>
+        <td>29.11.12&lt;BR&gt;00-57</td>
+
+    </tr>
+    </tbody>
+</table>
+</div>
+<div class="logs"></div>
+<!-- -->
+</div>
+</body>
+</html>

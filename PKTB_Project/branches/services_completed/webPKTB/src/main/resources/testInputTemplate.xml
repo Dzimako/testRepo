@@ -1,0 +1,155 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Депо приписки</label>
+            <type>SELECT</type>
+            <key>depoP</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_pasp_depo</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Отчетные сутки</label>
+            <type>SELECT</type>
+            <key>dateOtch</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_get_date</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Вид тяги</label>
+            <type>SELECT</type>
+            <key>vidT</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_pasp_depo</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Серия локомотива</label>
+            <type>SELECT</type>
+            <key>serLoc</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_ser_loc_rs_kod_ser_mnem_ser</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Род службы ТПС</label>
+            <type>SELECT</type>
+            <key>rodS</key>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>грузовые</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>пассажирские</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>грузопассажирские</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>маневровые</label>
+                    <paramValue>4</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Род тока</label>
+            <type>SELECT</type>
+            <key>rodT</key>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>переменного</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>постоянного</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>двойного питания</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Ширина колеи</label>
+            <type>SELECT</type>
+            <key>shirinaKolei</key>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>1520 мм</label>
+                    <paramValue>1520</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>1435 мм</label>
+                    <paramValue>1435</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>1067 мм</label>
+                    <paramValue>1067</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>750 мм</label>
+                    <paramValue>750</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Единица выдачи</label>
+            <type>SELECT</type>
+            <key>edVidachi</key>
+            <filterValues>
+                <filterValue>
+                    <label>с уч. кострукт. ед.</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>в тяговых ед.</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+
+    </filters>
+</reportInputTemplate>

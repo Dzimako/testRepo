@@ -1,0 +1,65 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Дата начала</label>
+            <type>DATEPICKER</type>
+            <showTime>true</showTime>
+            <dateParamKeys>
+                <yearKey>N0</yearKey>
+                <monthKey>N1</monthKey>
+                <dayKey>N2</dayKey>
+                <hourKey>N3</hourKey>
+                <minuteKey>N4</minuteKey>
+            </dateParamKeys>
+        </filter>
+        <filter>
+            <label>Дата конца</label>
+            <type>DATEPICKER</type>
+            <showTime>true</showTime>
+            <dateParamKeys>
+                <yearKey>N0K</yearKey>
+                <monthKey>N1K</monthKey>
+                <dayKey>N2K</dayKey>
+                <hourKey>N3K</hourKey>
+                <minuteKey>N4K</minuteKey>
+            </dateParamKeys>
+        </filter>
+
+
+        <filter>
+            <label>Вид тяги</label>
+            <type>SELECT</type>
+            <key>P8</key>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Электровозы</label>
+                    <paramValue>001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Тепловозы</label>
+                    <paramValue>002</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Серия локомотива</label>
+            <type>SELECT</type>
+            <key>P10</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_ser_loc_rs_ser_mnem</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+    </filters>
+</reportInputTemplate>

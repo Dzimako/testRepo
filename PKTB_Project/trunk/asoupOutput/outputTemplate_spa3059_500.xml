@@ -1,0 +1,184 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>№ п/п</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Станция</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>№ поезда</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Операция с поездом</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Дата и время совершения операции</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>№ парка / пути</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Направление</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Услов. длина поезда</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Вес поезда</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>3</colspan>
+                                <headerText>Кол-во вагонов</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Серия локом.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Завод. номер локом.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Таб. номер работ.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Приписка локомотив. бригады</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Индекс поезда предыд.</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Признак поезда</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Наличие охраны</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Код сообщения</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Дата и время ввода сообщения</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan/>
+                                <headerText>Код пункта передачи сообщения</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan/>
+                                <headerText>Брутто</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan/>
+                                <headerText>Нетто</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan/>
+                                <headerText>Всего</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan/>
+                                <headerText>Прицеп- ленных</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan/>
+                                <headerText>Отцеп- ленных</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan/>
+                                <headerText>Код дороги</headerText>
+                                <headerKey/>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan/>
+                                <headerText>Код депо</headerText>
+                                <headerKey/>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+
+</reportOutputTemplate>

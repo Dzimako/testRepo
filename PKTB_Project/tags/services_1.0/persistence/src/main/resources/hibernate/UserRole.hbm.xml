@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.digdes.pktb.persistence.model.impl.UserRoleImpl" table="USERS_ROLE">
+
+        <id name="roleId" type="java.lang.Long">
+            <column name="ROLE_ID"/>
+            <generator class="identity"/>
+        </id>
+
+        <property name="roleKey" column="ROLE_KEY" type="java.lang.String"/>
+        <property name="roleName" column="ROLE_NAME" type="java.lang.String"/>
+        <property name="description" column="DESCRIPTION" type="java.lang.String"/>
+    </class>
+
+</hibernate-mapping>

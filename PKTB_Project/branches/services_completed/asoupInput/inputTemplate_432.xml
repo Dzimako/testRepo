@@ -1,0 +1,102 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Дорога расчета</label>
+            <type>SELECT</type>
+            <key>P1</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_dor_cod_5</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Признак выборки</label>
+            <type>SELECT</type>
+            <key>P2</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_pasp_depo_7</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>На станции</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Подход к станции</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+
+        </filter>
+        <filter>
+            <label>Станция операции/подхода</label>
+            <type>SELECT</type>
+            <key>P3</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_slov_stan_4</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Депо приписки</label>
+            <type>SELECT</type>
+            <key>P4</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_pasp_depo_8</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Направление подхода</label>
+            <type>SELECT</type>
+            <key>P5</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_slov_stan_4</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+
+        <filter>
+            <label>Признак операции</label>
+            <type>SELECT</type>
+            <key>P6</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_slov_stan_4</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Бригадные</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Поездные</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+    </filters>
+</reportInputTemplate>

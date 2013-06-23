@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.digdes.pktb" version="1.0.0">
+    <extension
+            point="com_ibm_portal_app.BusinessComponents"
+            id="PKTBProjectBCImpl">
+        <provider class="com.digdes.pktb.rolemodel.bc.impl.PKTBProjectBCImpl">
+        </provider>
+    </extension>
+</plugin>
+

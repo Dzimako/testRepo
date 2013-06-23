@@ -1,0 +1,77 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Дорога</label>
+            <type>SELECT</type>
+            <key>P3</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_dor_cod_3</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Дорога приписки</label>
+            <type>SELECT</type>
+            <key>P1</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_dor_cod_3</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Депо приписки</label>
+            <type>SELECT</type>
+            <key>P2</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_pasp_depo_6</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Табельный номер</label>
+            <type>INPUT</type>
+            <key>P4</key>
+        </filter>
+        <filter>
+            <label>Начало периода</label>
+            <type>DATEPICKER</type>
+            <showTime>true</showTime>
+            <dateParamKeys>
+                <dateKey>beginDate</dateKey>
+                <hourKey>beginHour</hourKey>
+                <minuteKey>beginMinute</minuteKey>
+            </dateParamKeys>
+        </filter>
+        <filter>
+            <label>Конец периода</label>
+            <type>DATEPICKER</type>
+            <showTime>true</showTime>
+            <dateParamKeys>
+                <dateKey>endDate</dateKey>
+                <hourKey>endHour</hourKey>
+                <minuteKey>endMinute</minuteKey>
+            </dateParamKeys>
+        </filter>
+    </filters>
+</reportInputTemplate>

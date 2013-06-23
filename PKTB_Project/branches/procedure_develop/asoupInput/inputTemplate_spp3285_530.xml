@@ -1,0 +1,2258 @@
+<reportInputTemplate>
+    <title>Входной отчет</title>
+
+    <request>
+        <databaseOptions>
+            <dataSource>jdbc/pktb2</dataSource>
+            <procedureName>SPP3285</procedureName>
+        </databaseOptions>
+    </request>
+
+
+    <filters>
+        <filter>
+            <label>Дорога:</label>
+            <type>HIDDEN</type>
+            <key>DOR_RASCH</key>
+            <paramOrderNum>1</paramOrderNum>
+            <paramType>in</paramType>
+            <userDefaultRW>true</userDefaultRW>
+            <paramDataType>12</paramDataType>
+        </filter>
+        <filter>
+            <type>INPUT</type>
+            <label></label>
+            <key>RDDate</key>
+            <paramOrderNum>1</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+        </filter>
+        <filter>
+            <type>INPUT</type>
+            <label></label>
+            <key>RDDate2</key>
+            <paramOrderNum>2</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>Дор</label>
+            <key>esr1_2</key>
+            <paramOrderNum>3</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>Без проверки</label>
+                    <paramValue>0-0</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>10002.ПТРЗВ -11306.МГОРА</label>
+                    <paramValue>10002-11306</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>10322.ТОМИЦ -25807.СУОЯ1</label>
+                    <paramValue>10322-25807</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>11306.МГОРА -12101.ИДЕЛЬ</label>
+                    <paramValue>11306-12101</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>12101.ИДЕЛЬ -13000.БЕЛОМ</label>
+                    <paramValue>12101-13000</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>12328.ГМОСТ -12741.ВЫГ</label>
+                    <paramValue>12328-12741</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>12397.МАЛНГ -12703.СУМПС</label>
+                    <paramValue>12397-12703</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>12703.СУМПС -13000.БЕЛОМ</label>
+                    <paramValue>12703-13000</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>13000.БЕЛОМ -13208.КЕМЬ</label>
+                    <paramValue>13000-13208</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>13208.КЕМЬ -13801.ЛОУХИ</label>
+                    <paramValue>13208-13801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>13801.ЛОУХИ -14107.ПЯОЗР</label>
+                    <paramValue>13801-14107</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>13801.ЛОУХИ -14906.КАНДЛ</label>
+                    <paramValue>13801-14906</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14709.АЛАК -14450.РУЧ.К</label>
+                    <paramValue>14709-14450</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14906.КАНДЛ -15102.ПИНОЗ</label>
+                    <paramValue>14906-15102</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14906.КАНДЛ -15102.ПИНОЗ</label>
+                    <paramValue>14906-15102</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>15102.ПИНОЗ -15400.КОВДР</label>
+                    <paramValue>15102-15400</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>15102.ПИНОЗ -15631.АПАТ1</label>
+                    <paramValue>15102-15631</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>15631.АПАТ1 -16009.АПАТ</label>
+                    <paramValue>15631-16009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>15631.АПАТ1 -16308.ОЛЕНГ</label>
+                    <paramValue>15631-16308</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>16308.ОЛЕНГ -18409.МУРМН</label>
+                    <paramValue>16308-18409</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>16403.МОНЧГ -16308.ОЛЕНГ</label>
+                    <paramValue>16403-16308</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>17001.КОЛА -18108.ЗАПОЛ</label>
+                    <paramValue>17001-18108</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>18108.ЗАПОЛ -18201.НИКЕЛ</label>
+                    <paramValue>18108-18201</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>18409.МУРМН -19007.ВАЕНГ</label>
+                    <paramValue>18409-19007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>18606.КОМСМ -18709.КОМСЭ</label>
+                    <paramValue>18606-18709</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20004.ВЫБРГ -21100.ВЕЩЕВ</label>
+                    <paramValue>20004-21100</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20004.ВЫБРГ -39316.УШКОВ</label>
+                    <paramValue>20004-39316</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20004.ВЫБРГ -39602.КАННЛ</label>
+                    <paramValue>20004-39602</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20517.ПОПВО -20606.ВЫСОЦ</label>
+                    <paramValue>20517-20606</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>21401.БУСЛЭ -20004.ВЫБРГ</label>
+                    <paramValue>21401-20004</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>21702.КАМЕН -20004.ВЫБРГ</label>
+                    <paramValue>21702-20004</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>21806.СВЕТГ -21702.КАМЕН</label>
+                    <paramValue>21806-21702</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>21806.СВЕТГ -21702.КАМЕН</label>
+                    <paramValue>21806-21702</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>22404.ХИИТЛ -21702.КАМЕН</label>
+                    <paramValue>22404-21702</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>22404.ХИИТЛ -23106.КУЗНЧ</label>
+                    <paramValue>22404-23106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>23106.КУЗНЧ -38101.РУЧЬИ</label>
+                    <paramValue>23106-38101</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>23202.ЭЛИСН -22404.ХИИТЛ</label>
+                    <paramValue>23202-22404</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>23708.СОРТВ -23202.ЭЛИСН</label>
+                    <paramValue>23708-23202</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>24202.ВЯРТЭ -24005.МАТКС</label>
+                    <paramValue>24202-24005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>24202.ВЯРТЭ -24005.МАТКС</label>
+                    <paramValue>24202-24005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>24804.ПИТКР -25120.ЯНСЯР</label>
+                    <paramValue>24804-25120</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>25807.СУОЯ1 -24005.МАТКС</label>
+                    <paramValue>25807-24005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>25807.СУОЯ1 -24005.МАТКС</label>
+                    <paramValue>25807-24005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>25807.СУОЯ1 -27003.СУККЗ</label>
+                    <paramValue>25807-27003</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>27003.СУККЗ -27709.ЛЕДМЗ</label>
+                    <paramValue>27003-27709</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>27018.БРУСН -27304.ЛЕНДР</label>
+                    <paramValue>27018-27304</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>27018.БРУСН -27304.ЛЕНДР</label>
+                    <paramValue>27018-27304</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>27709.ЛЕДМЗ -28311.ЮШКОЗ</label>
+                    <paramValue>27709-28311</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>27802.КОСТМ -27709.ЛЕДМЗ</label>
+                    <paramValue>27802-27709</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>28100.КВР-Э -27802.КОСТМ</label>
+                    <paramValue>28100-27802</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>28100.КВР-Э -27802.КОСТМ</label>
+                    <paramValue>28100-27802</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>30006.ПСМ -31808.С-ПГЛ</label>
+                    <paramValue>30006-31808</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>30006.ПСМ -33409.ВОЛК</label>
+                    <paramValue>30006-33409</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>30107.НЕВДБ -30203.МГА</label>
+                    <paramValue>30107-30203</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>30203.МГА -45209.КИРШ</label>
+                    <paramValue>30203-45209</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>30203.МГА -48207.ВОЙБК</label>
+                    <paramValue>30203-48207</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>30909.РЫБАЦ -30203.МГА</label>
+                    <paramValue>30909-30203</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>31117.БП5 -38101.РУЧЬИ</label>
+                    <paramValue>31117-38101</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>31507.ШАПКИ -31302.ТОСНО</label>
+                    <paramValue>31507-31302</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>31808.С-ПГЛ -33409.ВОЛК</label>
+                    <paramValue>31808-33409</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>32139.СТЕКЛ -31302.ТОСНО</label>
+                    <paramValue>32139-31302</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>32302.НОВЛС -30203.МГА</label>
+                    <paramValue>32302-30203</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>32302.НОВЛС -32508.ПАВЛВ</label>
+                    <paramValue>32302-32508</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>32302.НОВЛС -32508.ПАВЛВ</label>
+                    <paramValue>32302-32508</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>32336.ВЛАДМ -32302.НОВЛС</label>
+                    <paramValue>32336-32302</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>32336.ВЛАДМ -32302.НОВЛС</label>
+                    <paramValue>32336-32302</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>32355.КОБРЛ -33004.ШУШАР</label>
+                    <paramValue>32355-33004</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33004.ШУШАР -33061.ППВИТ</label>
+                    <paramValue>33004-33061</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33004.ШУШАР -33108.КУПЧН</label>
+                    <paramValue>33004-33108</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33108.КУПЧН -30006.ПСМ</label>
+                    <paramValue>33108-30006</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33108.КУПЧН -30909.РЫБАЦ</label>
+                    <paramValue>33108-30909</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33409.ВОЛК -33413.ГЛХОЗ</label>
+                    <paramValue>33409-33413</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33409.ВОЛК -33502.ПТВ</label>
+                    <paramValue>33409-33502</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33409.ВОЛК -35207.ЦВЕТЧ</label>
+                    <paramValue>33409-35207</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33409.ВОЛК -35207.ЦВЕТЧ</label>
+                    <paramValue>33409-35207</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33409.ВОЛК -35207.ЦВЕТЧ</label>
+                    <paramValue>33409-35207</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>34007.ГАТ.Б -33803.ФРЕЗР</label>
+                    <paramValue>34007-33803</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>34007.ГАТ.Б -34505.ЛИГОВ</label>
+                    <paramValue>34007-34505</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>34026.ГАТ.В -33004.ШУШАР</label>
+                    <paramValue>34026-33004</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>34810.ШОССН -35300.ПВАРШ</label>
+                    <paramValue>34810-35300</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>35207.ЦВЕТЧ -35300.ПВАРШ</label>
+                    <paramValue>35207-35300</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>35207.ЦВЕТЧ -35323.БРОНВ</label>
+                    <paramValue>35207-35323</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>35207.ЦВЕТЧ -35809.НПОРТ</label>
+                    <paramValue>35207-35809</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>35705.НАРВС -35508.АВТОВ</label>
+                    <paramValue>35705-35508</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>35705.НАРВС -36002.ППБ</label>
+                    <paramValue>35705-36002</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>35809.НПОРТ -33108.КУПЧН</label>
+                    <paramValue>35809-33108</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>36106.М-РУЧ -37005.РЖЕВК</label>
+                    <paramValue>36106-37005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>36337.Л-ОЗР -36106.М-РУЧ</label>
+                    <paramValue>36337-36106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>36604.Н-ДБР -36106.М-РУЧ</label>
+                    <paramValue>36604-36106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>36801.НЕВА -37202.ЗПСТЭ</label>
+                    <paramValue>36801-37202</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>37005.РЖЕВК -37024.ПИСКР</label>
+                    <paramValue>37005-37024</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>37005.РЖЕВК -37024.ПИСКР</label>
+                    <paramValue>37005-37024</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>37005.РЖЕВК -37202.ЗПСТЭ</label>
+                    <paramValue>37005-37202</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>37024.ПИСКР -38205.ППФ</label>
+                    <paramValue>37024-38205</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>37202.ЗПСТЭ -30222.ГОРЫ</label>
+                    <paramValue>37202-30222</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>38101.РУЧЬИ -37024.ПИСКР</label>
+                    <paramValue>38101-37024</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>38101.РУЧЬИ -37024.ПИСКР</label>
+                    <paramValue>38101-37024</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>38101.РУЧЬИ -37024.ПИСКР</label>
+                    <paramValue>38101-37024</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>38510.ПРГЛ -37405.КУШЛВ</label>
+                    <paramValue>38510-37405</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>39208.БЕЛСТ -38215.ЛАНСК</label>
+                    <paramValue>39208-38215</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>39602.КАННЛ -38510.ПРГЛ</label>
+                    <paramValue>39602-38510</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>40008.ВЛХ-1 -47308.ПКЛ-1</label>
+                    <paramValue>40008-47308</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>40031.П116 -45482.ПОРОГ</label>
+                    <paramValue>40031-45482</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>40101.НОВГР -40900.РОГАВ</label>
+                    <paramValue>40101-40900</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>40120.НОВГЛ -42003.ЧУД-М</label>
+                    <paramValue>40120-42003</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>40120.НОВГЛ -58302.БАТЕЦ</label>
+                    <paramValue>40120-58302</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>40741.НОВГД -40120.НОВГЛ</label>
+                    <paramValue>40741-40120</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>40900.РОГАВ -32302.НОВЛС</label>
+                    <paramValue>40900-32302</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>41602.М.ВИШ -42003.ЧУД-М</label>
+                    <paramValue>41602-42003</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>42003.ЧУД-М -30006.ПСМ</label>
+                    <paramValue>42003-30006</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>42003.ЧУД-М -45482.ПОРОГ</label>
+                    <paramValue>42003-45482</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>42022.ЧУД-К -42200.ТОРФН</label>
+                    <paramValue>42022-42200</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>42107.ИРСА -45209.БП63</label>
+                    <paramValue>42107-45209</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>42107.ИРСА -45247.ПОСАД</label>
+                    <paramValue>42107-45247</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>43909.ХВОЙН -42906.ПЕСТВ</label>
+                    <paramValue>43909-42906</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>45001.БУДГЩ -43909.ХВОЙН</label>
+                    <paramValue>45001-43909</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>45001.БУДГЩ -47505.ТИХВН</label>
+                    <paramValue>45001-47505</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>45209.КИРШ -45001.БУДГЩ</label>
+                    <paramValue>45209-45001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>45482.ПОРОГ -40008.ВЛХ-1</label>
+                    <paramValue>45482-40008</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>45482.ПОРОГ -47825.КУКЛЬ</label>
+                    <paramValue>45482-47825</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>45603.БП60 -45209.БП63</label>
+                    <paramValue>45603-45209</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>46409.БАБВО -302600.КОШТА</label>
+                    <paramValue>46409-302600</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>46803.ПОДБР -43203.КАБОЖ</label>
+                    <paramValue>46803-43203</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>46803.ПОДБР -43203.КАБОЖ</label>
+                    <paramValue>46803-43203</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>47308.ПКЛ-1 -46409.БАБВО</label>
+                    <paramValue>47308-46409</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>48001.ВЛХ-2 -49106.ЛПОЛЕ</label>
+                    <paramValue>48001-49106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>48207.ВОЙБК -40008.ВЛХ-1</label>
+                    <paramValue>48207-40008</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>49106.ЛПОЛЕ -24804.ПИТКР</label>
+                    <paramValue>49106-24804</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>49407.СВИРЬ -10002.ПТРЗВ</label>
+                    <paramValue>49407-10002</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>50009.БЛГМ -51708.БЕЖЕЦ</label>
+                    <paramValue>50009-51708</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>50009.БЛГМ -53703.ОКУЛВ</label>
+                    <paramValue>50009-53703</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>50103.БЛГП -50009.БЛГМ</label>
+                    <paramValue>50103-50009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>50103.БЛГП -52700.МЕДВД</label>
+                    <paramValue>50103-52700</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>50300.САВЕЛ -51106.СОНКВ</label>
+                    <paramValue>50300-51106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>50601.УГЛИЧ -50457.КАЛЗП</label>
+                    <paramValue>50601-50457</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>51106.СОНКВ -51411.ОВНЩ2</label>
+                    <paramValue>51106-51411</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>51411.ОВНЩ2 -51604.ВЕСЬГ</label>
+                    <paramValue>51411-51604</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>51708.БЕЖЕЦ -51106.СОНКВ</label>
+                    <paramValue>51708-51106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>53309.УГЛОВ -53506.БОРВЧ</label>
+                    <paramValue>53309-53506</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>53703.ОКУЛВ -41602.М.ВИШ</label>
+                    <paramValue>53703-41602</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>53703.ОКУЛВ -44507.НЕБЛЧ</label>
+                    <paramValue>53703-44507</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>55200.ВАЛДЙ -50009.БЛГМ</label>
+                    <paramValue>55200-50009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>55200.ВАЛДЙ -55501.КРЕСТ</label>
+                    <paramValue>55200-55501</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>56307.РУССА -55200.ВАЛДЙ</label>
+                    <paramValue>56307-55200</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>56701.ДНО -56307.РУССА</label>
+                    <paramValue>56701-56307</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>56701.ДНО -58502.ОРЕДЖ</label>
+                    <paramValue>56701-58502</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>57102.СУЩЕВ -56701.ДНО</label>
+                    <paramValue>57102-56701</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58302.БАТЕЦ -72009.ЛУГА1</label>
+                    <paramValue>58302-72009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58502.ОРЕДЖ -32355.КОБРЛ</label>
+                    <paramValue>58502-32355</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58502.ОРЕДЖ -32355.КОБРЛ</label>
+                    <paramValue>58502-32355</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>59201.ПОСЕЛ -59004.ВЫРИЦ</label>
+                    <paramValue>59201-59004</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>59201.ПОСЕЛ -59004.ВЫРИЦ</label>
+                    <paramValue>59201-59004</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>60001.ХВР -60707.ПОВ1</label>
+                    <paramValue>60001-60707</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>60073.М.ПАС -60001.ХВР</label>
+                    <paramValue>60073-60001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>60707.ПОВ1 -61502.ТВЕРЬ</label>
+                    <paramValue>60707-61502</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>61108.РЕШЕТ -61201.КОНАК</label>
+                    <paramValue>61108-61201</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>61502.ТВЕРЬ -62100.ЛИХОС</label>
+                    <paramValue>61502-62100</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>61659.ДОРОШ -61803.В.МОХ</label>
+                    <paramValue>61659-61803</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>62100.ЛИХОС -62900.АКАДМ</label>
+                    <paramValue>62100-62900</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>62900.АКАДМ -50009.БЛГМ</label>
+                    <paramValue>62900-50009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>63006.РЖБАЛ -64106.ТОРЖК</label>
+                    <paramValue>63006-64106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>63006.РЖБАЛ -197702.ШАХОВ</label>
+                    <paramValue>63006-197702</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>63616.ОСУГА -63006.РЖБАЛ</label>
+                    <paramValue>63616-63006</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>64106.ТОРЖК -62100.ЛИХОС</label>
+                    <paramValue>64106-62100</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>65005.ЖАРКВ -64801.ЗЕМЦЫ</label>
+                    <paramValue>65005-64801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>65306.З-ДВН -63006.РЖБЛТ</label>
+                    <paramValue>65306-63006</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>65518.РУСАН -65306.З-ДВН</label>
+                    <paramValue>65518-65306</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>65908.ПОСНЭ -66602.НОВСК</label>
+                    <paramValue>65908-66602</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>66008.ВЛУКИ -65518.РУСАН</label>
+                    <paramValue>66008-65518</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>66008.ВЛУКИ -67665.НАЗИМ</label>
+                    <paramValue>66008-67665</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>66602.НОВСК -57102.СУЩЕВ</label>
+                    <paramValue>66602-57102</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>66602.НОВСК -66008.ВЛУКИ</label>
+                    <paramValue>66602-66008</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>66900.КЛЯСЭ -66008.ВЛУКИ</label>
+                    <paramValue>66900-66008</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>67665.НАЗИМ -68130.СОБЛГ</label>
+                    <paramValue>67665-68130</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>67665.НАЗИМ -68130.СОБЛГ</label>
+                    <paramValue>67665-68130</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>68130.СОБЛГ -50103.БЛГП</label>
+                    <paramValue>68130-50103</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>68130.СОБЛГ -64106.ТОРЖК</label>
+                    <paramValue>68130-64106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>70003.БЕРЕЗ -70615.ЛЮБЯТ</label>
+                    <paramValue>70003-70615</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>70501.ПСК-Т -70003.БЕРЕЗ</label>
+                    <paramValue>70501-70003</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>70605.ПСК-П -56701.ДНО</label>
+                    <paramValue>70605-56701</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>70605.ПСК-П -72009.ЛУГА1</label>
+                    <paramValue>70605-72009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>70709.ПЕЧОР -70605.ПСК-П</label>
+                    <paramValue>70709-70605</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>70709.ПЕЧОР -70605.ПСК-П</label>
+                    <paramValue>70709-70605</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>70709.ПЕЧОР -86209.ВАЛГА</label>
+                    <paramValue>70709-86209</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>72009.ЛУГА1 -33803.ФРЕЗР</label>
+                    <paramValue>72009-33803</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>72901.ГДОВ -73001.СЛАНЦ</label>
+                    <paramValue>72901-73001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>73001.СЛАНЦ -73603.ВЕЙМР</label>
+                    <paramValue>73001-73603</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>73603.ВЕЙМР -34007.ГАТ.Б</label>
+                    <paramValue>73603-34007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>73603.ВЕЙМР -34505.ЛИГОВ</label>
+                    <paramValue>73603-34505</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>73603.ВЕЙМР -73302.ИВАНГ</label>
+                    <paramValue>73603-73302</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>74502.У-ЛУГ -74606.КОТЛЫ</label>
+                    <paramValue>74502-74606</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>74907.КРСНФ -75007.ЛЕБЯЖ</label>
+                    <paramValue>74907-75007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>74907.КРСНФ -75007.ЛЕБЯЖ</label>
+                    <paramValue>74907-75007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>77905.ПЫТАЛ -70605.ПСК-П</label>
+                    <paramValue>77905-70605</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>77905.ПЫТАЛ -70605.ПСК-П</label>
+                    <paramValue>77905-70605</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>78503.СКАНЭ -77905.ПЫТАЛ</label>
+                    <paramValue>78503-77905</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>84805.ТАРТУ -70709.ПЕЧОР</label>
+                    <paramValue>84805-70709</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100001.КЛГ.СОРТ -100800.ЧЕРНЯХОВС</label>
+                    <paramValue>100001-100800</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100001.КЛГ.СОРТ -102505.ДЗЕРЖ.НОВ</label>
+                    <paramValue>100001-102505</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100001.КЛГ.СОРТ -103103.ШИПОВКА</label>
+                    <paramValue>100001-103103</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100054.ГОЛУБЕВО -102505.ДЗЕРЖ.НОВ</label>
+                    <paramValue>100054-102505</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100054.ГОЛУБЕВО -102702.МАМОНОВО</label>
+                    <paramValue>100054-102702</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100406.НЕСТЕР.ЭКС -100500.НЕСТЕРОВ</label>
+                    <paramValue>100406-100500</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100406.НЕСТЕР.ЭКС -124000.КИБАРТ.ЭКС</label>
+                    <paramValue>100406-124000</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100500.НЕСТЕРОВ -100406.НЕСТЕР.ЭКС</label>
+                    <paramValue>100500-100406</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100500.НЕСТЕРОВ -100800.ЧЕРНЯХОВС</label>
+                    <paramValue>100500-100800</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100800.ЧЕРНЯХОВС -100001.КЛГ.СОРТ</label>
+                    <paramValue>100800-100001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100800.ЧЕРНЯХОВС -100500.НЕСТЕРОВ</label>
+                    <paramValue>100800-100500</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100800.ЧЕРНЯХОВС -101310.ЖЕЛЕЗНОД</label>
+                    <paramValue>100800-101310</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>100800.ЧЕРНЯХОВС -104801.СОВЕТСК</label>
+                    <paramValue>100800-104801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>101108.ЖЕЛЕЗ.ЭКС -101310.ЖЕЛЕЗНОД</label>
+                    <paramValue>101108-101310</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>101310.ЖЕЛЕЗНОД -100800.ЧЕРНЯХОВС</label>
+                    <paramValue>101310-100800</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>101310.ЖЕЛЕЗНОД -101108.ЖЕЛЕЗ.ЭКС</label>
+                    <paramValue>101310-101108</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>102204.БАГРАТИОН -102308.БАГРАТ.ЭКС</label>
+                    <paramValue>102204-102308</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>102204.БАГРАТИОН -102505.ДЗЕРЖ.НОВ</label>
+                    <paramValue>102204-102505</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>102308.БАГРАТ.ЭКС -102204.БАГРАТИОН</label>
+                    <paramValue>102308-102204</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>102505.ДЗЕРЖ.НОВ -100001.КЛГ.СОРТ</label>
+                    <paramValue>102505-100001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>102505.ДЗЕРЖ.НОВ -100054.ГОЛУБЕВО</label>
+                    <paramValue>102505-100054</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>102505.ДЗЕРЖ.НОВ -102204.БАГРАТИОН</label>
+                    <paramValue>102505-102204</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>102702.МАМОНОВО -100054.ГОЛУБЕВО</label>
+                    <paramValue>102702-100054</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>102702.МАМОНОВО -102806.МАМОН.ЭКС</label>
+                    <paramValue>102702-102806</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>102806.МАМОН.ЭКС -102702.МАМОНОВО</label>
+                    <paramValue>102806-102702</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103103.ШИПОВКА -100001.КЛГ.СОРТ</label>
+                    <paramValue>103103-100001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103103.ШИПОВКА -103207.БАЛТ.ЛЕС</label>
+                    <paramValue>103103-103207</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103103.ШИПОВКА -103404.БАЛТИЙСК</label>
+                    <paramValue>103103-103404</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103207.БАЛТ.ЛЕС -103103.ШИПОВКА</label>
+                    <paramValue>103207-103103</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103334.ПРИМОР.НОВ -103813.СВЕТЛОГ1</label>
+                    <paramValue>103334-103813</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103404.БАЛТИЙСК -103103.ШИПОВКА</label>
+                    <paramValue>103404-103103</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103616.КЛГ.СЕВ -103809.ПИОНЕР.КУР</label>
+                    <paramValue>103616-103809</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103616.КЛГ.СЕВ -104303.КУТУЗ.НОВ</label>
+                    <paramValue>103616-104303</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103809.ПИОНЕР.КУР -103616.КЛГ.СЕВ</label>
+                    <paramValue>103809-103616</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103809.ПИОНЕР.КУР -104303.КУТУЗ.НОВ</label>
+                    <paramValue>103809-104303</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103813.СВЕТЛОГ1 -103334.ПРИМОР.НОВ</label>
+                    <paramValue>103813-103334</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103813.СВЕТЛОГ1 -103828.СВЕТЛОГ2</label>
+                    <paramValue>103813-103828</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>103828.СВЕТЛОГ2 -103813.СВЕТЛОГ1</label>
+                    <paramValue>103828-103813</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>104303.КУТУЗ.НОВ -103616.КЛГ.СЕВ</label>
+                    <paramValue>104303-103616</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>104303.КУТУЗ.НОВ -103809.ПИОНЕР.КУР</label>
+                    <paramValue>104303-103809</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>104303.КУТУЗ.НОВ -104801.СОВЕТСК</label>
+                    <paramValue>104303-104801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>104801.СОВЕТСК -100800.ЧЕРНЯХОВС</label>
+                    <paramValue>104801-100800</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>104801.СОВЕТСК -104303.КУТУЗОВО</label>
+                    <paramValue>104801-104303</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>104801.СОВЕТСК -104905.НЕМАН</label>
+                    <paramValue>104801-104905</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>104801.СОВЕТСК -105005.СОВЕТС.ЭКС</label>
+                    <paramValue>104801-105005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>104905.НЕМАН.НОВ -104801.СОВЕТСК</label>
+                    <paramValue>104905-104801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>105005.СОВЕТС.ЭКС -104801.СОВЕТСК</label>
+                    <paramValue>105005-104801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>124400.КИБАРТ.ЭКС -100406.НЕСТЕР.ЭКС</label>
+                    <paramValue>124400-100406</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>237007.AЛEKCAHДPOB -310005.ЯPOCЛABЛЬ-ГЛ</label>
+                    <paramValue>237007-310005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>237007.AЛEKCAHДPOB -310005.ЯPOCЛABЛЬ-ГЛ</label>
+                    <paramValue>237007-310005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>273200.CУCOЛOBKA -299906.ЗAOBPAЖЬE</label>
+                    <paramValue>273200-299906</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>280007.COЛЬBЫЧEГOД -281404.УPДOMA</label>
+                    <paramValue>280007-281404</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>280007.COЛЬBЫЧEГOД -281404.УPДOMA</label>
+                    <paramValue>280007-281404</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>280149.KOTЛAC-УЗEЛ -280007.COЛЬBЫЧEГOД</label>
+                    <paramValue>280149-280007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>282407.MИKУHЬ -281404.УPДOMA</label>
+                    <paramValue>282407-281404</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>282407.MИKУHЬ -283503.KOCЛAH</label>
+                    <paramValue>282407-283503</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>282407.MИKУHЬ -283908.CЫKTЫBKAP</label>
+                    <paramValue>282407-283908</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>282407.MИKУHЬ -285000.ИOCCEP</label>
+                    <paramValue>282407-285000</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>283400.CEЛЭГBOЖ -283700.BEHДИHГA</label>
+                    <paramValue>283400-283700</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>285000.ИOCCEP -285801.COCHOГOPCK</label>
+                    <paramValue>285000-285801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>285801.COCHOГOPCK -286408.TPOИЦKO-ПEЧ</label>
+                    <paramValue>285801-286408</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>285801.COCHOГOPCK -288009.ПEЧOPA</label>
+                    <paramValue>285801-288009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>288009.ПEЧOPA -287102.ИPAEЛЬ</label>
+                    <paramValue>288009-287102</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>288102.CЫHЯ -288308.УCИHCK</label>
+                    <paramValue>288102-288308</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>288600.ИHTA-1 -288009.ПEЧOPA</label>
+                    <paramValue>288600-288009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>288600.ИHTA-1 -288704.ИHTA-2</label>
+                    <paramValue>288600-288704</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>288600.ИHTA-1 -289529.XAHOBEЙ</label>
+                    <paramValue>288600-289529</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>289118.ЧУM -289904.ЛAБЫTHAHГИ</label>
+                    <paramValue>289118-289904</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>289118.ЧУM -289904.ЛAБЫTHAHГИ</label>
+                    <paramValue>289118-289904</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>289503.BOPKУTA -289529.XAHOBEЙ</label>
+                    <paramValue>289503-289529</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>289529.XAHOBEЙ -289406.MУЛЬДA</label>
+                    <paramValue>289529-289406</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>290009.ИCAKOГOPKA -290206.CEBEPOДBИHCK</label>
+                    <paramValue>290009-290206</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>290009.ИCAKOГOPKA -290507.APXAHГ-ГOPOД</label>
+                    <paramValue>290009-290507</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>290009.ИCAKOГOPKA -295002.OБOЗEPCKAЯ</label>
+                    <paramValue>290009-295002</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>290507.APXAHГ-ГOPOД-291500.KAPПOГOPЫ</label>
+                    <paramValue>290507-291500</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>292907.EPЦEBO -293007.KOHOШA-1</label>
+                    <paramValue>292907-293007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>293007.KOHOШA-1 -293030.KOHOШA-2</label>
+                    <paramValue>293007-293030</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>293007.KOHOШA-1 -293030.KOHOШA-2</label>
+                    <paramValue>293007-293030</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>293007.KOHOШA-1 -293609.HЯHДOMA</label>
+                    <paramValue>293007-293609</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>293030.KOHOШA-2 -293011.ШИPИXAHOBCK</label>
+                    <paramValue>293030-293011</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>293030.KOHOШA-2 -297900.KУЛOЙ</label>
+                    <paramValue>293030-297900</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>293609.HЯHДOMA -295002.OБOЗEPCKAЯ</label>
+                    <paramValue>293609-295002</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>295801.MAЛOШУЙKA -12397.MAЛEHГA</label>
+                    <paramValue>295801-12397</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>295801.MAЛOШУЙKA -295002.OБOЗEPCKAЯ</label>
+                    <paramValue>295801-295002</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>297900.KУЛOЙ -298706.KИЗEMA</label>
+                    <paramValue>297900-298706</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>298706.KИЗEMA -280149.KOTЛAC-УЗEЛ</label>
+                    <paramValue>298706-280149</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>299906.ЗAOBPAЖЬE -280149.KOTЛAC-УЗEЛ</label>
+                    <paramValue>299906-280149</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>299925.БП-359 -311101.ДAHИЛOB</label>
+                    <paramValue>299925-311101</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>299938.БП 359B KM -300003.ЛOCTA</label>
+                    <paramValue>299938-300003</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>300003.ЛOCTA -300709.ПEЧATKИHO</label>
+                    <paramValue>300003-300709</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>300003.ЛOCTA -303251.ПAПPИXA</label>
+                    <paramValue>300003-303251</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>300709.ПEЧATKИHO -292907.EPЦEBO</label>
+                    <paramValue>300709-292907</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>302507.ЧEPEПOBEЦ-2 -300107.BOЛOГДA-1</label>
+                    <paramValue>302507-300107</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>302507.ЧEPEПOBEЦ-2 -300107.BOЛOГДA-1</label>
+                    <paramValue>302507-300107</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>302507.ЧEPEПOBEЦ-2 -300107.BOЛOГДA-1</label>
+                    <paramValue>302507-300107</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>302507.ЧEPEПOBEЦ-2 -300107.BOЛOГДA-1</label>
+                    <paramValue>302507-300107</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>302507.ЧEPEПOBEЦ-2 -302600.KOШTA</label>
+                    <paramValue>302507-302600</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>302507.ЧEPEПOBEЦ-2 -302600.KOШTA</label>
+                    <paramValue>302507-302600</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>304606.БУЙ -299925.БП-359</label>
+                    <paramValue>304606-299925</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>304606.БУЙ -303251.ПAПPИXA</label>
+                    <paramValue>304606-303251</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>304606.БУЙ -307500.ШAPЬЯ</label>
+                    <paramValue>304606-307500</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>304911.KAPИMOBO -305007.KOCTPOMA</label>
+                    <paramValue>304911-305007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>305100.KOCTPOMA -306006.ГAЛИЧ</label>
+                    <paramValue>305100-306006</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>305577.ПEPBУШИHO -305806.ЗABOЛЖCK</label>
+                    <paramValue>305577-305806</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>305806.ЗABOЛЖCK -305577.ПEPBУШИHO</label>
+                    <paramValue>305806-305577</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>307500.ШAPЬЯ -308407.CBEЧA</label>
+                    <paramValue>307500-308407</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>310005.ЯPOCЛABЛЬ-ГЛ-311101.ДAHИЛOB</label>
+                    <paramValue>310005-311101</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>310005.ЯPOCЛABЛЬ-ГЛ-311101.ДAHИЛOB</label>
+                    <paramValue>310005-311101</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>310005.ЯPOCЛABЛЬ-ГЛ-312104.PЫБИHCK-ПACC</label>
+                    <paramValue>310005-312104</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>310005.ЯPOCЛABЛЬ-ГЛ-312104.PЫБИHCK-ПACC</label>
+                    <paramValue>310005-312104</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>310005.ЯPOCЛABЛЬ-ГЛ-315507.HEPEXTA</label>
+                    <paramValue>310005-315507</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>311101.ДAHИЛOB -299938.БП 359B KM</label>
+                    <paramValue>311101-299938</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>311101.ДAHИЛOB -299938.БП 359B KM</label>
+                    <paramValue>311101-299938</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>312104.PЫБИHCK-ПACC-51106.COHKOBO</label>
+                    <paramValue>312104-51106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>312104.PЫБИHCK-ПACC-312208.ШЛЮЗOBAЯ</label>
+                    <paramValue>312104-312208</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>312621.ЧEБOKOBO -312805.TУTAEBO</label>
+                    <paramValue>312621-312805</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>312689.BAУЛOBO -312662.BAPEГOBO</label>
+                    <paramValue>312689-312662</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>312805.TУTAEBO -312621.ЧEБOKOBO</label>
+                    <paramValue>312805-312621</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>313408.БEPEHДEEBO -313501.ПEPECЛABЛЬ</label>
+                    <paramValue>313408-313501</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>313501.ПEPECЛABЛЬ -313408.БEPEHДEEBO</label>
+                    <paramValue>313501-313408</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>314400.CEMИБPATOBO -314504.ГABPИЛOB-ЯM</label>
+                    <paramValue>314400-314504</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>314810.ПOЛЯHKИ -310109.ЯPOCЛABЛЬ</label>
+                    <paramValue>314810-310109</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>314810.ПOЛЯHKИ -314909.HOBOЯPOCЛ.</label>
+                    <paramValue>314810-314909</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>315507.HEPEXTA -305100.KOCTPOMA</label>
+                    <paramValue>315507-305100</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>315507.HEPEXTA -318609.ИBAHOBO-COPT</label>
+                    <paramValue>315507-318609</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>316001.ФУPMAHOB -316209.BOЛГOPEЧEHCK</label>
+                    <paramValue>316001-316209</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>316302.EPMOЛИHO -316707.KИHEШMA</label>
+                    <paramValue>316302-316707</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>316336.CTPOKИHO -318609.ИBAHOBO-COPT</label>
+                    <paramValue>316336-318609</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>318609.ИBAHOBO-COPT-237308.БEЛЬKOBO</label>
+                    <paramValue>318609-237308</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>318609.ИBAHOBO-COPT-262901.HOBKИ-2</label>
+                    <paramValue>318609-262901</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>
+            </label>
+            <key>hours1</key>
+            <paramOrderNum>4</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>00</label>
+                    <paramValue>00</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>01</label>
+                    <paramValue>01</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>02</label>
+                    <paramValue>02</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>03</label>
+                    <paramValue>03</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>04</label>
+                    <paramValue>04</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>05</label>
+                    <paramValue>05</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>06</label>
+                    <paramValue>06</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>07</label>
+                    <paramValue>07</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>08</label>
+                    <paramValue>08</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>09</label>
+                    <paramValue>09</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>10</label>
+                    <paramValue>10</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>11</label>
+                    <paramValue>11</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>12</label>
+                    <paramValue>12</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>13</label>
+                    <paramValue>13</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14</label>
+                    <paramValue>14</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>15</label>
+                    <paramValue>15</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>16</label>
+                    <paramValue>16</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>17</label>
+                    <paramValue>17</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>18</label>
+                    <paramValue>18</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>19</label>
+                    <paramValue>19</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20</label>
+                    <paramValue>20</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>21</label>
+                    <paramValue>21</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>22</label>
+                    <paramValue>22</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>23</label>
+                    <paramValue>23</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>
+            </label>
+            <key>minutes1</key>
+            <paramOrderNum>5</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>00</label>
+                    <paramValue>00</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>01</label>
+                    <paramValue>01</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>02</label>
+                    <paramValue>02</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>03</label>
+                    <paramValue>03</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>04</label>
+                    <paramValue>04</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>05</label>
+                    <paramValue>05</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>06</label>
+                    <paramValue>06</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>07</label>
+                    <paramValue>07</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>08</label>
+                    <paramValue>08</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>09</label>
+                    <paramValue>09</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>10</label>
+                    <paramValue>10</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>11</label>
+                    <paramValue>11</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>12</label>
+                    <paramValue>12</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>13</label>
+                    <paramValue>13</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14</label>
+                    <paramValue>14</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>15</label>
+                    <paramValue>15</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>16</label>
+                    <paramValue>16</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>17</label>
+                    <paramValue>17</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>18</label>
+                    <paramValue>18</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>19</label>
+                    <paramValue>19</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20</label>
+                    <paramValue>20</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>21</label>
+                    <paramValue>21</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>22</label>
+                    <paramValue>22</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>23</label>
+                    <paramValue>23</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>24</label>
+                    <paramValue>24</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>25</label>
+                    <paramValue>25</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>26</label>
+                    <paramValue>26</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>27</label>
+                    <paramValue>27</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>28</label>
+                    <paramValue>28</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>29</label>
+                    <paramValue>29</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>30</label>
+                    <paramValue>30</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>31</label>
+                    <paramValue>31</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>32</label>
+                    <paramValue>32</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33</label>
+                    <paramValue>33</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>34</label>
+                    <paramValue>34</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>35</label>
+                    <paramValue>35</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>36</label>
+                    <paramValue>36</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>37</label>
+                    <paramValue>37</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>38</label>
+                    <paramValue>38</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>39</label>
+                    <paramValue>39</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>40</label>
+                    <paramValue>40</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>41</label>
+                    <paramValue>41</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>42</label>
+                    <paramValue>42</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>43</label>
+                    <paramValue>43</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>44</label>
+                    <paramValue>44</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>45</label>
+                    <paramValue>45</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>46</label>
+                    <paramValue>46</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>47</label>
+                    <paramValue>47</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>48</label>
+                    <paramValue>48</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>49</label>
+                    <paramValue>49</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>50</label>
+                    <paramValue>50</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>51</label>
+                    <paramValue>51</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>52</label>
+                    <paramValue>52</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>53</label>
+                    <paramValue>53</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>54</label>
+                    <paramValue>54</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>55</label>
+                    <paramValue>55</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>56</label>
+                    <paramValue>56</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>57</label>
+                    <paramValue>57</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58</label>
+                    <paramValue>58</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>59</label>
+                    <paramValue>59</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>
+            </label>
+            <key>hours2</key>
+            <paramOrderNum>6</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>00</label>
+                    <paramValue>00</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>01</label>
+                    <paramValue>01</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>02</label>
+                    <paramValue>02</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>03</label>
+                    <paramValue>03</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>04</label>
+                    <paramValue>04</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>05</label>
+                    <paramValue>05</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>06</label>
+                    <paramValue>06</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>07</label>
+                    <paramValue>07</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>08</label>
+                    <paramValue>08</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>09</label>
+                    <paramValue>09</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>10</label>
+                    <paramValue>10</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>11</label>
+                    <paramValue>11</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>12</label>
+                    <paramValue>12</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>13</label>
+                    <paramValue>13</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14</label>
+                    <paramValue>14</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>15</label>
+                    <paramValue>15</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>16</label>
+                    <paramValue>16</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>17</label>
+                    <paramValue>17</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>18</label>
+                    <paramValue>18</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>19</label>
+                    <paramValue>19</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20</label>
+                    <paramValue>20</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>21</label>
+                    <paramValue>21</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>22</label>
+                    <paramValue>22</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>23</label>
+                    <paramValue>23</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>
+            </label>
+            <key>minutes2</key>
+            <paramOrderNum>7</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>00</label>
+                    <paramValue>00</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>01</label>
+                    <paramValue>01</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>02</label>
+                    <paramValue>02</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>03</label>
+                    <paramValue>03</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>04</label>
+                    <paramValue>04</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>05</label>
+                    <paramValue>05</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>06</label>
+                    <paramValue>06</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>07</label>
+                    <paramValue>07</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>08</label>
+                    <paramValue>08</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>09</label>
+                    <paramValue>09</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>10</label>
+                    <paramValue>10</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>11</label>
+                    <paramValue>11</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>12</label>
+                    <paramValue>12</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>13</label>
+                    <paramValue>13</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14</label>
+                    <paramValue>14</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>15</label>
+                    <paramValue>15</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>16</label>
+                    <paramValue>16</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>17</label>
+                    <paramValue>17</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>18</label>
+                    <paramValue>18</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>19</label>
+                    <paramValue>19</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20</label>
+                    <paramValue>20</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>21</label>
+                    <paramValue>21</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>22</label>
+                    <paramValue>22</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>23</label>
+                    <paramValue>23</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>24</label>
+                    <paramValue>24</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>25</label>
+                    <paramValue>25</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>26</label>
+                    <paramValue>26</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>27</label>
+                    <paramValue>27</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>28</label>
+                    <paramValue>28</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>29</label>
+                    <paramValue>29</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>30</label>
+                    <paramValue>30</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>31</label>
+                    <paramValue>31</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>32</label>
+                    <paramValue>32</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33</label>
+                    <paramValue>33</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>34</label>
+                    <paramValue>34</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>35</label>
+                    <paramValue>35</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>36</label>
+                    <paramValue>36</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>37</label>
+                    <paramValue>37</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>38</label>
+                    <paramValue>38</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>39</label>
+                    <paramValue>39</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>40</label>
+                    <paramValue>40</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>41</label>
+                    <paramValue>41</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>42</label>
+                    <paramValue>42</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>43</label>
+                    <paramValue>43</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>44</label>
+                    <paramValue>44</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>45</label>
+                    <paramValue>45</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>46</label>
+                    <paramValue>46</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>47</label>
+                    <paramValue>47</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>48</label>
+                    <paramValue>48</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>49</label>
+                    <paramValue>49</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>50</label>
+                    <paramValue>50</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>51</label>
+                    <paramValue>51</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>52</label>
+                    <paramValue>52</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>53</label>
+                    <paramValue>53</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>54</label>
+                    <paramValue>54</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>55</label>
+                    <paramValue>55</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>56</label>
+                    <paramValue>56</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>57</label>
+                    <paramValue>57</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58</label>
+                    <paramValue>58</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>59</label>
+                    <paramValue>59</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label></label>
+            <key>p5</key>
+            <paramOrderNum>8</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>грузовые</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>пассажирские</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>пригородные</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label></label>
+            <key>p6</key>
+            <paramOrderNum>9</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Нечетное</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Четное</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P1</key>
+            <paramOrderNum>10</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>5</paramDataType>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P2</key>
+            <paramOrderNum>11</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>4</paramDataType>
+        </filter>
+    </filters>
+
+    <tables>
+        <table>
+            <columns>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>1</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>2</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>3</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>4</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>5</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>6</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>7</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>8</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>9</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>10</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>11</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>12</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+            </columns>
+        </table>
+    </tables>
+</reportInputTemplate>

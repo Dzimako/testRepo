@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.digdes.pktb.persistence.model.impl.UserImpl" table="USERS">
+
+        <id name="id" type="java.lang.Long">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+
+        <property name="cn" column="CN" type="java.lang.String"/>
+        <property name="displayName" column="DISPLAYNAME" type="java.lang.String"/>
+        <property name="email" column="EMAIL" type="java.lang.String"/>
+        <many-to-one name="railway" column="RAILWAY_ID" class="com.digdes.pktb.persistence.model.impl.RailwayImpl"/>
+        <many-to-one name="userRole" column="ROLE_ID" class="com.digdes.pktb.persistence.model.impl.UserRoleImpl"/>
+
+        <set name="userGroupSet" table="USER_USERGROUP">
+            <key column="USER_ID" />
+            <many-to-many column="USERGROUP_ID" class="com.digdes.pktb.persistence.model.impl.UserGroupImpl"/>
+        </set>
+
+        <list name="favourites" table="USER_FAVOURITE_REPORTS">
+            <key column="USER_ID" />
+            <index column="INDEX"/>
+            <many-to-many column="REPORT_ID" class="com.digdes.pktb.persistence.model.impl.ReportImpl"/>
+        </list>
+
+        <set name="reportRights" table="REPORT_RIGHTS">
+            <key column="USER_ID" />
+            <one-to-many class="com.digdes.pktb.persistence.model.impl.ReportRightsImpl"/>
+        </set>
+    </class>
+
+</hibernate-mapping>

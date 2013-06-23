@@ -1,0 +1,57 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Предприятие локомотивного хозяйства</label>
+            <type>SELECT</type>
+            <key>P0</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_naim_depo</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Вид тяги</label>
+            <type>SELECT</type>
+            <key>P2</key>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Электровозы</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Тепловозы</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+
+
+        <filter>
+            <label>Вид ремонта или ТО</label>
+            <type>SELECT</type>
+            <key>P3</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_sost_lok_id</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+    </filters>
+</reportInputTemplate>

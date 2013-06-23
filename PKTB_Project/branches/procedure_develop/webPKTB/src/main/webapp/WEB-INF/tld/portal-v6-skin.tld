@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+                            http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"  
+        version="2.0">
+    <description>
+        This tag library contains content related tags for WebSphere Portal Server
+        
+        All tags in the library are designed 
+        to be used in themes and skins only. There is NO portlet support for these tags.
+        
+        @ibm-taglibrary @since 6.0
+    </description>
+    <tlib-version>6.0</tlib-version>
+    <short-name>portal-skin</short-name>
+    <uri>http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/portal-skin</uri>
+
+    <tag>
+        <description>
+            Generates the markup for the area of the portal page that includes
+            the portlets. The layout nodes are used for laying out containers 
+            (rows, columns) or controls (portlets). The tag iterates children 
+            of a layout node.
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>layoutNodeLoop</name>
+        <tag-class>com.ibm.wps.engine.tags.ComponentLoopTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.ComponentLoopTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                name of the scipting variable for the usage of nested tags
+            </description>
+            <name>var</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            Displays the value of a property of a given layout node or exposes
+            the value of the property in a scripting variable. 
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>layoutNodeProperty</name>
+        <tag-class>com.ibm.wps.engine.tags.LayoutNodePropertyTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.LayoutNodePropertyTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                the name of the variable holding the layout node
+                @see layoutNodeLoop tag
+            </description>
+            <name>varname</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ibm.portal.content.LayoutNode</type>
+        </attribute>
+        <attribute>
+            <description>
+                the name of the property to retrieve
+            </description>
+            <name>propertyname</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <description>
+                sed to expose the value of the property in a scripting 
+                variable of the given name instead of writing it to the
+                output directly.
+            </description>
+            <name>var</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            Renders an element of the layout model. This might be a 
+            container representing a row, column, or a control. This 
+            tag can only be used within a layoutNodeLoop tag.
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>layoutNodeRender</name>
+        <tag-class>com.ibm.wps.engine.tags.ComponentRenderTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <description>
+            This tag creates a link to the privious mode of the portlet.
+            
+            This tag works only in the Control.jsp
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>portletBack</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletBackTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletBackTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                specifies if we can generate a server relative url or not
+            </description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag creates a link to the CONFIG mode of the portlet.
+            It also checks if the mode is allowed for the user and 
+            supported by the portlet.
+            
+            This tag works only in the Control.jsp
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>portletConfigure</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletConfigureTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletConfigureTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                This parameter specifies if the referenced resource will 
+                be shown in a new window (popup or iFrame). 
+            </description>
+            <name>newWindow</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <description>
+                specifies if we can generate a server relative url or not
+            </description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag creates a link to the EDIT mode of the portlet.
+            It also checks if the mode is allowed for the user and 
+            supported by the portlet.
+            
+            This tag works only in the Control.jsp
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>portletEdit</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletEditTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletEditTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                This parameter specifies if the referenced resource will 
+                be shown in a new window (popup or iFrame). 
+            </description>
+            <name>newWindow</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <description>
+                specifies if we can generate a server relative url or not
+            </description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag creates a link to the EDIT_DEFAULTS mode of the portlet.
+            It also checks if the mode is allowed for the user and 
+            supported by the portlet.
+            
+            This tag works only in the Control.jsp
+            
+            @ibm-api @since 6.0
+        </description>
+        <name>portletEditDefaults</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletEditDefaultsTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletEditDefaultsTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                This parameter specifies if the referenced resource will 
+                be shown in a new window (popup or iFrame). 
+            </description>
+            <name>newWindow</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <description>
+                specifies if we can generate a server relative url or not
+            </description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag creates a link to the HELP mode of the portlet.
+            It also checks if the mode is allowed for the user and 
+            supported by the portlet.
+            
+            This tag works only in the Control.jsp
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>portletHelp</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletHelpTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletHelpTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                This parameter specifies if the referenced resource will 
+                be shown in a new window (popup or iFrame). 
+            </description>
+            <name>newWindow</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <description>
+                specifies if we can generate a server relative url or not
+            </description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag streams out a page-wide unique id for the current rendered 
+            portlet. It can only be used inside of the Control.jsp. It is used
+            to generate an anchor that the portal is able to jump to the 
+            appropriate place of the page to have the portlet in the view which 
+            were used most recently
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>portletID</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletIDTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <description>
+                name of the scipting variable for further usage
+            </description>
+            <name>var</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag creates a link to the MAXIMIZED state of the portlet.
+            It also checks if the state is supported by the portlet.
+            
+            This tag works only in the Control.jsp
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>portletMaximize</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletMaximizeTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletMaximizeTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                specifies if we can generate a server relative url or not
+            </description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag creates a link to the MINIMIZE state of the portlet.
+            It also checks if the state is supported by the portlet.
+            
+            This tag works only in the Control.jsp
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>portletMinimize</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletMinimizeTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletMinimizeTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        
+        <attribute>
+            <description>
+                specifies if we can generate a server relative url or not
+            </description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            Renders portlet content into the layout of the page that is currently 
+            being generated. This tag can be used only within the control in the 
+            skin JSPs.
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>portletRender</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletRenderTag</tag-class>
+        <body-content>JSP</body-content>
+    </tag>
+
+    <tag>
+        <description>
+            This tag creates a link to the NORMAL state of the portlet.
+            It also checks if the state is supported by the portlet.
+            
+            This tag works only in the Control.jsp
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>portletRestore</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletRestoreTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletRestoreTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                specifies if we can generate a server relative url or not
+            </description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag prints out the portlet's title if the ID attribute is 
+            set the String is stored in the scipting variable defined by 
+            the id attribute
+            
+            This tag works only in the Control.jsp
+            
+            @ibm-api @since 5.1
+        </description>
+        <name>portletTitle</name>
+        <tag-class>com.ibm.wps.engine.tags.PortletTitleTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PortletTitleTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>name of the scripting variable</description>
+            <name>id</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag creates a URL that supports one of the 
+            following surrounding tags. For better performance, 
+            use the parent tag's scripting variable if one is available.
+
+            * portletMaximize
+            * portletMinimize
+            * portletRestore
+            * portletBack
+            * portletConfigure
+            * portletEdit
+            * portletEditDefaults
+            * portletHelp
+        
+            @ibm-api @since 5.1
+        </description>
+        <name>urlParent</name>
+        <tag-class>com.ibm.wps.engine.tags.UrlParentTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+</taglib>

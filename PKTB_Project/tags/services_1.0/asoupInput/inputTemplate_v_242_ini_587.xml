@@ -1,0 +1,274 @@
+<reportInputTemplate>
+    <title>Входной отчет</title>
+
+
+    <filters>
+        <filter>
+            <type>SELECT</type>
+            <label>Род вагона:</label>
+            <key>kodRodVagList</key>
+            <paramOrderNum>1</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20 - KP</label>
+                    <paramValue>20</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>40 - ПЛ</label>
+                    <paramValue>40</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>60 - ПB</label>
+                    <paramValue>60</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>70 - ЦC</label>
+                    <paramValue>70</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>87 - PФ</label>
+                    <paramValue>87</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>90 - ПP</label>
+                    <paramValue>90</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>92 - MBЗ</label>
+                    <paramValue>92</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>93 - ЦMB</label>
+                    <paramValue>93</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>95 - ЗPB</label>
+                    <paramValue>95</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>96 - ФTГ</label>
+                    <paramValue>96</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>Код собственника:</label>
+            <key>kodAdmList</key>
+            <paramOrderNum>2</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>20 - РЖД</label>
+                    <paramValue>20</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>21 - БЧ</label>
+                    <paramValue>21</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>22 - УЗ</label>
+                    <paramValue>22</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>23 - ЧФМ</label>
+                    <paramValue>23</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>24 - ЛГ</label>
+                    <paramValue>24</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>25 - ЛДЗ</label>
+                    <paramValue>25</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>26 - ЭВР</label>
+                    <paramValue>26</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>27 - КЗХ</label>
+                    <paramValue>27</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>28 - ГР</label>
+                    <paramValue>28</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>29 - УТИ</label>
+                    <paramValue>29</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>57 - АЗ</label>
+                    <paramValue>57</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58 - АРМ</label>
+                    <paramValue>58</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>59 - КРГ</label>
+                    <paramValue>59</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>66 - ТЖД</label>
+                    <paramValue>66</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>67 - ТРК</label>
+                    <paramValue>67</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>Вид ремонта:</label>
+            <key>vidRemList</key>
+            <paramOrderNum>3</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>1 – деповской</label>
+                    <paramValue>01</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>2 - капитальный</label>
+                    <paramValue>02</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>Вид пользования:</label>
+            <key>vidPolzList</key>
+            <paramOrderNum>4</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>1 – инвентарный</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>2 - собственный</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>3 - арендованный</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P1</key>
+            <paramOrderNum>5</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>5</paramDataType>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P2</key>
+            <paramOrderNum>6</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>4</paramDataType>
+        </filter>
+    </filters>
+
+    <tables>
+        <table>
+            <columns>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>1</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>2</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>3</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>4</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>5</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>6</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>7</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+            </columns>
+        </table>
+    </tables>
+</reportInputTemplate>

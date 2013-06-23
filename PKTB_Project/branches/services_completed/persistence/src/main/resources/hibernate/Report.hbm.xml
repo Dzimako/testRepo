@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.digdes.pktb.persistence.model.impl.ReportImpl" table="REPORT">
+
+        <id name="id" type="java.lang.Long">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+
+
+        <property name="folder" column="ISFOLDER" type="java.lang.Boolean"/>
+        <property name="name" column="NAME" type="java.lang.String"/>
+        <property name="uid" column="UID" type="java.lang.String"/>
+        <property name="inputTemplatePath" column="INPUTTEMPLATE" type="java.lang.String"/>
+        <property name="outputTemplatePath" column="OUTPUTTEMPLATE" type="java.lang.String"/>
+        <property name="treePath" column="TREE_PATH" type="java.lang.String"/>
+        <property name="orderNum" column="ORDER_NUM" type="java.lang.Long"/>
+        <property name="showInTree" column="SHOWINTREE" type="java.lang.Boolean"/>
+        <property name="fullName" column="FULLNAME" type="java.lang.String"/>
+
+        <many-to-one name="parentReport" column="PARENTID" class="com.digdes.pktb.persistence.model.impl.ReportImpl"/>
+
+        <set name="reportStats" table="REPORT_STAT" lazy="false">
+            <key column="REPORT_ID"/>
+            <one-to-many class="com.digdes.pktb.persistence.model.impl.ReportStatImpl"/>
+        </set>
+        <set name="reportRights" table="REPORT_RIGHTS">
+            <key column="REPORT_ID" />
+            <one-to-many class="com.digdes.pktb.persistence.model.impl.ReportRightsImpl"/>
+        </set>
+
+    </class>
+
+</hibernate-mapping>

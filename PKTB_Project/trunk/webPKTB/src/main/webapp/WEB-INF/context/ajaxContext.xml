@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+    <bean id="jsonView" class="com.digdes.pktb.controllers.ajaxSupport.JsonView">
+
+    </bean>
+
+    <bean id="exceptionView" class="com.digdes.pktb.controllers.ajaxSupport.ExceptionView">
+
+    </bean>
+     <bean id="htmlView" class="com.digdes.pktb.controllers.ajaxSupport.HTMLView">
+
+    </bean>
+     <bean id="fileUploadView" class="com.digdes.pktb.controllers.ajaxSupport.FileUploadView">
+
+    </bean>
+    <bean id="reportView" class="org.springframework.web.servlet.view.JstlView">
+        <property name="url" value="/jsp/report.jsp"/>
+    </bean>
+    <bean id="bodyView" class="org.springframework.web.servlet.view.JstlView">
+        <property name="url" value="/jsp/body.jsp"/>
+    </bean>
+
+    <bean id="filterView" class="org.springframework.web.servlet.view.JstlView">
+        <property name="url" value="/jsp/filter.jsp"/>
+    </bean>
+
+    <bean id="rightsFilter" class="org.springframework.web.servlet.view.JstlView">
+        <property name="url" value="/jsp/rightsFilter.jsp"/>
+    </bean>
+
+
+    <!--Support AjaxSpring (DON'T CHANGE)-->
+    <bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+        <property name="alwaysUseFullPath" value="true"/>
+    </bean>
+
+
+    <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="com.digdes.univer.persistence.exceptions.authentication.NotAuthenticationUserException">
+                    exceptionView
+                </prop>
+                <prop key="com.digdes.univer.persistence.exceptions.authentication.IncorrectlyPasswordException">
+                    exceptionView
+                </prop>
+                <prop key="com.digdes.univer.persistence.exceptions.authentication.UserNotFoundException">
+                    exceptionView
+                </prop>
+                <prop key="com.digdes.univer.persistence.exceptions.authentication.AccessDeniedException">
+                    exceptionView
+                </prop>
+                <prop key="com.digdes.univer.persistence.exceptions.authentication.CanNotBeNullException">
+                    exceptionView
+                </prop>
+                <prop key="com.digdes.univer.persistence.exceptions.CustomException">
+                    exceptionView
+                </prop>
+                <prop key="java.lang.Exception">exceptionView</prop>
+            </props>
+        </property>
+    </bean>-->
+
+
+    <!-- Supprot Ajax (DON'T CHANGE) -->
+    <bean id="ajaxViewResolver" class="com.digdes.pktb.controllers.ajaxSupport.AjaxViewResolver">
+        <property name="ajaxView" ref="jsonView"/>
+    </bean>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    
+
+</beans>

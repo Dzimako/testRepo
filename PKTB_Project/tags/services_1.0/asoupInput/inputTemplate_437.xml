@@ -1,0 +1,137 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Дорога приписки:</label>
+            <type>SELECT</type>
+            <key>dor</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_dor_cod_2</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Депо приписки:</label>
+            <type>SELECT</type>
+            <key>depo</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_pasp_depo_2</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Табельный номер</label>
+            <type>INPUT</type>
+            <key>tabNom</key>
+        </filter>
+        <filter>
+            <label>Должность</label>
+            <type>SELECT</type>
+            <key>doljnost</key>
+            <filterValues>
+                <filterValue>
+                    <label>Все должности</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Машинист</label>
+                    <paramValue>11</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Помощник</label>
+                    <paramValue>21</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Маш-инстр.</label>
+                    <paramValue>41</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Другие</label>
+                    <paramValue>31</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Отвлечение/Турн. поездка</label>
+            <type>SELECT</type>
+            <key>otvlechenie</key>
+            <filterValues>
+                <filterValue>
+                    <label>Все отвлечения</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Гособязанность</label>
+                    <paramValue>51</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Командировка</label>
+                    <paramValue>53</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Отпуск</label>
+                    <paramValue>55</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Адм. отпуск</label>
+                    <paramValue>56</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Адм. отпуск</label>
+                    <paramValue>56</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Болезнь</label>
+                    <paramValue>57</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Уч. отпуск</label>
+                    <paramValue>58</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Курсы ПК</label>
+                    <paramValue>59</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Медкомиссия</label>
+                    <paramValue>60</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Турная поездка</label>
+                    <paramValue>61</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Начало периода</label>
+            <type>DATEPICKER</type>
+            <showTime>true</showTime>
+            <dateParamKeys>
+                <yearKey>godBegin</yearKey>
+                <monthKey>mounthBegin</monthKey>
+                <dayKey>dateBegin</dayKey>
+                <hourKey>hourBegin</hourKey>
+                <minuteKey>minBegin</minuteKey>
+            </dateParamKeys>
+        </filter>
+        <filter>
+            <label>Конец периода</label>
+            <type>DATEPICKER</type>
+            <showTime>true</showTime>
+            <dateParamKeys>
+                <yearKey>godEnd</yearKey>
+                <monthKey>mounthEnd</monthKey>
+                <dayKey>dateEnd</dayKey>
+                <hourKey>hourEnd</hourKey>
+                <minuteKey>minEnd</minuteKey>
+            </dateParamKeys>
+        </filter>
+    </filters>
+</reportInputTemplate>

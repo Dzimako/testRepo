@@ -1,0 +1,386 @@
+<reportInputTemplate>
+    <title>Входной отчет</title>
+
+
+    <filters>
+        <filter>
+            <type>SELECT</type>
+            <label>Код ОКПО:</label>
+            <key>kodOKPO</key>
+            <paramOrderNum>1</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>0</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>149721 "Ярославский техуглерод" ОАО (ст.Новоярославская)</label>
+                    <paramValue>149721</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>149765 "Славнефть-Ярославнефтеоргсинтез" ОАО</label>
+                    <paramValue>149765</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>186217 "Северсталь" ОАО (ст.Череповец-2)</label>
+                    <paramValue>186217</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>260528 "СФАТ" ЗАО</label>
+                    <paramValue>260528</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>1133298 "Русский Мир" ЗАО компания</label>
+                    <paramValue>1133298</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>7518941 "НПК "Уралвагонзавод" ОАО</label>
+                    <paramValue>7518941</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>13582446 "АНКОР" ООО</label>
+                    <paramValue>13582446</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14121173 "ВЭБ-лизинг" ОАО</label>
+                    <paramValue>14121173</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14248347 Рентас-М ООО</label>
+                    <paramValue>14248347</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14267669 "Газпромбанк Лизинг" ЗАО</label>
+                    <paramValue>14267669</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>14869894 "Газпромбанк Лизинг" ЗАО</label>
+                    <paramValue>14869894</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>18270912 Транспортно-Экспедиционная к-я Евротранс ООО</label>
+                    <paramValue>18270912</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>18389174 "АЛЬФА-ЛИЗИНГ" ООО</label>
+                    <paramValue>18389174</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>23954676 Орентранс ЗАО</label>
+                    <paramValue>23954676</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>29052532 "ЛУКОЙЛ-Транс" ООО</label>
+                    <paramValue>29052532</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>29890641 "Сбербанк Лизинг" ЗАО</label>
+                    <paramValue>29890641</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>32112373 "Корс" ЗАО</label>
+                    <paramValue>32112373</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>33698955 "3Р" ЗАО</label>
+                    <paramValue>33698955</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>34392980 "ГЭС Астрахань" ООО</label>
+                    <paramValue>34392980</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>41091836 "Трансфат" ЗАО (ст.Стенькино-2)</label>
+                    <paramValue>41091836</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>41985114 "ВНЕШТОППРОМ компания" ЗАО</label>
+                    <paramValue>41985114</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>42917344 "РТК-Лизинг" ОАО</label>
+                    <paramValue>42917344</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>43034676 "ИКС" ЗАО</label>
+                    <paramValue>43034676</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>45196992 "Магистральнефтеоргсинтез" ЗАО</label>
+                    <paramValue>45196992</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>46477138 "Магистральнефтеоргсинтез" ЗАО</label>
+                    <paramValue>46477138</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>48478142 "Трансгарант" ООО</label>
+                    <paramValue>48478142</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>48920804 "БАЛТОНЭКСИМ Лизинг" ООО</label>
+                    <paramValue>48920804</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>49255154 "Сибирская лизинговая компания" ООО</label>
+                    <paramValue>49255154</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>51089556 "Росдорлизинг" Российская дор,лизинг,компания" ОАО</label>
+                    <paramValue>51089556</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>52142548 "БалтТрансСервис" ООО</label>
+                    <paramValue>52142548</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>52436861 "Райффайзен-Лизинг" ООО</label>
+                    <paramValue>52436861</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>52800862 "ЛК"Инпромлизинг" ООО</label>
+                    <paramValue>52800862</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>54816637 "СПойл-Транс" ООО</label>
+                    <paramValue>54816637</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>55196728 "Севтехнотранс" ООО</label>
+                    <paramValue>55196728</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>55197886 "Лизинговая компания УРАЛСИБ" ООО</label>
+                    <paramValue>55197886</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>56306709 "Евросиб-СПб-ТС" ЗАО</label>
+                    <paramValue>56306709</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>56738657 "НТК" ООО</label>
+                    <paramValue>56738657</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>57067225 "Газтехлизинг" ООО</label>
+                    <paramValue>57067225</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>57756597 "Локотранс" ЗАО</label>
+                    <paramValue>57756597</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>57992197 "ГТЛК" ОАО</label>
+                    <paramValue>57992197</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58233878 "Брансвик Рейл Сервис" ООО</label>
+                    <paramValue>58233878</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58693261 ВТБ-ЛИЗИНГ ОАО</label>
+                    <paramValue>58693261</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58718274 Газпромтранс Уренгойский ф-л ООО</label>
+                    <paramValue>58718274</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58848893 "ФосАгроТранс" ООО</label>
+                    <paramValue>58848893</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>58989688 "Рустэк-Магистраль" ООО</label>
+                    <paramValue>58989688</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>59398794 "ТрансМашЛизинг" ООО</label>
+                    <paramValue>59398794</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>59750713 "Ханса Лизинг Руссия"АО</label>
+                    <paramValue>59750713</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>59769434 "ЮниКредит Лизинг" ООО</label>
+                    <paramValue>59769434</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>59869940 "ВПТ" ООО</label>
+                    <paramValue>59869940</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>64548304 "Брансвик Вагон Лизинг" ООО</label>
+                    <paramValue>64548304</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>68047958 "ФинТрансГрупп" ООО</label>
+                    <paramValue>68047958</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>68398528 "ВГК" ОАО</label>
+                    <paramValue>68398528</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>68923874 "ВНЛ" ООО</label>
+                    <paramValue>68923874</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>69947109 "Управление отгрузок" ЗАО</label>
+                    <paramValue>69947109</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>70104409 "НПК" ОАО</label>
+                    <paramValue>70104409</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>70266975 "Синтез Транс" ООО</label>
+                    <paramValue>70266975</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>73497971 "Ханса-Лизинг" ООО</label>
+                    <paramValue>73497971</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>74077099 "Голдлайн" ООО</label>
+                    <paramValue>74077099</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>74098813 "АГРОВАГОН" ООО</label>
+                    <paramValue>74098813</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>75870598 "Бизнес лизинг" ООО</label>
+                    <paramValue>75870598</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>76012313 "ЛокатЛизингРуссия" ЗАО</label>
+                    <paramValue>76012313</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>77462857 РусТрансКом ООО</label>
+                    <paramValue>77462857</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>77766586 "Невский Экспресс" ООО</label>
+                    <paramValue>77766586</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>78129508 "ПромТрансСервис" ООО</label>
+                    <paramValue>78129508</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>80805120 "ФинТрансЛизинг" ООО</label>
+                    <paramValue>80805120</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>82404922 "ПГК" ОАО</label>
+                    <paramValue>82404922</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>82406996 "ТРАНС-СЕРВИС" ООО</label>
+                    <paramValue>82406996</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>82563129 "ИнвестКонсалтинг" ООО</label>
+                    <paramValue>82563129</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>84697207 "МНОС" ООО</label>
+                    <paramValue>84697207</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>89499535 "Русагротранс" ЗАО</label>
+                    <paramValue>89499535</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>93287520 СМТ "Стройиндустрия"-филиал ОАО "РЖДстрой"</label>
+                    <paramValue>93287520</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>93294342 "ТрансЛес" ООО</label>
+                    <paramValue>93294342</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>94421386 "ТРАНСКОНТЕЙНЕР" ОАО</label>
+                    <paramValue>94421386</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>96024519 "ЕТК" ООО</label>
+                    <paramValue>96024519</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>96442441 "Капиталтранс" ООО</label>
+                    <paramValue>96442441</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>99976605 "ЛК "Вагонпарк" ООО</label>
+                    <paramValue>99976605</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P1</key>
+            <paramOrderNum>2</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>5</paramDataType>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P2</key>
+            <paramOrderNum>3</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>4</paramDataType>
+        </filter>
+    </filters>
+
+    <tables>
+        <table>
+            <columns>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>1</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>2</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>3</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>4</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+            </columns>
+        </table>
+    </tables>
+</reportInputTemplate>

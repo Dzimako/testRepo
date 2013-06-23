@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.0.xsd"
+       xmlns:jee="http://www.springframework.org/schema/jee">
+
+    <!-- Puma Service Manage Users -->
+    <jee:jndi-lookup id="pumaHome" jndi-name="portal:service/usermanagement/Puma"
+                     expected-type="com.ibm.portal.um.PumaHome" lookup-on-startup="false"/>
+    <!-- Identification Service for ObjectID -->
+    <!--<jee:jndi-lookup id="identificationService" jndi-name="portal:service/Identification"-->
+                     <!--expected-type="com.ibm.portal.identification.Identification"/>-->
+
+
+</beans>

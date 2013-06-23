@@ -1,0 +1,65 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Дата запроса</label>
+            <type>DATEPICKER</type>
+            <showTime>true</showTime>
+            <dateParamKeys>
+                <yearKey>N0</yearKey>
+                <monthKey>N1</monthKey>
+                <dayKey>N2</dayKey>
+                <hourKey>N3</hourKey>
+                <minuteKey>N4</minuteKey>
+            </dateParamKeys>
+        </filter>
+        <filter>
+            <label>Вид тяги</label>
+            <type>SELECT</type>
+            <key>N10</key>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Электровозы</label>
+                    <paramValue>001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Тепловозы</label>
+                    <paramValue>002</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Выдача в единицах</label>
+            <type>SELECT</type>
+            <key>N11</key>
+            <filterValues>
+                <filterValue>
+                    <label>Тяговые единицы</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Единицы конструктивного исполнения</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Признак разложения</label>
+            <type>SELECT</type>
+            <key>N12</key>
+            <filterValues>
+                <filterValue>
+                    <label>По депо приписки</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>По депо приписки и сериям</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+    </filters>
+</reportInputTemplate>

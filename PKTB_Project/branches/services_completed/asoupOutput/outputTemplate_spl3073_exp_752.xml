@@ -1,0 +1,205 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+
+    <parameters>
+        <parameter>
+            <key>rwCodeName</key>
+            <label>Дорога:</label>
+        </parameter>
+        <parameter>
+            <key>period</key>
+            <label>Период запроса:</label>
+        </parameter>
+        <parameter>
+            <key>razlozhenie</key>
+            <label>Разложение:</label>
+        </parameter>
+        <parameter>
+            <key>operation</key>
+            <label>Объект операции:</label>
+        </parameter>
+        <parameter>
+            <key>oper</key>
+            <label>Операция:</label>
+        </parameter>
+        <parameter>
+            <key>vidT</key>
+            <label>Вид тяги:</label>
+        </parameter>
+        <parameter>
+            <key>rodS</key>
+            <label>Род службы серий:</label>
+        </parameter>
+    </parameters>
+
+    <tables>
+        <table>
+            <headers>
+                <rows>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>4</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Серия</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>4</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Состав</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>14</colspan>
+                                <headerText>ЭКСПЛУАТИРУЕМЫЙ ПАРК (ЭП), В ТОМ ЧИСЛЕ РАБОЧИЙ ПАРК (РП) С РАЗБИВКОЙ ПО
+                                    ВИДАМ ДВИЖЕНИЯ И РАБОТЫ (часы, минуты)
+                                </headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>3</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Всего ЭП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>3</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Из "Всего ЭП" РП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Грузовое движение</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Пассажирское движение</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Хозяйственное движение</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Спецманевры и прочая маневровая работа</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>3</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Прочие виды работы</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Всего</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>В т.ч. перед. и вывозное</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>2</colspan>
+                                <headerText>Всего</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>2</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Из "Всего" проч. ман. раб.</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                    <row>
+                        <headerCells>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>ЭП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>В т.ч. РП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>ЭП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>В т.ч. РП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>ЭП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>В т.ч. РП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>ЭП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>В т.ч. РП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>ЭП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>В т.ч. РП</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+</reportOutputTemplate>

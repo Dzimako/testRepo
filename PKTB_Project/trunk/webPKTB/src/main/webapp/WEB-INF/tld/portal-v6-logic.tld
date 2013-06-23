@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+                            http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+    <description>
+		This tag library contains logical tags for WebSphere Portal Server
+		
+		All tags in the library are designed
+		to be used in themes and skins only. There is NO portlet support for these tags.
+		
+		@ibm-taglibrary @since 6.0
+	</description>
+	<tlib-version>6.0</tlib-version>
+    <short-name>portal-logic</short-name>
+    <uri>http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/portal-logic</uri>
+
+    <tag>
+        <description>
+			Used to access the portal-wide find URL that is specified in Portal Settings.
+
+			@ibm-api @since 5.1
+		</description>
+		<name>find</name>
+        <tag-class>com.ibm.wps.engine.tags.FindTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.FindTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+    </tag>
+
+    <tag>
+        <description>
+			Through the attributes of this tag, several conditions can be checked.
+			If the condition is true, the body of the tag is written to the page.
+			
+			@ibm-api @since 5.1
+		</description>
+		<name>if</name>
+        <tag-class>com.ibm.wps.engine.tags.IfTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				Indicates whether the user is logged in.
+			</description>
+            <name>loggedIn</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Indicates whether showTools is enabled or not
+			</description>
+            <name>showTools</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Indicates whether the client supports the specified capability
+			</description>
+            <name>capableOf</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Checks whether a node is in the selection path or not
+			</description>
+            <name>nodeInSelectionPath</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Indicates if a navigation is available.
+			</description>
+            <name>navigationAvailable</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Checks if a previous set of pages are available to be access
+				from the navigation
+			</description>
+            <name>pageAvailablePrevious</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Checks if a subsequent set of pages are available to be
+				accessed from the navigation.
+			</description>
+            <name>pageAvailableNext</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Checks if a problem is occured or not
+			</description>
+            <name>problem</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Checks the value of the current screen name. Use a comma to separate
+				multiple screen names. In the following example, the content of the
+				tag is displayed only when the selected screen is Home, LoggedIn,
+				or LoggedOut.
+			</description>
+            <name>screen</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Indicates whether the current portlet is maximzed or not
+			</description>
+            <name>portletMaximized</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Indicates whether the portal is in soloMode or not
+			</description>
+            <name>portletSolo</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Checks if the portlet is in the specified mode. This tag is
+				most useful in a customized skin.
+				Allowed values are edit,view,configure,help
+			</description>
+            <name>portletMode</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Checks if the portlet is in the specified window state. This tag is
+				most useful in a customized skin.
+				Allowed values are normal,maximized,minimized
+			</description>
+            <name>portletState</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Indicates whether the locale of the client is that of the
+				specified locale (or subtype of the specified locale). You
+				can specify a comma-separated list, such as en, en_US .
+			</description>
+            <name>locale</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>resumeLevel</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>resumeOption</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Indicates if the page is rendered in a seperate window (popup(iFrame)
+			</description>
+			<description>
+				This parameter specifies if the referenced resource will
+				be shown in a new window (popup or iFrame).
+			</description>
+            <name>newWindow</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Indicates whether the page and its derivation parents are active.
+			</description>
+            <name>pageCompletelyActive</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				checks whether the active page is bookmarkable
+			</description>
+            <name>pageBookmarkable</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				checks whether the active user is allowed
+				to delete the current selected page and if
+				the page is deleteable.
+			</description>
+            <name>pageDeletable</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Checks whether the specified page is the current page.
+			</description>
+            <name>selection</name>
+            <required>false</required>
+        </attribute>
+		<!-- This is used for deprecated attributes -->
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+	<tag>
+        <description>
+			Gives access to the current page attributes
+			
+			@ibm-api @since 6.0
+		</description>
+        <name>pageMetaData</name>
+        <tag-class>com.ibm.wps.engine.tags.PageMetaDataTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.PageMetaDataTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				Exposes the scripting variable with the given name,
+				which implements com.ibm.portal.MetaData
+			</description>
+            <name>varname</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+			<description>
+				specifies the type of the. Allowed values are
+				* direct - returns the MetaData of the ContentNode only
+				* aggregated - returns the aggregated MetaData object
+			</description>
+            <name>type</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+		<description>@ibm-api @since 5.1</description>
+        <name>unless</name>
+        <tag-class>com.ibm.wps.engine.tags.UnlessTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>loggedIn</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>capableOf</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>navigationAvailable</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>nodeInSelectionPath</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>pageAvailablePrevious</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>pageAvailableNext</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>problem</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>screen</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>portletMaximized</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>portletSolo</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>portletMode</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>portletState</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>locale</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				checks if the current page gets rendered in a new
+				window (popup or iFrame).
+			</description>
+            <name>newWindow</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+		<description>@ibm-api @since 5.1</description>
+        <name>urlFind</name>
+        <tag-class>com.ibm.wps.engine.tags.UrlFindTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>root</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>path</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>file</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>id</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+		<description>
+			Search for resource in the current skin and generates a url to it
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>urlFindInSkin</name>
+        <tag-class>com.ibm.wps.engine.tags.UrlFindInSkinTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.UrlFindInSkinTag$TEI</tei-class>
+        <body-content>empty</body-content>
+        <attribute>
+			<description>specifies the file to be looked up</description>
+            <name>file</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				specifies a certain skin if the resource is not located in
+				the active skin
+			</description>
+            <name>skin</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				specifies the name of the scripting variable where the
+				url is stored
+			</description>
+            <name>id</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+		<description>
+			Search for resource in the current theme and generates a url to it
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>urlFindInTheme</name>
+        <tag-class>com.ibm.wps.engine.tags.UrlFindInThemeTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.UrlFindInThemeTag$TEI</tei-class>
+        <body-content>empty</body-content>
+        <attribute>
+			<description>specifies the file to be looked up</description>
+            <name>file</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				specifies a certain theme if the resource is not located in
+				the active theme
+			</description>
+            <name>theme</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				specifies the name of the scripting variable where the
+				url is stored
+			</description>
+            <name>id</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+
+</taglib>

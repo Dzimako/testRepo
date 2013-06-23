@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+                            http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"  
+        version="2.0">
+    <description>
+		This tag library contains tags for the dynamic UI
+		
+		All tags in the library are designed 
+		to be used in themes and skins only. There is NO portlet support for these tags.
+		
+		@ibm-taglibrary @since 6.0
+	</description>
+	<tlib-version>6.0</tlib-version>
+    <short-name>portal-dynamic</short-name>
+    <uri>http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/portal-dynamicui</uri>
+
+    <tag>
+        <description>
+			Provides a URL that closes a dynamic page. 
+			
+			@ibm-api @since 5.1
+		</description>
+		<name>closePage</name>
+        <tag-class>com.ibm.wps.dynamicui.tags.CloseTransientPageTag</tag-class>
+        <tei-class>com.ibm.wps.dynamicui.tags.CloseTransientPageTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+        	<description>Optional attribute to specify the (dynamic) node to be closed.</description>        
+            <name>node</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ibm.portal.Identifiable</type>
+        </attribute>                
+    </tag>
+
+    <tag>
+        <description>
+			Provides a URL that closes a dynamic portlet. This tag should be used 
+			only within a skin JSP. The content of this tag is rendered only if the 
+			portlet is dynamic
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>closePortlet</name>
+        <tag-class>com.ibm.wps.dynamicui.tags.CloseTransientPortletTag</tag-class>
+        <tei-class>com.ibm.wps.dynamicui.tags.CloseTransientPortletTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+    </tag>
+
+    <tag>
+        <description>
+			Through the use of scripting variables, notifies the user 
+			whenever a new, unclaimed task has been assigned.
+			
+			@ibm-api @since 5.1
+		</description>
+		<name>pendingTasks</name>
+        <tag-class>com.ibm.wps.pendingtasks.PendingTasksTag</tag-class>
+        <tei-class>com.ibm.wps.pendingtasks.PendingTasksTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+    </tag>
+
+
+</taglib>

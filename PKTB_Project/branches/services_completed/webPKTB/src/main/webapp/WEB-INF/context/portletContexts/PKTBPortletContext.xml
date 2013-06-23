@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="pktb_project" class="com.digdes.pktb.controllers.portletControllers.PKTBPortletController">
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <!--<bean id="createCompetitionController"
+          class="com.digdes.pktb.controllers.portletControllers.CreateCompetitionController"/>
+
+    <bean id="createRequisitionController"
+          class="com.digdes.pktb.controllers.portletControllers.CreateRequisitionController">
+        <property name="userService" ref="userService"/>
+        <property name="requisitionService" ref="requisitionService"/>
+        <property name="competitionService" ref="competitionService"/>
+    </bean>
+
+     <bean id="requisitionsPageController"
+          class="com.digdes.pktb.controllers.portletControllers.RequisitionsPageController">
+        <property name="userService" ref="userService"/>
+        <property name="requisitionService" ref="requisitionService"/>
+    </bean>
+
+
+    <bean id="parameterMappingInterceptor"
+          class="org.springframework.web.portlet.handler.ParameterMappingInterceptor"/>
+
+    <bean id="portletModeParameterHandlerMapping"
+          class="org.springframework.web.portlet.handler.PortletModeParameterHandlerMapping">
+        <property name="order" value="1"/>
+        <property name="interceptors">
+            <list>
+                <ref bean="parameterMappingInterceptor"/>
+            </list>
+        </property>
+        <property name="portletModeParameterMap">
+            <map>
+                <entry key="view">
+                    <map>
+                        <entry key="mainPage">
+                            <ref bean="hrCompetition"/>
+                        </entry>
+                        <entry key="createCompetition">
+                            <ref bean="createCompetitionController"/>
+                        </entry>
+                        <entry key="createRequisition">
+                            <ref bean="createRequisitionController"/>
+                        </entry>
+                        <entry key="requisition">
+                            <ref bean="requisitionsPageController"/>
+                        </entry>
+                    </map>
+                </entry>
+            </map>
+        </property>
+    </bean>-->
+
+
+    <bean id="portletModeHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeHandlerMapping">
+        <property name="order" value="2"/>
+        <property name="portletModeMap">
+            <map>
+                <entry key="view">
+                    <ref local="pktb_project"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+</beans>

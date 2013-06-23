@@ -1,0 +1,113 @@
+<reportOutputTemplate>
+	<title>Выходной отчет</title>
+
+	<parameters>
+		<parameter>
+			<key>rwCodeName</key>
+			<label>Дорога: </label>
+		</parameter>
+		<parameter>
+			<key>period</key>
+			<label>Период запроса: </label>
+		</parameter>
+		<parameter>
+			<key>razlozhenie</key>
+			<label>Разложение: </label>
+		</parameter>
+		<parameter>
+			<key>operation</key>
+			<label>Объект операции: </label>
+		</parameter>
+		<parameter>
+			<key>oper</key>
+			<label>Операция: </label>
+		</parameter>
+		<parameter>
+			<key>vidT</key>
+			<label>Вид тяги: </label>
+		</parameter>
+		<parameter>
+			<key>rodS</key>
+			<label>Род службы серий: </label>
+		</parameter>
+	</parameters>
+
+    <tables>
+        <table>
+			<headers>
+                <rows>
+                    <row>
+                        <headerCells>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>№ п/п</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Серия локомотива</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Номер</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                            <headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Дата и время операции</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Объект операции</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Состояние локомотива</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Депо приписки локомотивной бригады</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Табельный номер машиниста</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Дата и время явки локомотивной бригады</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Операция с бригадой</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+							<headerCell>
+                                <rowspan>1</rowspan>
+                                <colspan>1</colspan>
+                                <headerText>Автоответ абонента</headerText>
+                                <headerKey></headerKey>
+                            </headerCell>
+                        </headerCells>
+                    </row>
+                </rows>
+            </headers>
+        </table>
+    </tables>
+</reportOutputTemplate>

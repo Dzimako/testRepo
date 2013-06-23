@@ -1,0 +1,10 @@
+/*.pktb .tree-container {
+    zoom: 1;
+    width: 100%;
+    *width: expression(parentNode.offsetWidth - 4 + 'px');
+}*/
+
+.responseReportName {
+  font-weight: bold;
+  text-align: center;
+}

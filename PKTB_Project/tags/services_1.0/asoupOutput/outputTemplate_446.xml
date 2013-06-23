@@ -1,0 +1,14 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+    <parameters>
+        <parameter>
+            <key>timeS</key>
+            <label>Дата</label>
+        </parameter>
+
+        <parameter>
+            <key>error</key>
+            <label>Ошибка</label>
+        </parameter>
+    </parameters>
+</reportOutputTemplate>

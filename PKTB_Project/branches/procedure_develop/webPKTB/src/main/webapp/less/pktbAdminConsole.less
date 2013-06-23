@@ -1,0 +1,193 @@
+@padding: .4em;
+@margin: .4em;
+@jquery: #A6C9E2;
+@jqueryRed: #D40513;//#A6C9E2;
+@theme-color-gray: #313131;
+@theme-color-red: #D40513;
+@theme-color-blue: #5B7794;
+@theme-color-lightgray: #AAA;
+@theme-font-size: 12px;
+@font-family: Tahoma, sans-serif;
+
+@-moz-document url-prefix() {
+    .pktb .addUserDisplayNameInputWrapper {
+        padding: 0 !important;
+    }
+    .pktb .addUserDisplayNameInput {
+        font-size: 14px !important;
+    }
+}
+
+.pktb {
+
+    .railwayListGroupListRadioContainer {
+        margin: @padding 0 @padding * 2 0;
+    }
+
+    .listContainer, .rightsReportTreeContainer {
+        height: 400px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border: 1px solid #d3d3d3;
+    }
+
+    .railwayList, .groupList, .userList, .avlilibleList, .availibleList {
+        list-style-type: none;
+        padding: 1px;
+        margin: 0;
+        font-family: @font-family;
+
+
+        .railwayLabel, .groupLabel, .userLabel, .reportOrFolderLabel {
+            line-height: 16px;
+        }
+
+        .railwayEditor, .groupEditor {
+            display: none;
+            margin: -.4em;
+            margin: ~"-3px -3px -2px\9";
+            *margin: -3px;
+            padding: 1px 0;
+            padding: 0\9;
+
+            input {
+                border: 1px solid #d3d3d3;
+                padding: 2px;
+                font-family: @font-family;
+                margin: 2px;
+                margin-left: 2px;
+                margin-right: 0;
+                margin-top: ~"0\9";
+                margin-bottom: ~"0\9";
+                //height: 16px;
+            }
+        }
+        .railway, .group, .user, .reportOrFolder {
+            zoom: 1;
+            padding: @padding;
+            margin: 0 0 1px 0;
+            cursor: pointer;
+
+            .railwayName, .railwayCode {
+                line-height: 16px;
+                display: inline-block;
+                *display: inline;
+                zoom: 1;
+            }
+            .railwayCode {
+                padding-right: 4px;
+                width: 2em;
+                text-align: left;
+
+            }
+            .railwayName {
+                border-left: 1px dotted lightGray;
+                padding-left: 4px;
+            }
+
+            .editRailway, .removeRailway, .confirmEditRailway, .cancelEditRailway, .editGroup, .removeGroup, .confirmEditGroup, .cancelEditGroup, .detachUser, .userRights, .groupRights {
+                float: right;
+                border-left: 1px dotted lightGray;
+                padding-left: .2em;
+                display: none;
+            }
+            &.hoverRailway, &.hoverGroup, &.selectedGroup, &.hoverUser, &.selectedRailway {
+                z-index: 1000;
+                .editRailway, .removeRailway, .editGroup, .removeGroup, .detachUser, .userRights, .groupRights  { display: block; }
+
+            }
+            .takeAwayRights {
+                float: right;
+                padding-left: .2em;
+                opacity: 0;
+            }
+            &.hoverReportOrFolder .takeAwayRights {
+                opacity: 1;
+            }
+
+            &.editing {
+                .railwayEditor, .groupEditor { display: block; }
+                .confirmEditRailway, .cancelEditRailway, .confirmEditGroup, .cancelEditGroup, { display: block; }
+                .railwayLabel, .groupLabel { display: none; }
+                .editRailway, .removeRailway, .editGroup, .removeGroup, .groupRights { display: none; }
+
+            }
+        }
+    }
+
+    .editRailwayForm, .editGroupForm {
+        display: none;
+        height: 290px;
+        padding: 5px @padding;
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+    }
+
+    .editRailwayControls, .editGroupControls {
+        display: none;
+    }
+
+    .addRailwayButton, .addGroupButton {
+        margin: 0;
+        margin-top: 2px;
+        *margin-top: 3px;
+    }
+
+    .addUserDisplayNameInputWrapper {
+        overflow: hidden;
+        margin-top: 0;
+        padding: 1px 0;
+        padding: 0\9;
+        *padding: 0;
+    }
+
+    .addUserDisplayNameInput {
+        width: 100%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: @padding 4px;
+        font-size: 12px;
+        line-height: 1.4em;
+        height:28px\9;
+        *height: 20px;
+        margin: 0;
+        border-color: #d3d3d3;
+        margin-top: 0;
+        *width: ~"expression(parentNode.parentNode.clientWidth - 12 + 'px')";
+
+    }
+
+    .addUserConfirmButton {
+        float: right;
+        margin-left: 3px;
+        margin-top: 0;
+        *margin-top: 1px;
+    }
+
+    .addUserForm {
+        padding-top: 2px;
+    }
+
+    .rightsReportTreeContainer {
+        .jstree {
+            overflow: visible;
+        }
+    }
+    .reportOrFolder {
+        line-height: 16px;
+        .reportIcon, .folderIcon {
+        //width: 16px;
+        //height: 16px;
+            float: left;
+        }
+        .reportIcon {
+
+        }
+    }
+
+
+
+}

@@ -1,0 +1,3954 @@
+<reportInputTemplate>
+    <title>Входной отчет</title>
+
+    <request>
+        <databaseOptions>
+            <dataSource>jdbc/pktb2</dataSource>
+            <procedureName>SPP3265</procedureName>
+        </databaseOptions>
+    </request>
+
+    <filters>
+        <filter>
+            <type>SELECT</type>
+            <label>Дорога расчёта:</label>
+            <key>dor</key>
+            <paramOrderNum>1</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>ОКТЯБРЬСКАЯ</label>
+                    <paramValue>01</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАЛИНИНГРАДСКАЯ</label>
+                    <paramValue>10</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОСКОВСКАЯ</label>
+                    <paramValue>17</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГОРЬКОВСКАЯ</label>
+                    <paramValue>24</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕВЕРНАЯ</label>
+                    <paramValue>28</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕВЕРО-КАВКАЗСКАЯ</label>
+                    <paramValue>51</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЮГО-ВОСТОЧНАЯ</label>
+                    <paramValue>58</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПРИВОЛЖСКАЯ</label>
+                    <paramValue>61</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КУЙБЫШЕВСКАЯ</label>
+                    <paramValue>63</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СВЕРДЛОВСКАЯ</label>
+                    <paramValue>76</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЮЖНО-УРАЛЬСКАЛЬСКАЯ</label>
+                    <paramValue>80</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЗАПАДНО-СИБИРСКАЯ</label>
+                    <paramValue>83</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КРАСНОЯРСКАЯ</label>
+                    <paramValue>88</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОАО АК ЖД ЯКУТИИ</label>
+                    <paramValue>91</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОСТОЧНО-СИБИРСКАЯ</label>
+                    <paramValue>92</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЗАБАЙКАЛЬСКАЯ</label>
+                    <paramValue>94</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДАЛЬНЕВОСТОЧНАЯ</label>
+                    <paramValue>96</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <!--<filter>-->
+        <!--<type>INPUT</type>-->
+        <!--<label>Код станции:</label>-->
+        <!--<key/>-->
+        <!--<paramOrderNum>2</paramOrderNum>-->
+        <!--<paramType>in</paramType>-->
+        <!--<paramDataType>12</paramDataType>-->
+        <!--</filter>-->
+        <filter>
+            <type>SELECT</type>
+            <label></label>
+            <key>kodStanList</key>
+            <paramOrderNum>2</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>4</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>АБРОСИМОВО (РЗД) (306813)</label>
+                    <paramValue>306813</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АЙЮВА (286817)</label>
+                    <paramValue>286817</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АЛАМБАШ (301152)</label>
+                    <paramValue>301152</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АМШОР (РЗД) (288946)</label>
+                    <paramValue>288946</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АНДОМА (305416)</label>
+                    <paramValue>305416</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АНТРОПОВО (306300)</label>
+                    <paramValue>306300</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АРАНЕЦ (ОБП) (288028)</label>
+                    <paramValue>288028</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АРМЕНКИ (315704)</label>
+                    <paramValue>315704</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АРХАНГЕЛЬСК (290403)</label>
+                    <paramValue>290403</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АРХАНГЕЛЬСК (ЭКСП.) (291209)</label>
+                    <paramValue>291209</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АРХАНГЕЛЬСК (перев.) (290102)</label>
+                    <paramValue>290102</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АРХАНГЕЛЬСК-ГОРОД (290507)</label>
+                    <paramValue>290507</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АРХАНГЕЛЬСК-ГОРОД (ПЕРЕВ.) (290704)</label>
+                    <paramValue>290704</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>АРХАНГЕЛЬСК-ГОРОД (ЭКСП.) (290600)</label>
+                    <paramValue>290600</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БАВЛЕНЫ (317201)</label>
+                    <paramValue>317201</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БАГРИМОВО (313323)</label>
+                    <paramValue>313323</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БАЙДУК (РЗД) (288627)</label>
+                    <paramValue>288627</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БАКАРИЦА (290305)</label>
+                    <paramValue>290305</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БАКАРИЦА (ПЕРЕВ.) (290808)</label>
+                    <paramValue>290808</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БАКАРИЦА (ЭКСП.) (291001)</label>
+                    <paramValue>291001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БАКЛАНКА (303105)</label>
+                    <paramValue>303105</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БАЛАКИРЕВО (313304)</label>
+                    <paramValue>313304</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЕКЛЕМИШЕВО (313821)</label>
+                    <paramValue>313821</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЕЛКИ (ОБП) (284915)</label>
+                    <paramValue>284915</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЕРЕЗОВЫЙ (299821)</label>
+                    <paramValue>299821</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЕРЕНДЕЕВО (313408)</label>
+                    <paramValue>313408</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛИНЫ (РЗД) (308217)</label>
+                    <paramValue>308217</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 1264 КМ (281917)</label>
+                    <paramValue>281917</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 1266 КМ (281921)</label>
+                    <paramValue>281921</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 1363 КМ (284436)</label>
+                    <paramValue>284436</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 1811 КМ (287843)</label>
+                    <paramValue>287843</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 1846 КМ (288051)</label>
+                    <paramValue>288051</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 1847 КМ (288047)</label>
+                    <paramValue>288047</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 1854 КМ (288174)</label>
+                    <paramValue>288174</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 1856 КМ (288165)</label>
+                    <paramValue>288165</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 1974 КМ (288511)</label>
+                    <paramValue>288511</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 359 КМ (299925)</label>
+                    <paramValue>299925</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БЛОКПОСТ 359В КМ (299938)</label>
+                    <paramValue>299938</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БОГЧИНА (РЗД) (306014)</label>
+                    <paramValue>306014</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БОЛОТОВО (305346)</label>
+                    <paramValue>305346</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БОЛЬШАКОВО (319315)</label>
+                    <paramValue>319315</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БОЛЬШАЯ КЯМА (295036)</label>
+                    <paramValue>295036</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БОЛЬШАЯ СЛОБОДКА (280115)</label>
+                    <paramValue>280115</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БОРЗОВО (300836)</label>
+                    <paramValue>300836</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БРАНТОВКА (307002)</label>
+                    <paramValue>307002</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БРОДНИ (РЗД) (304413)</label>
+                    <paramValue>304413</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БРУСЕНИЦА (295445)</label>
+                    <paramValue>295445</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БУГРЫ-ПОЛЯРНЫЕ (288846)</label>
+                    <paramValue>288846</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БУЙ (304606)</label>
+                    <paramValue>304606</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БУРАЧИХА (293365)</label>
+                    <paramValue>293365</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БУРДУКОВО (303247)</label>
+                    <paramValue>303247</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БУРМАКИНО (315403)</label>
+                    <paramValue>315403</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БУРУНДУЧИХА (307816)</label>
+                    <paramValue>307816</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>БУШУИХА (303444)</label>
+                    <paramValue>303444</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВАГА (297807)</label>
+                    <paramValue>297807</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВАЛДЕЕВО (296912)</label>
+                    <paramValue>296912</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВАНДЫШ (293308)</label>
+                    <paramValue>293308</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВАРАКИНСКИЙ (307407)</label>
+                    <paramValue>307407</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВАРЕГОВО (312662)</label>
+                    <paramValue>312662</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВАСЬКОВО (РЗД) (290162)</label>
+                    <paramValue>290162</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВАТСА (280030)</label>
+                    <paramValue>280030</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВАУЛОВО (312689)</label>
+                    <paramValue>312689</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕЖАЙКА (282801)</label>
+                    <paramValue>282801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕЗДИНО (282106)</label>
+                    <paramValue>282106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕКСА (РЗД) (304625)</label>
+                    <paramValue>304625</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕЛИКИЙ УСТЮГ (299709)</label>
+                    <paramValue>299709</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕЛИКООЗЕРСКИЙ (294921)</label>
+                    <paramValue>294921</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕЛЬСК (297703)</label>
+                    <paramValue>297703</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕНДИНГА (283700)</label>
+                    <paramValue>283700</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕРЕСОВО (296908)</label>
+                    <paramValue>296908</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕРХНЕИЖЕМСКАЯ (286003)</label>
+                    <paramValue>286003</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕРХНЯЯ СИНЕГА (297582)</label>
+                    <paramValue>297582</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕСЛЯНА (284826)</label>
+                    <paramValue>284826</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЕТЛАСЯН (285706)</label>
+                    <paramValue>285706</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВИЕР (БП) (286713)</label>
+                    <paramValue>286713</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВИКТОРЬЕЛЬ (РЗД) (289317)</label>
+                    <paramValue>289317</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВИЛЕДЬ (281103)</label>
+                    <paramValue>281103</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВИС (286802)</label>
+                    <paramValue>286802</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВИЧУГА (316603)</label>
+                    <paramValue>316603</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЖЕГА (301400)</label>
+                    <paramValue>301400</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЖСКАЯ (283005)</label>
+                    <paramValue>283005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЗРОЖДЕНИЕ (301010)</label>
+                    <paramValue>301010</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЙВОЖ (ОБП) (287025)</label>
+                    <paramValue>287025</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЛГА (311807)</label>
+                    <paramValue>311807</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЛГОРЕЧЕНСК (316209)</label>
+                    <paramValue>316209</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЛОГДА I (300107)</label>
+                    <paramValue>300107</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЛОГДА II (300304)</label>
+                    <paramValue>300304</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЛОГДА-ПРИСТАНЬ (300200)</label>
+                    <paramValue>300200</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЛОГДА-ПРИСТАНЬ (ПЕРЕВ.) (300408)</label>
+                    <paramValue>300408</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЛОНГА (300817)</label>
+                    <paramValue>300817</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЛОЦКОЙ (303228)</label>
+                    <paramValue>303228</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОНГУДА (296039)</label>
+                    <paramValue>296039</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОНЖУГА (298814)</label>
+                    <paramValue>298814</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОРКУТА (289503)</label>
+                    <paramValue>289503</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОРОЖИНО (РЗД) (318914)</label>
+                    <paramValue>318914</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОСТОШМА (РЗД) (305543)</label>
+                    <paramValue>305543</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОХТОГА (303603)</label>
+                    <paramValue>303603</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВОЧЕРОВО (РЗД) (307214)</label>
+                    <paramValue>307214</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЫЛЬЮ (РЗД) (288117)</label>
+                    <paramValue>288117</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ВЫЧЕГДА (280613)</label>
+                    <paramValue>280613</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГАВРИЛОВ ПОСАД (317606)</label>
+                    <paramValue>317606</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГАВРИЛОВ-ЯМ (314504)</label>
+                    <paramValue>314504</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГАЛИЧ (306006)</label>
+                    <paramValue>306006</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГАРЬ (299836)</label>
+                    <paramValue>299836</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГЛАЗАНИХА (296221)</label>
+                    <paramValue>296221</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГЛУБОКОЕ-НОВОЕ (291302)</label>
+                    <paramValue>291302</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГОРИНО (318806)</label>
+                    <paramValue>318806</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГОРКИНО (316507)</label>
+                    <paramValue>316507</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГОСТОВСКАЯ (308109)</label>
+                    <paramValue>308109</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГРИБАНИХА (296012)</label>
+                    <paramValue>296012</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ГРЯЗОВЕЦ (303209)</label>
+                    <paramValue>303209</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Галич (305990)</label>
+                    <paramValue>305990</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДАНИЛОВ (311101)</label>
+                    <paramValue>311101</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДАЧИ (300541)</label>
+                    <paramValue>300541</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДЕБОЛОВСКАЯ (314218)</label>
+                    <paramValue>314218</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДЕПО (310024)</label>
+                    <paramValue>310024</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДЖИНТУЙ (РЗД) (288136)</label>
+                    <paramValue>288136</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДИКАЯ (301720)</label>
+                    <paramValue>301720</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДОГАДЦЕВО (310912)</label>
+                    <paramValue>310912</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДОЗМЕР (РЗД) (287519)</label>
+                    <paramValue>287519</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДОМАННИК (ОБП) (285513)</label>
+                    <paramValue>285513</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДОМОВИЦЫ (РЗД) (316016)</label>
+                    <paramValue>316016</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДРОВИНКИ (305308)</label>
+                    <paramValue>305308</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ДУНАЙКА (315121)</label>
+                    <paramValue>315121</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Данилов Буй (311099)</label>
+                    <paramValue>311099</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Данилов-Вологда (311084)</label>
+                    <paramValue>311084</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЕДВА (283202)</label>
+                    <paramValue>283202</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЕЖОВО (РЗД) (315511)</label>
+                    <paramValue>315511</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЕЛЕНСКИЙ (306601)</label>
+                    <paramValue>306601</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЕЛЕЦКАЯ (289603)</label>
+                    <paramValue>289603</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЕМЦА (294809)</label>
+                    <paramValue>294809</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЕРГА (299075)</label>
+                    <paramValue>299075</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЕРИНЬ (282910)</label>
+                    <paramValue>282910</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЕРМОЛИНО (316302)</label>
+                    <paramValue>316302</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЕРЦЕВО (292907)</label>
+                    <paramValue>292907</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Ерцево (292894)</label>
+                    <paramValue>292894</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЖАРОВИХА (290901)</label>
+                    <paramValue>290901</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЖАРОВИХА (ПЕРЕВ.) (291800)</label>
+                    <paramValue>291800</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЖАРОК-ЯРОСЛАВСКИЙ (РЗД) (304127)</label>
+                    <paramValue>304127</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЖЕЛДЫБИНО (317023)</label>
+                    <paramValue>317023</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЗАВОЛЖСК (305806)</label>
+                    <paramValue>305806</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЗАИОНИКИЕВО (300516)</label>
+                    <paramValue>300516</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЗАЛУЖЬЕ (305435)</label>
+                    <paramValue>305435</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЗАОВРАЖЬЕ (299906)</label>
+                    <paramValue>299906</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЗАРУЧЕНЬЕ (ОБП) (293613)</label>
+                    <paramValue>293613</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЗЕБЛЯКИ (307708)</label>
+                    <paramValue>307708</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЗЕЛЕНОБОРСК (287218)</label>
+                    <paramValue>287218</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЗЕЛЕНЫЙ (ОБП) (293516)</label>
+                    <paramValue>293516</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИВАКША (294207)</label>
+                    <paramValue>294207</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИВАНОВО (318505)</label>
+                    <paramValue>318505</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИВАНОВО-СОРТИРОВОЧНОЕ (318609)</label>
+                    <paramValue>318609</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИВАШЕВО (305702)</label>
+                    <paramValue>305702</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИГНАТЬЕВСКАЯ (316317)</label>
+                    <paramValue>316317</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИЗЪЯЮ (РЗД) (288140)</label>
+                    <paramValue>288140</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИЛЕЗА (298301)</label>
+                    <paramValue>298301</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИЛЕС (РЗД) (295411)</label>
+                    <paramValue>295411</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИНТА I (288600)</label>
+                    <paramValue>288600</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИНТА II (288704)</label>
+                    <paramValue>288704</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИОССЕР (285000)</label>
+                    <paramValue>285000</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИРАЕЛЬ (287102)</label>
+                    <paramValue>287102</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИСАКОГОРКА (290009)</label>
+                    <paramValue>290009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ИТЛАРЬ (313910)</label>
+                    <paramValue>313910</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАДЖЕРОМ (287504)</label>
+                    <paramValue>287504</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАДНИКОВСКИЙ (301307)</label>
+                    <paramValue>301307</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАЗАРИНОВО (304377)</label>
+                    <paramValue>304377</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАЛЯКУРЬЯ (РЗД) (288422)</label>
+                    <paramValue>288422</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАМЕНКА (287720)</label>
+                    <paramValue>287720</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАМИНСКИЙ (316355)</label>
+                    <paramValue>316355</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАМСКИЙ (ОП) (300535)</label>
+                    <paramValue>300535</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАРИМОВО (РЗД) (304911)</label>
+                    <paramValue>304911</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАРПОГОРЫ (291500)</label>
+                    <paramValue>291500</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАРПОГОРЫ-ПАССАЖИРСКАЯ (291603)</label>
+                    <paramValue>291603</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАРСТЫ (БП) (285416)</label>
+                    <paramValue>285416</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАРЬЕР (300728)</label>
+                    <paramValue>300728</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КАТЫДВЕДЬ (ОБП) (286611)</label>
+                    <paramValue>286611</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КЕЛАРЕВА ГОРКА (297116)</label>
+                    <paramValue>297116</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КЕНИЦА (290935)</label>
+                    <paramValue>290935</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КЕРКИ (286709)</label>
+                    <paramValue>286709</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КИВЕР (281264)</label>
+                    <paramValue>281264</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КИЗЕМА (298706)</label>
+                    <paramValue>298706</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КИНЕШМА (316707)</label>
+                    <paramValue>316707</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КИНЕШМА II (317004)</label>
+                    <paramValue>317004</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КИНЕШМА II (ЭКСП.) (317409)</label>
+                    <paramValue>317409</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КИНЕШМА II (перев.) (316800)</label>
+                    <paramValue>316800</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КИПЕЛОВО (301805)</label>
+                    <paramValue>301805</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КИПРЕВО (316904)</label>
+                    <paramValue>316904</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КЛИНЦЕВО (РЗД) (312617)</label>
+                    <paramValue>312617</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КНЯЖПОГОСТ (284506)</label>
+                    <paramValue>284506</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОБОСТОВО (311900)</label>
+                    <paramValue>311900</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОДИНО (296503)</label>
+                    <paramValue>296503</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОЖВА I (287805)</label>
+                    <paramValue>287805</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОЖВА II (287913)</label>
+                    <paramValue>287913</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОЖЫМ (288507)</label>
+                    <paramValue>288507</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОЗЬЕ (РЗД) (297313)</label>
+                    <paramValue>297313</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОЗЬМОДЕМЬЯНСК (314701)</label>
+                    <paramValue>314701</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОЙТЫ (284101)</label>
+                    <paramValue>284101</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОКШЕНЬГА (297922)</label>
+                    <paramValue>297922</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОЛФОНД (ОБП) (292926)</label>
+                    <paramValue>292926</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОЛЬЧУГИНО (317108)</label>
+                    <paramValue>317108</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОНОША I (293007)</label>
+                    <paramValue>293007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОНОША II (293030)</label>
+                    <paramValue>293030</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОНСТАНТИНОВСКИЙ ЗАВОД (312655)</label>
+                    <paramValue>312655</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОПОСОВО (299215)</label>
+                    <paramValue>299215</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОРБА (305327)</label>
+                    <paramValue>305327</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОРЕГА (РЗД) (304502)</label>
+                    <paramValue>304502</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОРОБОВЩИНСКАЯ (317019)</label>
+                    <paramValue>317019</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОРОМЫСЛОВО (314425)</label>
+                    <paramValue>314425</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОРЫШЕВО (301646)</label>
+                    <paramValue>301646</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОСЛАН (283503)</label>
+                    <paramValue>283503</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОСМЫНИНО (304907)</label>
+                    <paramValue>304907</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОСТРИНСКИЙ РУЧЕЙ (РЗД) (296414)</label>
+                    <paramValue>296414</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОСТРИХА (РЗД) (307021)</label>
+                    <paramValue>307021</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОСТРОМА (305007)</label>
+                    <paramValue>305007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОСТРОМА НОВАЯ (305100)</label>
+                    <paramValue>305100</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОСТЫЛЕВО (298104)</label>
+                    <paramValue>298104</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОСЬЮ (288189)</label>
+                    <paramValue>288189</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОТЛАС-СЕВЕРНЫЙ (280505)</label>
+                    <paramValue>280505</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОТЛАС-СЕВЕРНЫЙ (ПЕРЕВ.) (280702)</label>
+                    <paramValue>280702</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОТЛАС-СЕВЕРНЫЙ (ЭКСП.) (280806)</label>
+                    <paramValue>280806</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОТЛАС-ЮЖНЫЙ (280100)</label>
+                    <paramValue>280100</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОТОРОСЛЬ (ОБП) (310019)</label>
+                    <paramValue>310019</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОХМА (318908)</label>
+                    <paramValue>318908</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОЧЕНЯТИНО (310768)</label>
+                    <paramValue>310768</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОЧМЕС (288634)</label>
+                    <paramValue>288634</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КОШТА (302600)</label>
+                    <paramValue>302600</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КРАСАВИНО (299605)</label>
+                    <paramValue>299605</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КРАСИЛЬНИКОВО (306103)</label>
+                    <paramValue>306103</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КРАСНОСЕЛЬСКАЯ (316321)</label>
+                    <paramValue>316321</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КРАСНЫЙ (РЗД) (307229)</label>
+                    <paramValue>307229</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КРЕПЕЖНАЯ (285015)</label>
+                    <paramValue>285015</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КРУТЕНСКИЙ (РЗД) (308236)</label>
+                    <paramValue>308236</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КУВАШ (297525)</label>
+                    <paramValue>297525</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КУДРЯВЦЕВО (314434)</label>
+                    <paramValue>314434</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КУДЬМА (290244)</label>
+                    <paramValue>290244</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КУЛОЙ (297900)</label>
+                    <paramValue>297900</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КУХТООЗЕРСКИЙ (БП) (294813)</label>
+                    <paramValue>294813</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КУША (295708)</label>
+                    <paramValue>295708</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КУЩУБА (301909)</label>
+                    <paramValue>301909</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КЫКШОР (РЗД) (289124)</label>
+                    <paramValue>289124</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>КЭМДОР (285922)</label>
+                    <paramValue>285922</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Коноша II (293045)</label>
+                    <paramValue>293045</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Кошта (302615)</label>
+                    <paramValue>302615</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛАБЫТНАНГИ (289904)</label>
+                    <paramValue>289904</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛАБЫТНАНГИ (ПЕРЕВ.) (289302)</label>
+                    <paramValue>289302</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛАДЫГИНО (319014)</label>
+                    <paramValue>319014</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛАЙСКАЯ (РЗД) (290121)</label>
+                    <paramValue>290121</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЕВЦОВО (310772)</label>
+                    <paramValue>310772</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЕДНЕВО (317317)</label>
+                    <paramValue>317317</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЕЖА (303500)</label>
+                    <paramValue>303500</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЕЛЬМА (293835)</label>
+                    <paramValue>293835</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЕМЪЮ (286516)</label>
+                    <paramValue>286516</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЕПША (294103)</label>
+                    <paramValue>294103</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЕСОЗАВОД (290329)</label>
+                    <paramValue>290329</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЕТНЕОЗЕРСКИЙ (294902)</label>
+                    <paramValue>294902</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛИМЕНДА (280308)</label>
+                    <paramValue>280308</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛИПОВАЯ ГОРА (315117)</label>
+                    <paramValue>315117</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛИСТВЕННИЧНЫЙ (РЗД) (295214)</label>
+                    <paramValue>295214</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛОДЬМА (РЗД) (290916)</label>
+                    <paramValue>290916</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛОЙГА (298602)</label>
+                    <paramValue>298602</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛОМ (312509)</label>
+                    <paramValue>312509</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛОМОВАТКА (299003)</label>
+                    <paramValue>299003</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛОМОВОЕ (295303)</label>
+                    <paramValue>295303</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛОПАРЕВО (306207)</label>
+                    <paramValue>306207</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛОСТА (300003)</label>
+                    <paramValue>300003</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛУКИНО (РЗД) (303618)</label>
+                    <paramValue>303618</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛУКОВЕЦКИЙ (291105)</label>
+                    <paramValue>291105</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛУМБА (301716)</label>
+                    <paramValue>301716</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛУНКА (РЗД) (304112)</label>
+                    <paramValue>304112</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛУНЬВОЖ (ОБП) (285424)</label>
+                    <paramValue>285424</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛУХТОНГА (292822)</label>
+                    <paramValue>292822</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЬНОЗАВОД (302876)</label>
+                    <paramValue>302876</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЮБИМ (304305)</label>
+                    <paramValue>304305</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЛЮТОВО (315301)</label>
+                    <paramValue>315301</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАДМАС (281902)</label>
+                    <paramValue>281902</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАКАРОВО (302812)</label>
+                    <paramValue>302812</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАКАРОВСКАЯ (314449)</label>
+                    <paramValue>314449</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАЛАХОВСКАЯ (315808)</label>
+                    <paramValue>315808</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАЛАЯ ПЕРА (287006)</label>
+                    <paramValue>287006</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАЛОШУЙКА (295801)</label>
+                    <paramValue>295801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАЛЫШКОВО (304926)</label>
+                    <paramValue>304926</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАЛЬКА (РЗД) (295110)</label>
+                    <paramValue>295110</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАНТУРОВО (307106)</label>
+                    <paramValue>307106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАРКОВ (РЗД) (288920)</label>
+                    <paramValue>288920</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАРФИНО (302827)</label>
+                    <paramValue>302827</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАСЛОВО (311510)</label>
+                    <paramValue>311510</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МАХРОВО (РЗД) (304610)</label>
+                    <paramValue>304610</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МЕЖДУДВОРЬЕ (ОБП) (293914)</label>
+                    <paramValue>293914</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МЕЖЕГ (282002)</label>
+                    <paramValue>282002</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МЕЗА (РЗД) (305312)</label>
+                    <paramValue>305312</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МЕЛЕНТЬЕВСКИЙ (293204)</label>
+                    <paramValue>293204</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МЕТИЛ (РЗД) (308011)</label>
+                    <paramValue>308011</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МИКУНЬ (282407)</label>
+                    <paramValue>282407</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МИКУНЬ II (282500)</label>
+                    <paramValue>282500</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МИХАЙЛОВСКОЕ (302032)</label>
+                    <paramValue>302032</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МИШАЯГ (ОБП) (288013)</label>
+                    <paramValue>288013</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОЖУГА (297008)</label>
+                    <paramValue>297008</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОЗЫНДОР (283109)</label>
+                    <paramValue>283109</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОЛОТ (313107)</label>
+                    <paramValue>313107</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОЛОЧНАЯ (301627)</label>
+                    <paramValue>301627</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОНАКОВО (РЗД) (306211)</label>
+                    <paramValue>306211</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОРЖЕНГА (300821)</label>
+                    <paramValue>300821</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОРСКОЙ ПРОСПЕКТ (290225)</label>
+                    <paramValue>290225</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОСТОЗАВОД (280134)</label>
+                    <paramValue>280134</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОШНИНО (313319)</label>
+                    <paramValue>313319</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МОШНОЕ (РЗД) (296518)</label>
+                    <paramValue>296518</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МУДЬЮГА (296408)</label>
+                    <paramValue>296408</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МУЛЬДА (289406)</label>
+                    <paramValue>289406</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МУСЬКА (284421)</label>
+                    <paramValue>284421</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>МЯСНИКОВКА (303213)</label>
+                    <paramValue>303213</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НЕВЕРОВО (304930)</label>
+                    <paramValue>304930</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НЕКОУЗ (311600)</label>
+                    <paramValue>311600</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НЕЛЬША (306828)</label>
+                    <paramValue>306828</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НЕНОКСА (290210)</label>
+                    <paramValue>290210</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НЕРЕХТА (315507)</label>
+                    <paramValue>315507</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НЕРЛЬ (317818)</label>
+                    <paramValue>317818</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НЕФЕДОВО (302920)</label>
+                    <paramValue>302920</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НЕЯ (306705)</label>
+                    <paramValue>306705</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НИБЕЛЬ (286111)</label>
+                    <paramValue>286111</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НИЗОВКА (280904)</label>
+                    <paramValue>280904</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НИКОЛО-ПОЛОМА (306404)</label>
+                    <paramValue>306404</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НИКОЛО-УГОЛ (306315)</label>
+                    <paramValue>306315</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НИМЕНГА (295905)</label>
+                    <paramValue>295905</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НОВОЕ КИСЕЛЕВО (307820)</label>
+                    <paramValue>307820</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НОВОЯРОСЛАВСКАЯ (314909)</label>
+                    <paramValue>314909</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НОМЖА (306508)</label>
+                    <paramValue>306508</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НОРМЕНГА (297224)</label>
+                    <paramValue>297224</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НОЯБРЬСКИЙ (301218)</label>
+                    <paramValue>301218</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НЮР (РЗД) (288615)</label>
+                    <paramValue>288615</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>НЯНДОМА (293609)</label>
+                    <paramValue>293609</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОБОЗЕРСКАЯ (295002)</label>
+                    <paramValue>295002</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОБОЛСУНОВО (318204)</label>
+                    <paramValue>318204</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОБСКАЯ (289707)</label>
+                    <paramValue>289707</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОЛАРЕВО (300520)</label>
+                    <paramValue>300520</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОМРА (286226)</label>
+                    <paramValue>286226</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОНЕГА (296109)</label>
+                    <paramValue>296109</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСАНОВИЦ (317517)</label>
+                    <paramValue>317517</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 100 КМ (297629)</label>
+                    <paramValue>297629</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 103 КМ (291158)</label>
+                    <paramValue>291158</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1096 КМ (295356)</label>
+                    <paramValue>295356</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1106 КМ (295455)</label>
+                    <paramValue>295455</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1113 КМ (295430)</label>
+                    <paramValue>295430</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1121 КМ (281029)</label>
+                    <paramValue>281029</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1127 КМ (290314)</label>
+                    <paramValue>290314</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1136 КМ (281118)</label>
+                    <paramValue>281118</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1139 КМ (281122)</label>
+                    <paramValue>281122</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1141 КМ (281137)</label>
+                    <paramValue>281137</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1153 КМ (281226)</label>
+                    <paramValue>281226</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1165 КМ (281230)</label>
+                    <paramValue>281230</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1169 КМ (281245)</label>
+                    <paramValue>281245</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 117 КМ (313342)</label>
+                    <paramValue>313342</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1175 КМ (281252)</label>
+                    <paramValue>281252</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1180 КМ (281353)</label>
+                    <paramValue>281353</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1186 КМ (281334)</label>
+                    <paramValue>281334</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1200 КМ (281349)</label>
+                    <paramValue>281349</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 133 КМ (295521)</label>
+                    <paramValue>295521</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1382 КМ (284629)</label>
+                    <paramValue>284629</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1479 КМ (285138)</label>
+                    <paramValue>285138</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1562 КМ (285710)</label>
+                    <paramValue>285710</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1619 КМ (286821)</label>
+                    <paramValue>286821</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1812 КМ (288066)</label>
+                    <paramValue>288066</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 183 КМ (295820)</label>
+                    <paramValue>295820</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 19 КМ (299446)</label>
+                    <paramValue>299446</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 191 КМ (295816)</label>
+                    <paramValue>295816</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 1952 КМ (288437)</label>
+                    <paramValue>288437</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 2 КМ (312693)</label>
+                    <paramValue>312693</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 2004 КМ (288687)</label>
+                    <paramValue>288687</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 2017 КМ (288672)</label>
+                    <paramValue>288672</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 202 КМ (296842)</label>
+                    <paramValue>296842</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 205 КМ (296857)</label>
+                    <paramValue>296857</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 212 КМ (296823)</label>
+                    <paramValue>296823</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 213 КМ (296861)</label>
+                    <paramValue>296861</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 22 КМ (290738)</label>
+                    <paramValue>290738</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 227 КМ (296876)</label>
+                    <paramValue>296876</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 229 КМ (296062)</label>
+                    <paramValue>296062</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 25 КМ (290545)</label>
+                    <paramValue>290545</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 26 КМ (282411)</label>
+                    <paramValue>282411</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 27 КМ (290564)</label>
+                    <paramValue>290564</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 297 КМ (296429)</label>
+                    <paramValue>296429</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 30 КМ (297218)</label>
+                    <paramValue>297218</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 300 КМ (312636)</label>
+                    <paramValue>312636</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 306 КМ (310791)</label>
+                    <paramValue>310791</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 313 КМ (296522)</label>
+                    <paramValue>296522</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 324 КМ (315437)</label>
+                    <paramValue>315437</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 326 КМ (299910)</label>
+                    <paramValue>299910</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 331 КМ (296537)</label>
+                    <paramValue>296537</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 334 КМ (305562)</label>
+                    <paramValue>305562</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 341 КМ (305558)</label>
+                    <paramValue>305558</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 344 КМ (296556)</label>
+                    <paramValue>296556</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 346 КМ (299893)</label>
+                    <paramValue>299893</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 35 КМ (284313)</label>
+                    <paramValue>284313</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 350 КМ (296560)</label>
+                    <paramValue>296560</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 352 КМ (316364)</label>
+                    <paramValue>316364</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 356 КМ (304979)</label>
+                    <paramValue>304979</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 358 КМ (304964)</label>
+                    <paramValue>304964</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 359 КМ (299889)</label>
+                    <paramValue>299889</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 36 КМ (290193)</label>
+                    <paramValue>290193</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 361 КМ (311116)</label>
+                    <paramValue>311116</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 362 КМ (304945)</label>
+                    <paramValue>304945</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 364 КМ (299874)</label>
+                    <paramValue>299874</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 365 КМ (299861)</label>
+                    <paramValue>299861</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 369 КМ (299855)</label>
+                    <paramValue>299855</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 370 КМ (304131)</label>
+                    <paramValue>304131</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 371 КМ (304981)</label>
+                    <paramValue>304981</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 378 КМ (304146)</label>
+                    <paramValue>304146</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 381 КМ (280153)</label>
+                    <paramValue>280153</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 388 КМ (304150)</label>
+                    <paramValue>304150</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 389 КМ (280519)</label>
+                    <paramValue>280519</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 391 КМ (305219)</label>
+                    <paramValue>305219</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 395 КМ (280717)</label>
+                    <paramValue>280717</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 397 КМ (280721)</label>
+                    <paramValue>280721</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 399 КМ (304339)</label>
+                    <paramValue>304339</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 4 КМ (312119)</label>
+                    <paramValue>312119</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 403 КМ (302831)</label>
+                    <paramValue>302831</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 409 КМ (304343)</label>
+                    <paramValue>304343</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 41 КМ (299619)</label>
+                    <paramValue>299619</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 411 КМ (305331)</label>
+                    <paramValue>305331</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 419 КМ (304358)</label>
+                    <paramValue>304358</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 420 КМ (303016)</label>
+                    <paramValue>303016</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 425 КМ (305420)</label>
+                    <paramValue>305420</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 428 КМ (304362)</label>
+                    <paramValue>304362</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 435 КМ (304428)</label>
+                    <paramValue>304428</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 436 КМ (303124)</label>
+                    <paramValue>303124</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 438 КМ (304432)</label>
+                    <paramValue>304432</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 45 КМ (299624)</label>
+                    <paramValue>299624</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 453 КМ (303290)</label>
+                    <paramValue>303290</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 463 КМ (304639)</label>
+                    <paramValue>304639</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 467 КМ (302511)</label>
+                    <paramValue>302511</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 469 КМ (303285)</label>
+                    <paramValue>303285</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 472 КМ (302329)</label>
+                    <paramValue>302329</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 476 КМ (304644)</label>
+                    <paramValue>304644</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 477 КМ (302244)</label>
+                    <paramValue>302244</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 484 КМ (304729)</label>
+                    <paramValue>304729</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 489 КМ (302263)</label>
+                    <paramValue>302263</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 495 КМ (304733)</label>
+                    <paramValue>304733</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 499 КМ (302259)</label>
+                    <paramValue>302259</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 503 КМ (302136)</label>
+                    <paramValue>302136</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 505 КМ (306029)</label>
+                    <paramValue>306029</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 515 КМ (300412)</label>
+                    <paramValue>300412</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 517 КМ (302117)</label>
+                    <paramValue>302117</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 519 КМ (306033)</label>
+                    <paramValue>306033</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 528 КМ (306118)</label>
+                    <paramValue>306118</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 54 КМ (284328)</label>
+                    <paramValue>284328</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 541 КМ (300713)</label>
+                    <paramValue>300713</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 554 КМ (301813)</label>
+                    <paramValue>301813</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 555 КМ (300840)</label>
+                    <paramValue>300840</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 588 КМ (301612)</label>
+                    <paramValue>301612</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 599 КМ (301114)</label>
+                    <paramValue>301114</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 6 КМ (299427)</label>
+                    <paramValue>299427</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 60 КМ (297417)</label>
+                    <paramValue>297417</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 620 КМ (303266)</label>
+                    <paramValue>303266</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 632 КМ (303463)</label>
+                    <paramValue>303463</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 645 КМ (303478)</label>
+                    <paramValue>303478</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 647 КМ (303514)</label>
+                    <paramValue>303514</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 653 КМ (303482)</label>
+                    <paramValue>303482</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 664 КМ (303497)</label>
+                    <paramValue>303497</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 674 КМ (303533)</label>
+                    <paramValue>303533</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 687 КМ (303622)</label>
+                    <paramValue>303622</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 691 КМ (307318)</label>
+                    <paramValue>307318</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 694 КМ (307411)</label>
+                    <paramValue>307411</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 697 КМ (307426)</label>
+                    <paramValue>307426</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 698 КМ (303637)</label>
+                    <paramValue>303637</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 703 КМ (307520)</label>
+                    <paramValue>307520</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 707 КМ (303726)</label>
+                    <paramValue>303726</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 717 КМ (293026)</label>
+                    <paramValue>293026</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 72 КМ (297537)</label>
+                    <paramValue>297537</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 721 КМ (303730)</label>
+                    <paramValue>303730</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 724 КМ (293064)</label>
+                    <paramValue>293064</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 728 КМ (307840)</label>
+                    <paramValue>307840</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 738 КМ (293079)</label>
+                    <paramValue>293079</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 744 КМ (293098)</label>
+                    <paramValue>293098</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 750 КМ (307916)</label>
+                    <paramValue>307916</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 757 КМ (293312)</label>
+                    <paramValue>293312</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 769 КМ (293539)</label>
+                    <paramValue>293539</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 773 КМ (308113)</label>
+                    <paramValue>308113</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 786 КМ (293524)</label>
+                    <paramValue>293524</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 790 КМ (308221)</label>
+                    <paramValue>308221</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 801 КМ (293647)</label>
+                    <paramValue>293647</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 808 КМ (308330)</label>
+                    <paramValue>308330</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 810 КМ (293651)</label>
+                    <paramValue>293651</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 827 КМ (297856)</label>
+                    <paramValue>297856</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 831 КМ (297845)</label>
+                    <paramValue>297845</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 832 КМ (293844)</label>
+                    <paramValue>293844</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 835 КМ (297830)</label>
+                    <paramValue>297830</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 838 КМ (297826)</label>
+                    <paramValue>297826</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 840 КМ (293948)</label>
+                    <paramValue>293948</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 843 КМ (297811)</label>
+                    <paramValue>297811</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 846 КМ (293933)</label>
+                    <paramValue>293933</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 848 КМ (297934)</label>
+                    <paramValue>297934</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 851 (293929)</label>
+                    <paramValue>293929</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 852 КМ (297949)</label>
+                    <paramValue>297949</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 868 КМ (294014)</label>
+                    <paramValue>294014</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 875 КМ (294118)</label>
+                    <paramValue>294118</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 880 КМ (298123)</label>
+                    <paramValue>298123</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 884 КМ (298138)</label>
+                    <paramValue>298138</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 892 КМ (298142)</label>
+                    <paramValue>298142</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 896 КМ (298157)</label>
+                    <paramValue>298157</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 898 КМ (294419)</label>
+                    <paramValue>294419</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 9 КМ (299431)</label>
+                    <paramValue>299431</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 903 КМ (298161)</label>
+                    <paramValue>298161</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 907 КМ (298176)</label>
+                    <paramValue>298176</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 91 КМ (297648)</label>
+                    <paramValue>297648</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 915 КМ (298246)</label>
+                    <paramValue>298246</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 917 КМ (298227)</label>
+                    <paramValue>298227</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 921 КМ (298231)</label>
+                    <paramValue>298231</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 922 КМ (294645)</label>
+                    <paramValue>294645</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 926 КМ (294635)</label>
+                    <paramValue>294635</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 930 КМ (298316)</label>
+                    <paramValue>298316</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 932 КМ (294620)</label>
+                    <paramValue>294620</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 933 КМ (298320)</label>
+                    <paramValue>298320</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 935 КМ (298335)</label>
+                    <paramValue>298335</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 943 КМ (294724)</label>
+                    <paramValue>294724</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 946 КМ (298347)</label>
+                    <paramValue>298347</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 95 КМ (297633)</label>
+                    <paramValue>297633</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 950 КМ (294739)</label>
+                    <paramValue>294739</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 952 КМ (298532)</label>
+                    <paramValue>298532</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 960 КМ (294847)</label>
+                    <paramValue>294847</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 964 КМ (294832)</label>
+                    <paramValue>294832</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 973 КМ (294940)</label>
+                    <paramValue>294940</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 975 КМ (294936)</label>
+                    <paramValue>294936</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 976 КМ (294828)</label>
+                    <paramValue>294828</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТ. ПУНКТ 986 КМ (294898)</label>
+                    <paramValue>294898</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОСТРОВСКОЕ (305609)</label>
+                    <paramValue>305609</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОХОТПОСТ (РЗД) (288418)</label>
+                    <paramValue>288418</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОШВОР (РЗД) (289041)</label>
+                    <paramValue>289041</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОШПЕР (288827)</label>
+                    <paramValue>288827</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ОШЪЕЛЬ (288032)</label>
+                    <paramValue>288032</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПАЛЕНЬГА (291124)</label>
+                    <paramValue>291124</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПАНОВКА (301311)</label>
+                    <paramValue>301311</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПАНТЕЛЕЕВО (311012)</label>
+                    <paramValue>311012</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПАПРИХА (303251)</label>
+                    <paramValue>303251</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПАЧЕВСКИЙ (302121)</label>
+                    <paramValue>302121</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПАШУЧИХА (301133)</label>
+                    <paramValue>301133</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕЖМА (297120)</label>
+                    <paramValue>297120</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕКАРНЯ (280123)</label>
+                    <paramValue>280123</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕЛГУСОВО (318312)</label>
+                    <paramValue>318312</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕЛЫСЬ (282623)</label>
+                    <paramValue>282623</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕРВУШИНО (305577)</label>
+                    <paramValue>305577</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕРЕСЛАВЛЬ (313501)</label>
+                    <paramValue>313501</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕРМИЛОВО (295159)</label>
+                    <paramValue>295159</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕРНАШОР (РЗД) (289016)</label>
+                    <paramValue>289016</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕРХИНО (292911)</label>
+                    <paramValue>292911</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕСЕЦ (РЗД) (289213)</label>
+                    <paramValue>289213</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕТРОВСК (314106)</label>
+                    <paramValue>314106</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕТРОВСКАЯ (317702)</label>
+                    <paramValue>317702</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕТРУНЬ (288831)</label>
+                    <paramValue>288831</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕТРУШИНО (РЗД) (307017)</label>
+                    <paramValue>307017</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕЧАТКИНО (300709)</label>
+                    <paramValue>300709</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕЧОРА (288009)</label>
+                    <paramValue>288009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕЧОРА (ПЕРЕВ.) (288808)</label>
+                    <paramValue>288808</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЕШКОВО (РЗД) (316618)</label>
+                    <paramValue>316618</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПИНЯГИ (РЗД) (312320)</label>
+                    <paramValue>312320</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПИЩАЛКИНО (311309)</label>
+                    <paramValue>311309</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРИА 672 КМ (292837)</label>
+                    <paramValue>292837</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 369 КМ (299959)</label>
+                    <paramValue>299959</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 100 КМ (297756)</label>
+                    <paramValue>297756</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1001 КМ (298922)</label>
+                    <paramValue>298922</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1009 КМ (298918)</label>
+                    <paramValue>298918</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 101 КМ (288969)</label>
+                    <paramValue>288969</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1012 (299022)</label>
+                    <paramValue>299022</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 102 КМ (291139)</label>
+                    <paramValue>291139</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1020 КМ (299018)</label>
+                    <paramValue>299018</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1023 КМ (299287)</label>
+                    <paramValue>299287</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1025 КМ (299272)</label>
+                    <paramValue>299272</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1032 КМ (299268)</label>
+                    <paramValue>299268</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1037 КМ (299253)</label>
+                    <paramValue>299253</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1044 КМ (299249)</label>
+                    <paramValue>299249</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1047 КМ (299234)</label>
+                    <paramValue>299234</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1056 КМ (299223)</label>
+                    <paramValue>299223</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1059 КМ (299291)</label>
+                    <paramValue>299291</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1071 КМ (299450)</label>
+                    <paramValue>299450</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1078 КМ (299465)</label>
+                    <paramValue>299465</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1092 КМ (295341)</label>
+                    <paramValue>295341</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 110 КМ (288865)</label>
+                    <paramValue>288865</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 114 КМ (288870)</label>
+                    <paramValue>288870</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1174 КМ (281279)</label>
+                    <paramValue>281279</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 12 КМ (310734)</label>
+                    <paramValue>310734</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 122 КМ (291143)</label>
+                    <paramValue>291143</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 129 КМ (288884)</label>
+                    <paramValue>288884</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 134 КМ (288899)</label>
+                    <paramValue>288899</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 140 КМ (316092)</label>
+                    <paramValue>316092</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 141 КМ (288973)</label>
+                    <paramValue>288973</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 142 КМ (313338)</label>
+                    <paramValue>313338</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 147 КМ (313412)</label>
+                    <paramValue>313412</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 15 КМ (290526)</label>
+                    <paramValue>290526</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 152 КМ (291410)</label>
+                    <paramValue>291410</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 155 КМ (313624)</label>
+                    <paramValue>313624</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 156 КМ (318613)</label>
+                    <paramValue>318613</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 165 КМ (288653)</label>
+                    <paramValue>288653</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 166 КМ (318628)</label>
+                    <paramValue>318628</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 17 КМ (289143)</label>
+                    <paramValue>289143</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 176 КМ (291425)</label>
+                    <paramValue>291425</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 177 КМ (288668)</label>
+                    <paramValue>288668</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1808 КМ (287817)</label>
+                    <paramValue>287817</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 1809 КМ (287858)</label>
+                    <paramValue>287858</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 187 КМ (313817)</label>
+                    <paramValue>313817</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 197 КМ (291514)</label>
+                    <paramValue>291514</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 201 КМ (291529)</label>
+                    <paramValue>291529</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 21 КМ (290530)</label>
+                    <paramValue>290530</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 22 КМ (296058)</label>
+                    <paramValue>296058</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 231 КМ (314311)</label>
+                    <paramValue>314311</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 24 КМ (289228)</label>
+                    <paramValue>289228</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 25 КМ (297262)</label>
+                    <paramValue>297262</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 259 КМ (314468)</label>
+                    <paramValue>314468</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 26 КМ (295322)</label>
+                    <paramValue>295322</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 265 КМ (314754)</label>
+                    <paramValue>314754</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 268 КМ (314744)</label>
+                    <paramValue>314744</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 27 КМ (297258)</label>
+                    <paramValue>297258</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 274 КМ (314735)</label>
+                    <paramValue>314735</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 287 КМ (310043)</label>
+                    <paramValue>310043</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 29 КМ (289340)</label>
+                    <paramValue>289340</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 296 КМ (315210)</label>
+                    <paramValue>315210</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 30 КМ (297243)</label>
+                    <paramValue>297243</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 305 КМ (315329)</label>
+                    <paramValue>315329</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 310 КМ (315333)</label>
+                    <paramValue>315333</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 318 КМ (315422)</label>
+                    <paramValue>315422</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 32 КМ (290719)</label>
+                    <paramValue>290719</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 322 КМ (310931)</label>
+                    <paramValue>310931</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 323 КМ (312674)</label>
+                    <paramValue>312674</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 331 КМ (311027)</label>
+                    <paramValue>311027</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 335 КМ (299997)</label>
+                    <paramValue>299997</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 34 КМ (290155)</label>
+                    <paramValue>290155</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 343 КМ (311031)</label>
+                    <paramValue>311031</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 344 КМ (316340)</label>
+                    <paramValue>316340</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 346 КМ (299982)</label>
+                    <paramValue>299982</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 351 КМ (311046)</label>
+                    <paramValue>311046</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 359 КМ (299978)</label>
+                    <paramValue>299978</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 36 КМ (290723)</label>
+                    <paramValue>290723</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 37 КМ (297239)</label>
+                    <paramValue>297239</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 371 КМ (299944)</label>
+                    <paramValue>299944</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 381 КМ (280558)</label>
+                    <paramValue>280558</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 39 КМ (289355)</label>
+                    <paramValue>289355</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 394 КМ (319322)</label>
+                    <paramValue>319322</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 4 КМ (310715)</label>
+                    <paramValue>310715</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 400 КМ (319334)</label>
+                    <paramValue>319334</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 42 КМ (297050)</label>
+                    <paramValue>297050</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 44 КМ (289374)</label>
+                    <paramValue>289374</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 48 КМ (290920)</label>
+                    <paramValue>290920</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 497 КМ (300215)</label>
+                    <paramValue>300215</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 499 КМ (300222)</label>
+                    <paramValue>300222</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 524 КМ (302047)</label>
+                    <paramValue>302047</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 529 КМ (300618)</label>
+                    <paramValue>300618</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 54 КМ (290943)</label>
+                    <paramValue>290943</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 545 КМ (301913)</label>
+                    <paramValue>301913</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 555 КМ (301928)</label>
+                    <paramValue>301928</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 557 КМ (301932)</label>
+                    <paramValue>301932</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 56 КМ (311614)</label>
+                    <paramValue>311614</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 563 КМ (301025)</label>
+                    <paramValue>301025</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 579 КМ (301650)</label>
+                    <paramValue>301650</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 587 КМ (301148)</label>
+                    <paramValue>301148</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 61 КМ (289389)</label>
+                    <paramValue>289389</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 62 КМ (297027)</label>
+                    <paramValue>297027</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 621 КМ (301326)</label>
+                    <paramValue>301326</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 622 КМ (303425)</label>
+                    <paramValue>303425</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 638 КМ (301415)</label>
+                    <paramValue>301415</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 647 КМ (292882)</label>
+                    <paramValue>292882</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 655 КМ (292841)</label>
+                    <paramValue>292841</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 686 КМ (292959)</label>
+                    <paramValue>292959</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 69 КМ (311525)</label>
+                    <paramValue>311525</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 690 КМ (292945)</label>
+                    <paramValue>292945</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 695 КМ (292930)</label>
+                    <paramValue>292930</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 699 КМ (303752)</label>
+                    <paramValue>303752</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 7 КМ (295426)</label>
+                    <paramValue>295426</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 70 КМ (289514)</label>
+                    <paramValue>289514</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 730 КМ (297277)</label>
+                    <paramValue>297277</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 771 КМ (297351)</label>
+                    <paramValue>297351</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 778 КМ (297544)</label>
+                    <paramValue>297544</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 784 КМ (297667)</label>
+                    <paramValue>297667</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 79 КМ (297154)</label>
+                    <paramValue>297154</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 8 КМ (310723)</label>
+                    <paramValue>310723</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 816 КМ (297652)</label>
+                    <paramValue>297652</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 818 КМ (297760)</label>
+                    <paramValue>297760</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 831 КМ (297737)</label>
+                    <paramValue>297737</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 835 КМ (297722)</label>
+                    <paramValue>297722</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 838 КМ (297718)</label>
+                    <paramValue>297718</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 843 КМ (297972)</label>
+                    <paramValue>297972</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 86 КМ (296927)</label>
+                    <paramValue>296927</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 863 КМ (297953)</label>
+                    <paramValue>297953</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 867 КМ (297968)</label>
+                    <paramValue>297968</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 873 КМ (298180)</label>
+                    <paramValue>298180</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 880 КМ (298195)</label>
+                    <paramValue>298195</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 895 КМ (298265)</label>
+                    <paramValue>298265</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 9 КМ (289139)</label>
+                    <paramValue>289139</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 907 КМ (298284)</label>
+                    <paramValue>298284</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 91 КМ (297141)</label>
+                    <paramValue>297141</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 918 КМ (298299)</label>
+                    <paramValue>298299</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 92 КМ (291115)</label>
+                    <paramValue>291115</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 921 КМ (298354)</label>
+                    <paramValue>298354</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 934 КМ (298369)</label>
+                    <paramValue>298369</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 937 КМ (298373)</label>
+                    <paramValue>298373</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 944 КМ (298388)</label>
+                    <paramValue>298388</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 948 КМ (298528)</label>
+                    <paramValue>298528</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 95 КМ (297135)</label>
+                    <paramValue>297135</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 956 КМ (298551)</label>
+                    <paramValue>298551</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 962 КМ (298547)</label>
+                    <paramValue>298547</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 977 КМ (298710)</label>
+                    <paramValue>298710</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА 986 КМ (298725)</label>
+                    <paramValue>298725</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА АНТОНОВО (280539)</label>
+                    <paramValue>280539</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА Б.-СЛОБОДКА (280543)</label>
+                    <paramValue>280543</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА ЛОК. ДЕПО. (280079)</label>
+                    <paramValue>280079</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА ПЕРЕЕЗД (299476)</label>
+                    <paramValue>299476</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА ТУЙМИНО (297046)</label>
+                    <paramValue>297046</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА884 КМ (298250)</label>
+                    <paramValue>298250</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛАТФОРМА904 КМ (298270)</label>
+                    <paramValue>298270</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЛЕСЕЦКАЯ (294601)</label>
+                    <paramValue>294601</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОДБЕРЕЖСКИЙ (РЗД) (303529)</label>
+                    <paramValue>303529</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОДЮГА (297309)</label>
+                    <paramValue>297309</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОЖНЯ (286605)</label>
+                    <paramValue>286605</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОЛОХА (293350)</label>
+                    <paramValue>293350</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОЛЯНКИ (314810)</label>
+                    <paramValue>314810</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОНАЗЫРЕВО (307905)</label>
+                    <paramValue>307905</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОНЬГА (296819)</label>
+                    <paramValue>296819</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОПОВКА (292856)</label>
+                    <paramValue>292856</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОСНА (281014)</label>
+                    <paramValue>281014</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОСТ 243 КМ (296024)</label>
+                    <paramValue>296024</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОСТ 285 КМ (310039)</label>
+                    <paramValue>310039</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОСТ 481 КМ (303270)</label>
+                    <paramValue>303270</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОСТ 5 КМ (290013)</label>
+                    <paramValue>290013</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПОСТ-АБЕЗЬ (288916)</label>
+                    <paramValue>288916</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПРЕДУЗЛОВОЙ (РЗД) (290511)</label>
+                    <paramValue>290511</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПРЕЧИСТОЕ (302808)</label>
+                    <paramValue>302808</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПРИВОДИНО (299501)</label>
+                    <paramValue>299501</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПРИВОЛЖЬЕ (310607)</label>
+                    <paramValue>310607</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПРОНИНО (305581)</label>
+                    <paramValue>305581</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПРОСВЕТ (312015)</label>
+                    <paramValue>312015</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПУКСА (294404)</label>
+                    <paramValue>294404</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПУНДУГА (301129)</label>
+                    <paramValue>301129</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПУНЦЕВО (311313)</label>
+                    <paramValue>311313</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПУРШЕВО (311328)</label>
+                    <paramValue>311328</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПУСТОВО (РЗД) (312640)</label>
+                    <paramValue>312640</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПУТЯТИНО (311050)</label>
+                    <paramValue>311050</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПУЧКОВСКИЙ (310927)</label>
+                    <paramValue>310927</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЫРСКИЙ (280026)</label>
+                    <paramValue>280026</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ПЫШОР (РЗД) (289035)</label>
+                    <paramValue>289035</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 1008 КМ (295017)</label>
+                    <paramValue>295017</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 1014 КМ (295040)</label>
+                    <paramValue>295040</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 1028 КМ (295136)</label>
+                    <paramValue>295136</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 1049 КМ (295144)</label>
+                    <paramValue>295144</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 1059 КМ (295229)</label>
+                    <paramValue>295229</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 1064 КМ (295233)</label>
+                    <paramValue>295233</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 1076 КМ (295337)</label>
+                    <paramValue>295337</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 16 КМ (290117)</label>
+                    <paramValue>290117</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 1814 КМ (287824)</label>
+                    <paramValue>287824</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 1815 КМ (287839)</label>
+                    <paramValue>287839</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 28 КМ (290136)</label>
+                    <paramValue>290136</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 30 КМ (288155)</label>
+                    <paramValue>288155</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 373 КМ (316514)</label>
+                    <paramValue>316514</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 78 КМ (297101)</label>
+                    <paramValue>297101</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 79 КМ (288225)</label>
+                    <paramValue>288225</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 81 КМ (288231)</label>
+                    <paramValue>288231</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАЗЪЕЗД 84 КМ (288210)</label>
+                    <paramValue>288210</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАКПАС (284614)</label>
+                    <paramValue>284614</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РАТЬКОВО-РОЖНОВО (РЗД) (303711)</label>
+                    <paramValue>303711</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РЕВАЖ (299319)</label>
+                    <paramValue>299319</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РЕКА (314716)</label>
+                    <paramValue>314716</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РИКАСИХА (РЗД) (290140)</label>
+                    <paramValue>290140</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РОДИОНОВО (311390)</label>
+                    <paramValue>311390</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РОКША (313615)</label>
+                    <paramValue>313615</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РОНАЕЛЬ (РЗД) (287523)</label>
+                    <paramValue>287523</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РОПЧА (285119)</label>
+                    <paramValue>285119</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РОССОЛОВО (304705)</label>
+                    <paramValue>304705</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РОСТОВ-ЯРОСЛАВСКИЙ (314307)</label>
+                    <paramValue>314307</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РОЩА (302013)</label>
+                    <paramValue>302013</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РУША (РЗД) (304310)</label>
+                    <paramValue>304310</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РЫБИНСК-ПАССАЖИРСКИЙ (312104)</label>
+                    <paramValue>312104</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РЫБИНСК-ТОВАРНЫЙ (312301)</label>
+                    <paramValue>312301</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РЫБИНСК-ТОВАРНЫЙ (ПЕРЕВ.) (312405)</label>
+                    <paramValue>312405</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РЫБКИНО (300501)</label>
+                    <paramValue>300501</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РЫБНИЦА (287311)</label>
+                    <paramValue>287311</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>РЯЗАНЦЕВО (313709)</label>
+                    <paramValue>313709</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>САВВАТИЯ (299802)</label>
+                    <paramValue>299802</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>САВИНО (319300)</label>
+                    <paramValue>319300</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>САРМАЮ (РЗД) (288935)</label>
+                    <paramValue>288935</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>САХАРЕЖ (РЗД) (315418)</label>
+                    <paramValue>315418</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>САХТЫШ (318007)</label>
+                    <paramValue>318007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>САЦЕВИНО (305539)</label>
+                    <paramValue>305539</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СВЕТИК (281329)</label>
+                    <paramValue>281329</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СВЕЧА (308407)</label>
+                    <paramValue>308407</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕВЕРОДВИНСК (290206)</label>
+                    <paramValue>290206</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕДЬВОЖ (286910)</label>
+                    <paramValue>286910</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕЙДА (289054)</label>
+                    <paramValue>289054</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕКША (РЗД) (304324)</label>
+                    <paramValue>304324</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕЛЬМЕНЬГА (297915)</label>
+                    <paramValue>297915</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕЛЭГВОЖ (283400)</label>
+                    <paramValue>283400</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕМЕНОВСКИЙ (РЗД) (308310)</label>
+                    <paramValue>308310</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕМИБРАТОВО (314400)</label>
+                    <paramValue>314400</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕМИГОРОДНЯЯ (301006)</label>
+                    <paramValue>301006</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕНГОС (298985)</label>
+                    <paramValue>298985</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЕНДЕГА (305204)</label>
+                    <paramValue>305204</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СИВАЯ МАСКА (289001)</label>
+                    <paramValue>289001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СИЛЬНИЦЫ (314006)</label>
+                    <paramValue>314006</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СИЛЮТИНСКИЙ (297614)</label>
+                    <paramValue>297614</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СИНДОР (284900)</label>
+                    <paramValue>284900</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СИНЕГОРСКАЯ (286624)</label>
+                    <paramValue>286624</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СИЯ (291406)</label>
+                    <paramValue>291406</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СКАЛИНО (302901)</label>
+                    <paramValue>302901</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СКОМОРОХОВО (303114)</label>
+                    <paramValue>303114</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЛОБОДЧИКОВО (281315)</label>
+                    <paramValue>281315</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СМОЛЬНЫЙ БУЯН (290333)</label>
+                    <paramValue>290333</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОБЬ (289711)</label>
+                    <paramValue>289711</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОДЕНЬГА (298028)</label>
+                    <paramValue>298028</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОЙВА (286215)</label>
+                    <paramValue>286215</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОКОЛОВСКИЙ (307515)</label>
+                    <paramValue>307515</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОЛГА (297510)</label>
+                    <paramValue>297510</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОЛЗА (290259)</label>
+                    <paramValue>290259</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОЛОМБАЛКА (291707)</label>
+                    <paramValue>291707</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОЛОМБАЛКА (перев.) (292004)</label>
+                    <paramValue>292004</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОЛОМБАЛКА (эксп.) (291904)</label>
+                    <paramValue>291904</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОЛЬВЫЧЕГОДСК (280007)</label>
+                    <paramValue>280007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОРДЪЮ (БП) (284417)</label>
+                    <paramValue>284417</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОРТИРОВОЧНАЯ (310749)</label>
+                    <paramValue>310749</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОСНОВЦЫ (310753)</label>
+                    <paramValue>310753</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОСНОГОРСК (285801)</label>
+                    <paramValue>285801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОСНОГОРСК II (285937)</label>
+                    <paramValue>285937</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОТ УЙМА (290239)</label>
+                    <paramValue>290239</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СОТЬ (304165)</label>
+                    <paramValue>304165</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СТАНОВОЕ (303459)</label>
+                    <paramValue>303459</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СТАРКОВО (317324)</label>
+                    <paramValue>317324</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СТЕБЛЕВО (ОБП) (303232)</label>
+                    <paramValue>303232</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СТРОКИНО (316336)</label>
+                    <paramValue>316336</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СУДИСЛАВЛЬ (305401)</label>
+                    <paramValue>305401</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СУЛОЗЕРО (295604)</label>
+                    <paramValue>295604</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СУЛОНДА (298413)</label>
+                    <paramValue>298413</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СУПРОТИВНЫЙ (308005)</label>
+                    <paramValue>308005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СУХОЙ ЛОГ (БП) (287716)</label>
+                    <paramValue>287716</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СУХОНА (300605)</label>
+                    <paramValue>300605</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЫКТЫВКАР (283908)</label>
+                    <paramValue>283908</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЫНЯ (288102)</label>
+                    <paramValue>288102</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЯМБА (ПП) (292714)</label>
+                    <paramValue>292714</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>СЯРЬЗЕНЬГА (290189)</label>
+                    <paramValue>290189</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Свеча (308414)</label>
+                    <paramValue>308414</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТАЕЖНЫЙ (284811)</label>
+                    <paramValue>284811</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТАЛЫЙ (287415)</label>
+                    <paramValue>287415</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТАЛЬНИК (289336)</label>
+                    <paramValue>289336</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТАРЗА (294226)</label>
+                    <paramValue>294226</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТЕБЗА (305524)</label>
+                    <paramValue>305524</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТЕЙКОВО (318100)</label>
+                    <paramValue>318100</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТЕКСТИЛЬНЫЙ (318401)</label>
+                    <paramValue>318401</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТЕЛИЩЕВО (315206)</label>
+                    <paramValue>315206</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТЕНИНО (312706)</label>
+                    <paramValue>312706</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТЕСОВКА (РЗД) (296217)</label>
+                    <paramValue>296217</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТИМАНСКИЙ (285123)</label>
+                    <paramValue>285123</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТИММЕ (294711)</label>
+                    <paramValue>294711</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТИХМЕНЕВО (312000)</label>
+                    <paramValue>312000</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТОБЫСЬ (285392)</label>
+                    <paramValue>285392</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТОРОПОВО (РЗД) (312316)</label>
+                    <paramValue>312316</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТОЩИХА (РЗД) (315314)</label>
+                    <paramValue>315314</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТРАКТ (284718)</label>
+                    <paramValue>284718</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТРОИЦКО-ПЕЧОРСК (286408)</label>
+                    <paramValue>286408</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТУНДРА (295318)</label>
+                    <paramValue>295318</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТУРУН (288850)</label>
+                    <paramValue>288850</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТУТАЕВО (312805)</label>
+                    <paramValue>312805</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТУФАНОВО (РЗД) (303433)</label>
+                    <paramValue>303433</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТЧАНИКОВО (РЗД) (306325)</label>
+                    <paramValue>306325</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ТЫВА (281495)</label>
+                    <paramValue>281495</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УВОДЬ (319419)</label>
+                    <paramValue>319419</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УГОЛЬНЫЙ (ОБП) (288526)</label>
+                    <paramValue>288526</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УДИМА (299200)</label>
+                    <paramValue>299200</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УЙМА (290174)</label>
+                    <paramValue>290174</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УНЕЖМА (295500)</label>
+                    <paramValue>295500</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УНЖА (РЗД) (307201)</label>
+                    <paramValue>307201</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УРАМЕЦ (295021)</label>
+                    <paramValue>295021</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УРДОМА (281404)</label>
+                    <paramValue>281404</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УСА (288901)</label>
+                    <paramValue>288901</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УСВА (283306)</label>
+                    <paramValue>283306</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УСИНСК (288308)</label>
+                    <paramValue>288308</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УСТЬ-ВЫМЬ (284309)</label>
+                    <paramValue>284309</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УСТЬ-ШОНОША (297493)</label>
+                    <paramValue>297493</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УТИЦЫ (294616)</label>
+                    <paramValue>294616</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УТКИНО (310823)</label>
+                    <paramValue>310823</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УФТЮГА (298513)</label>
+                    <paramValue>298513</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УХТА (285602)</label>
+                    <paramValue>285602</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>УШАКОВО (314453)</label>
+                    <paramValue>314453</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Урдома (281419)</label>
+                    <paramValue>281419</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ФЕВРАЛЬСКИЙ (292818)</label>
+                    <paramValue>292818</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ФИЛИНО (310700)</label>
+                    <paramValue>310700</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ФИЛИНО (ПЕРЕВ.) (310503)</label>
+                    <paramValue>310503</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ФОМИНСКАЯ (293054)</label>
+                    <paramValue>293054</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ФУРМАНОВ (316001)</label>
+                    <paramValue>316001</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ХАНОВЕЙ (289529)</label>
+                    <paramValue>289529</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ХАРОВСКАЯ (301109)</label>
+                    <paramValue>301109</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ХАРП-СЕВЕРНОЕ СИЯНИЕ (289800)</label>
+                    <paramValue>289800</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ХЕМАЛДА (302210)</label>
+                    <paramValue>302210</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ХМЕЛЬНИКИ (297012)</label>
+                    <paramValue>297012</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ХОЖАЕВО (314720)</label>
+                    <paramValue>314720</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ХОЛМОГОРСКАЯ (295202)</label>
+                    <paramValue>295202</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ХОРОТА (289618)</label>
+                    <paramValue>289618</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ХРАМКИ (РЗД) (304714)</label>
+                    <paramValue>304714</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЦИБИРИНО (314415)</label>
+                    <paramValue>314415</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧАХЛОВО (БП) (303410)</label>
+                    <paramValue>303410</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧЕБАКОВО (312621)</label>
+                    <paramValue>312621</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧЕБСАРА (302009)</label>
+                    <paramValue>302009</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧЕРЕМУХА (281000)</label>
+                    <paramValue>281000</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧЕРЕПОВЕЦ I (302304)</label>
+                    <paramValue>302304</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧЕРЕПОВЕЦ II (302507)</label>
+                    <paramValue>302507</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧЕРЕПОВЕЦ-ПРИСТАНЬ (302403)</label>
+                    <paramValue>302403</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧЕРЕПОВЕЦ-ПРИСТАНЬ (ПЕРЕВ.) (302704)</label>
+                    <paramValue>302704</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧЕРНЫЙ (288530)</label>
+                    <paramValue>288530</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧЕРПАКИ (308325)</label>
+                    <paramValue>308325</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧИЖОВО (РЗД) (312513)</label>
+                    <paramValue>312513</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧИКШИНО (287608)</label>
+                    <paramValue>287608</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧИМ (283611)</label>
+                    <paramValue>283611</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧИНЬЯВОРЫК (285208)</label>
+                    <paramValue>285208</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧОВЬЮ (284008)</label>
+                    <paramValue>284008</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧОВЬЮ (ПЕРЕВ.) (283804)</label>
+                    <paramValue>283804</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧОКУР (БП) (281211)</label>
+                    <paramValue>281211</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧОМКОСАЕЛЬ (285918)</label>
+                    <paramValue>285918</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧУБ (284440)</label>
+                    <paramValue>284440</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЧУМ (289118)</label>
+                    <paramValue>289118</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШАБАЛИНО (308306)</label>
+                    <paramValue>308306</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШАЛАКУША (294007)</label>
+                    <paramValue>294007</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШАНГАЛЫ (298119)</label>
+                    <paramValue>298119</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШАРЬЯ (307500)</label>
+                    <paramValue>307500</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШАСТИНСКИЙ (РЗД) (296804)</label>
+                    <paramValue>296804</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШАЧА (305515)</label>
+                    <paramValue>305515</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШЕКСНА (302102)</label>
+                    <paramValue>302102</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШЕКШЕМА (307303)</label>
+                    <paramValue>307303</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШЕЛЕКСА (294705)</label>
+                    <paramValue>294705</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШЕЛОМОВО (302225)</label>
+                    <paramValue>302225</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШЕСТИОЗЕРСКИЙ (293632)</label>
+                    <paramValue>293632</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШЕСТИХИНО (311703)</label>
+                    <paramValue>311703</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШИЕС (281714)</label>
+                    <paramValue>281714</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШИРИХАНОВСКИЙ (ПП) (293011)</label>
+                    <paramValue>293011</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШЛЮЗОВАЯ (312208)</label>
+                    <paramValue>312208</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШОЖМА (293721)</label>
+                    <paramValue>293721</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШОЛОСОВО (302846)</label>
+                    <paramValue>302846</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШОР (РЗД) (289020)</label>
+                    <paramValue>289020</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШОРЫГИНО (319211)</label>
+                    <paramValue>319211</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШУНДАНЕЦ (РЗД) (295712)</label>
+                    <paramValue>295712</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШУРАЙ (298212)</label>
+                    <paramValue>298212</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШУШКОВО (313639)</label>
+                    <paramValue>313639</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШУШКОДОМ (303745)</label>
+                    <paramValue>303745</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ШУЯ (319003)</label>
+                    <paramValue>319003</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЩИПАХОВСКИЙ (ПП) (293717)</label>
+                    <paramValue>293717</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЭЖВА (284012)</label>
+                    <paramValue>284012</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЮКАРКА (285301)</label>
+                    <paramValue>285301</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЮКОСТ (288244)</label>
+                    <paramValue>288244</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЮНЬ-ЯГА (РЗД) (289321)</label>
+                    <paramValue>289321</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЮРА (297421)</label>
+                    <paramValue>297421</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЮРИНСКИЙ (РЗД) (312024)</label>
+                    <paramValue>312024</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЮРЬЕВ-ПОЛЬСКИЙ (317305)</label>
+                    <paramValue>317305</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯВЕНГА (292803)</label>
+                    <paramValue>292803</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯДРИХА (299408)</label>
+                    <paramValue>299408</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯЗЕЛЬ (284210)</label>
+                    <paramValue>284210</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯКШАНГА (307801)</label>
+                    <paramValue>307801</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯКШИНСКИЙ (317907)</label>
+                    <paramValue>317907</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯНЬЮ (РЗД) (288121)</label>
+                    <paramValue>288121</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯРЕГА (285509)</label>
+                    <paramValue>285509</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯРОСЛАВЛЬ (310109)</label>
+                    <paramValue>310109</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯРОСЛАВЛЬ-ГЛАВНЫЙ (310005)</label>
+                    <paramValue>310005</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯРОСЛАВЛЬ-ПРИСТАНЬ (310202)</label>
+                    <paramValue>310202</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯРОСЛАВЛЬ-ПРИСТАНЬ (ПЕРЕВ.) (310306)</label>
+                    <paramValue>310306</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>ЯРОСЛАВЛЬ-ПРИСТАНЬ (ЭКСП.) (310404)</label>
+                    <paramValue>310404</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>Признак выборки:</label>
+            <key>pr</key>
+            <paramOrderNum>3</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>сформированных на станции</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>назначением на станцию</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>обработанных на станции</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P1</key>
+            <paramOrderNum>4</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>5</paramDataType>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P2</key>
+            <paramOrderNum>5</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>4</paramDataType>
+        </filter>
+    </filters>
+
+</reportInputTemplate>

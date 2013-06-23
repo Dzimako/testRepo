@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
+
+
+<!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="mappingResources">
+            <list>
+                <value>/hibernate/ReportLevel.hbm.xml</value>
+                <value>/hibernate/Railway.hbm.xml</value>
+                <value>/hibernate/Report.hbm.xml</value>
+                <value>/hibernate/ReportRights.hbm.xml</value>
+                <value>/hibernate/ReportStat.hbm.xml</value>
+                <value>/hibernate/User.hbm.xml</value>
+                <value>/hibernate/UserGroup.hbm.xml</value>
+                <value>/hibernate/UserRole.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <!--<prop key="hibernate.connection.datasource">jdbc/hrCompetition</prop>-->
+
+                <!--Рабочая база-->
+                <!--<prop key="hibernate.connection.url">jdbc:db2://10.35.90.21:50000/PKTB_DB</prop>-->
+                <prop key="hibernate.connection.url">jdbc:db2://10.23.248.164:50000/PKTB_DB</prop>
+                <!--Тестовая база-->
+                <!--<prop key="hibernate.connection.url">jdbc:db2://10.23.248.164:50000/pktb</prop>-->
+                <prop key="hibernate.connection.driver_class">com.ibm.db2.jcc.DB2Driver</prop>
+                <prop key="hibernate.connection.username">db2inst1</prop>
+                <!--<prop key="hibernate.use_sql_comments">false</prop>-->
+                <prop key="hibernate.connection.password">db21pwd</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.DB2Dialect</prop>
+                <!--<prop key="hibernate.show_sql">false</prop>-->
+                <prop key="hibernate.format_sql">true</prop>
+                <!--<prop key="hibernate.connection.pool_size">20</prop>-->
+                <prop key="hibernate.default_schema">PKTB</prop>
+                <prop key="hibernate.current_session_context_class">thread</prop>
+                <prop key="hibernate.session_factory_name">com.ibm.websphere.naming.WsnInitialContextFactory</prop>
+            </props>
+        </property>
+
+    </bean>
+
+    <!--DAO -->
+    <bean id="reportDao" class="com.digdes.pktb.persistence.dao.impl.ReportDaoImpl"
+          p:sessionFactory-ref="sessionFactory"/>
+
+    <!--DAO -->
+    <bean id="reportStatDao" class="com.digdes.pktb.persistence.dao.impl.ReportStatDaoImpl"
+          p:sessionFactory-ref="sessionFactory"/>
+
+    <bean id="userDao" class="com.digdes.pktb.persistence.dao.impl.UserDaoImpl"
+          p:sessionFactory-ref="sessionFactory"/>
+
+    <bean id="userGroupDao" class="com.digdes.pktb.persistence.dao.impl.UserGroupDaoImpl"
+          p:sessionFactory-ref="sessionFactory"/>
+
+    <bean id="userRoleDao" class="com.digdes.pktb.persistence.dao.impl.UserRoleDaoImpl"
+          p:sessionFactory-ref="sessionFactory"/>
+
+    <bean id="railwayDao" class="com.digdes.pktb.persistence.dao.impl.RailwayDaoImpl"
+          p:sessionFactory-ref="sessionFactory"/>
+
+    <bean id="reportRightsDao" class="com.digdes.pktb.persistence.dao.impl.ReportRightsDaoImpl"
+          p:sessionFactory-ref="sessionFactory"/>
+
+    <bean id="rzdReportDao" class="com.digdes.pktb.persistence.dao.impl.RZDReportDaoImpl"/>
+
+    <bean id="dictionaryDao" class="com.digdes.pktb.persistence.dao.impl.DictionaryDaoImpl"/>
+
+
+     <!-- transaction and LAzY-->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+          p:sessionFactory-ref="sessionFactory"/>
+</beans>
+

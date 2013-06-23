@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+                            http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"  
+        version="2.0">
+    <description>
+		This tag library contains core tags for WebSphere Portal Server
+		
+		All tags in the library are designed 
+		to be used in themes and skins only. There is NO portlet support for these tags.
+		
+		@ibm-taglibrary @since 6.0.1
+	</description>
+	<tlib-version>6.01</tlib-version>
+    <short-name>portal-web20</short-name>
+    <uri>http://www.ibm.com/xmlns/prod/websphere/portal/v6.0.1/portal-web20</uri>
+
+   	<tag>
+        <description>
+        	
+        	
+        	@ibm-api @since 6.0.1
+        </description>
+        <name>cacheProxyUrl</name>
+        <tag-class>com.ibm.wps.tags.FragmentTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+        	<description></description>
+            <name>id</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+   
+    <tag>
+        <description>@ibm-api @since 6.0.1</description>
+		<name>constants</name>
+        <tag-class>com.ibm.wps.engine.tags.FragmentIDTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>

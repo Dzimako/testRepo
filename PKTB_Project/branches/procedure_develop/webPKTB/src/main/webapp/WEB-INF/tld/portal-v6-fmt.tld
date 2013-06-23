@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+                            http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+    <description>
+        This tag library contains formatting tags for WebSphere Portal Server
+
+        All tags in the library are designed
+        to be used in themes and skins only. There is NO portlet support for these tags.
+
+        @ibm-taglibrary @since 6.0
+    </description>
+    <tlib-version>6.0</tlib-version>
+    <short-name>portal-fmt</short-name>
+    <uri>http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/portal-fmt</uri>
+
+    <tag>
+        <description>
+            Returns the answer text for a given key in the specified language.
+            This tag should be used only within a portletRender or pageRender tag.
+
+            @ibm-api @since 5.1
+        </description>
+        <name>answer</name>
+        <tag-class>com.ibm.wps.engine.tags.AnswerTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                specifies the bundle which has to be taken for the
+                answer key
+            </description>
+            <name>bundle</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag is used to support the display of bidirectional languages.
+
+            @ibm-api @since 5.1
+        </description>
+        <name>bidi</name>
+        <tag-class>com.ibm.wps.engine.tags.BidiTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>attribute</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>locale</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>dir</name>
+            <required>false</required>
+        </attribute>
+        <!-- This is used for deprecated attributes -->
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>
+            Provides the description of an object that implements
+            the Localized interface. This tag should be used only in
+            theme/skin JSPs.
+
+            @ibm-api @since 5.1
+        </description>
+        <name>description</name>
+        <tag-class>com.ibm.wps.engine.tags.DescriptionTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                Specifies the name of the scripting variable holding the localized object.
+            </description>
+            <name>varname</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ibm.portal.Localized</type>
+        </attribute>
+        <attribute>
+            <description>
+                Overrides the current language setting.
+            </description>
+            <name>locale</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <description>
+                streams out XML escaped output. required for XHTML support
+            </description>
+            <name>escapeXml</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            Transforms a String representation of the ObjectID into an ObjectID
+            and vice versa
+
+            @ibm-api @since 6.0
+        </description>
+        <name>identification</name>
+        <tag-class>com.ibm.wps.engine.tags.IdentificationTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.IdentificationTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                specifies the operation to be done on the given object
+                allowed values are serialize and deserialize
+            </description>
+            <name>action</name>
+            <rtexprvalue>false</rtexprvalue>
+            <required>true</required>
+        </attribute>
+
+        <attribute>
+            <description>
+                object which needs to be handle. Allowed values are an
+                object of the type com.ibm.portal.Identifiable or java.lang.String.
+            </description>
+            <name>object</name>
+            <rtexprvalue>true</rtexprvalue>
+            <required>true</required>
+        </attribute>
+
+        <attribute>
+            <description>
+                specifies the name of the scripting variable where
+                to store the generated value
+            </description>
+            <name>var</name>
+            <rtexprvalue>false</rtexprvalue>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            If a problem is set in the request the tag prints out
+            a message which is located in a ResourceBundle specified
+            by the bundle attribute
+
+            @ibm-api @since 5.1
+        </description>
+        <name>problem</name>
+        <tag-class>com.ibm.wps.engine.tags.ProblemTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                specifies the bundle which has to be taken for the
+                problem key
+            </description>
+            <name>bundle</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>@ibm-api @since 5.1</description>
+        <name>text</name>
+        <tag-class>com.ibm.wps.engine.tags.TextTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>key</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>bundle</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>@ibm-api @since 5.1</description>
+        <name>textParam</name>
+        <tag-class>com.ibm.wps.engine.tags.TextParamTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>value</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            Prints out the Localized objects title specified by
+            the varname attribute
+
+            @ibm-api @since 5.1
+        </description>
+        <name>title</name>
+        <tag-class>com.ibm.wps.engine.tags.TitleTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>
+                Specifies the name of the scripting variable holding the localized object.
+            </description>
+            <name>varname</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ibm.portal.Localized</type>
+        </attribute>
+        <attribute>
+            <description>
+                Overrides the current language setting.
+            </description>
+            <name>locale</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <description>
+                streams out XML escaped output. required for XHTML support
+            </description>
+            <name>escapeXml</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+            This tag can be used to print out user information specified by
+            the tag's attributes
+
+            @ibm-api @since 5.1
+        </description>
+        <name>user</name>
+        <tag-class>com.ibm.wps.engine.tags.UserTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <description>
+                specifies the LDAP scheme attribute für the required user information
+            </description>
+            <name>attribute</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+</taglib>

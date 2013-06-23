@@ -1,0 +1,93 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Дорога расчета</label>
+            <type>SELECT</type>
+            <key>p1</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_dor_cod_3</serviceUID>
+                </serviceOption>
+            </requestAdress>
+        </filter>
+        <filter>
+            <label>Признак запроса</label>
+            <type>SELECT</type>
+            <key>p2</key>
+            <filterValues>
+                <filterValue>
+                    <label>Все переданные</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Выпол. наряды</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Невыпол. наряды</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Явки без нарядов</label>
+                    <paramValue>4</paramValue>
+                </filterValue>
+            </filterValues>
+
+        </filter>
+        <filter>
+            <label>Депо приписки:</label>
+            <type>SELECT</type>
+            <key>p5</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_pasp_depo_5</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Таб. номер:</label>
+            <type>INPUT</type>
+            <key>p6</key>
+        </filter>
+
+        <filter>
+            <label>Начало</label>
+            <type>DATEPICKER</type>
+            <dateParamKeys>
+                <dateKey>date1</dateKey>
+            </dateParamKeys>
+        </filter>
+        <filter>
+            <label>Конец</label>
+            <type>DATEPICKER</type>
+            <dateParamKeys>
+                <dateKey>date2</dateKey>
+            </dateParamKeys>
+        </filter>
+        <filter>
+            <label>ДоПризнак сортиров.</label>
+            <type>SELECT</type>
+            <key>p7</key>
+            <filterValues>
+                <filterValue>
+                    <label>По дате</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>По депо</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>По виду работ</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+    </filters>
+</reportInputTemplate>

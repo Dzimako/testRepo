@@ -1,0 +1,20 @@
+<div class="filterItem" paramKey="p1"><label>Дорога расчета</label><select serviceUID="dict_tn_dor_cod_3"/></div>
+        <div class="filterItem" paramKey="p2"><label>Признак запроса</label><select><option value="1">Все переданные</option><option value="2">Выпол. наряды</option><option value="3">Невыпол. наряды</option><option value="4">Явки без нарядов</option></select></div>
+        <div class="filterItem" paramKey="p5"><label>Депо приписки:</label><select serviceUID="dict_tn_pasp_depo_5"><option value="*">все</option></select></div>
+        <div class="filterItem" paramKey="p6"><label>Таб. номер:</label><input type="text" name="p6"/></div>
+
+        <div class="filterItem" paramKey="date1"><label>Начало</label><input class="datePickerInput" type="text" name="date1" value=""/></div>
+        <div class="filterItem" paramKey="date2"><label>Конец</label><input class="datePickerInput" type="text" name="date2" value=""/></div>
+        <div class="filterItem" paramKey="p7"><label>ДоПризнак сортиров.</label><select><option value="1">По дате</option><option value="2">По депо</option><option value="3">По виду работ</option></select></div>
+
+
+
+        <div class="separator"></div>
+<div class="pktb-reportPlaceholder">
+    <div></div>
+
+<button class="pktb-reportPlaceholderSubmit">Запросить отчет</button>
+    <button class="getReportExcel">Получить в формате Excel</button>
+    <button class="clearReportBody">Очистить</button>
+    <button id="addToFavourites">Добавить в избранное</button>
+</div>

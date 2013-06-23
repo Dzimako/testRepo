@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+                            http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+    <description>
+		This tag library contains navigation tags for WebSphere Portal Server
+		
+		All tags in the library are designed
+		to be used in themes and skins only. There is NO portlet support for these tags.
+		
+		@ibm-taglibrary @since 6.0
+	</description>
+	<tlib-version>6.0</tlib-version>
+    <short-name>portal-navigation</short-name>
+    <uri>http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/portal-navigation</uri>
+
+    <tag>
+        <description>
+			Renders the portal navigation. This tag makes several scripting
+			variables available for obtaining information for the navigation.
+			These scripting variables are accessible only within the body of
+			the tag. The settings of the startLevel and stopLevel attributes
+			determine whether the content of the navigation tag is evaluated.
+			The navigation tag uses an "in-order" traversal of the navigation
+			tree to select the nodes.
+			
+			@ibm-api @since 5.1
+		</description>
+		<name>navigation</name>
+        <tag-class>com.ibm.wps.engine.tags.NavigationTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.NavigationTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				The level on which this navigation is to begin showing
+				information. If no start level is given, this tag will
+				start at the navigation node after the levels that where
+				shown by other JSPs . Otherwise, the default is level 1.
+			</description>
+            <name>startLevel</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				The level on which this navigation is to stop showing
+				information. Default is to render all levels.
+			</description>
+            <name>stopLevel</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Compute the number of levels that will actually be shown
+				by this navigation. When this attribute is set to "true",
+				a scripting variable is made available inside the body of
+				the navigation tag named wpsNavNumLevelsToDisplay of Java
+				type java.lang.Integer.
+			</description>
+            <name>computeNumLevelsToDisplay</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the starting node where to start rendering the
+				navigation
+				
+				@ibm-api @since 6.0
+			</description>
+            <name>scopeUniqueName</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+			This tag can only be used within the body of a navigation tag.
+			This tag indicates the part of the markup that will be repeated
+			once for each navigation node. There are no attributes for this
+			tag. The body of this tag is executed for each navigation node.
+			This tag makes several scripting variables available for obtaining
+			information for the navigation. These scripting variables are
+			accessible only within the body of the tag.
+			
+			@ibm-api @since 5.1
+		</description>
+		<name>navigationLoop</name>
+        <tag-class>com.ibm.wps.engine.tags.NavigationLoopTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.NavigationLoopTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+    </tag>
+
+    <tag>
+        <description>
+			Used in the navigation to create a URL that will scroll to the
+			next set of page links
+			
+			@ibm-api @since 5.1
+		</description>
+		<name>navigationShift</name>
+        <tag-class>com.ibm.wps.engine.tags.NavigationShiftTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				specifies the number of pages to scroll
+			</description>
+            <name>by</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the numbers of pages to be displayed
+			</description>
+            <name>maxPages</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>
+			Creates URLs for navigation nodes. The tag is used inside the
+			body of the navigationLoop tag and outputs links for the current
+			navigation node according to the type attribute.
+			
+			@ibm-api @since 5.1
+		</description>
+		<name>navigationUrl</name>
+        <tag-class>com.ibm.wps.engine.tags.NavigationUrlTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.NavigationUrlTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				specifies if we can generate a server relative url or not
+			</description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				specifies the screen template name where the referenced node
+				will be rendered
+			</description>
+            <name>screenTemplate</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				specifies the theme template name where the referenced node
+				will be rendered
+			</description>
+            <name>themeTemplate</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				spectifies the type of url which will be genrated by the tag.
+				Allowed values are:
+				  * link - creates a URL to change the selected node
+				  * expand - creates a URL that expands the node to reveal its
+							 child nodes. This is intended for expanding the
+							 navigation tree.
+				  * collapse - creates a URL that collapses the node to conceal
+				               its child nodes. This is intended for collapsing
+				               the navigation tree.
+				  * launch - depending on the page type it will either generate a
+				             normal selection url or a page launch url
+							 @since 6.0
+			</description>
+            <name>type</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+			<description>
+				specifies an object of type com.ibm.portal.navigation.NavigationNode
+				for which the URL is to be generated. The attribute is optional.
+			</description>
+            <name>varname</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ibm.portal.navigation.NavigationNode</type>
+        </attribute>
+        <attribute>
+            <description>
+                specifies scripting variable name under which to expose the generated URL
+            </description>
+            <name>var</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				If set to true specifies that the generated URL maintains the current 
+				navigational state (including all portlet modes, states, 
+				and render parameters). If set to false the portal navigational 
+				state is reset to its default. Default value is true.
+			</description>
+            <name>keepNavigationalState</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+		<description>
+			Generates a url to certain artifact in portal
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>url</name>
+        <tag-class>com.ibm.wps.engine.tags2.UrlTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				Specifies if the URL points to public or protected area.
+				Allowed values are public or protected
+			</description>
+            <name>home</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies if the the protocol to be used.
+				Allowed values are true or false
+			</description>
+            <name>ssl</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>specifies the theme template to be rendered</description>
+            <name>themeTemplate</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>specifies the screen to be rendered</description>
+            <name>screen</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>specifies the engine command to be rendered</description>
+            <name>command</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				streams out a XML valid url. required for XHTML support
+			</description>
+            <name>escapeXml</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				specifies if we can generate a server relative url or not
+			</description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				specifies if the portal maintains the navigational state
+			</description>
+            <name>keepNavigationalState</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+		<!-- This is used for deprecated attributes -->
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+		<description>
+			Generates a URL to a certain potal artifact
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>urlGeneration</name>
+        <tag-class>com.ibm.wps.engine.tags.UrlGenerationTag</tag-class>
+        <tei-class>com.ibm.wps.engine.tags.UrlGenerationTag$TEI</tei-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>
+				Specifies if the URL points to public or protected area.
+				Allowed values are public or protected
+			</description>
+            <name>home</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies if the the protocol to be used.
+				Allowed values are true or false
+			</description>
+            <name>ssl</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+			<description>
+				this value only gets evaluated if the specified layoutNode
+				is a control which holds a IBM portlet. These types of portlets
+				need a action name to trigger a portlet action
+			</description>
+            <name>actionName</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				specifies if we can generate a server relative url or not
+			</description>
+            <name>allowRelativeURL</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the navigation node the generated URL points to
+			</description>
+            <name>navigationNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the content node the generated URL points to
+			</description>
+            <name>contentNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the control the generated URL points to
+			</description>
+            <name>layoutNode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the windowState for the referenced portlet
+				specified by the layoutNode attribute
+			</description>
+            <name>portletWindowState</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies the portletMode for the referenced portlet
+				specified by the layoutNode attribute
+			</description>
+            <name>portletMode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Checks if the specified operation is allowed on the current page
+				if so the URL gets generated otherwise we SKIP_BODY
+				
+				Allowed values are
+			</description>
+            <name>accessControlCheck</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				Specifies if the generated URL maintains the existing state
+				or not
+				Allowed values true or false (default true)
+			</description>
+            <name>keepNavigationalState</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				this value only gets evaluated if a layoutNode is specified
+				allowed values are RENDER and ACTION
+			</description>
+            <name>portletParameterType</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				This parameter specifies if the referenced resource will
+				be shown in a new window (popup or iFrame).
+			</description>
+            <name>newWindow</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				This parameter specifies the ThemeTemplate which will
+				be taken for rendering the requested page
+			</description>
+            <name>themeTemplate</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				This parameter indicates that the URL to be generated should be normalized.
+				If additional parameters are set the normalization will be executed first
+				and afterwards the other state modifications will be accomplished.
+				The normalized representation of the URL can be used to bookmark a page.
+			</description>
+            <name>normalize</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+		<!-- This is used for deprecated and internal attributes -->
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+		<description>
+			Appends context dependent parameters to a url. Mostly this
+			parameters are not in form of query parameters
+			
+			@ibm-api @since 5.1
+		</description>
+        <name>urlParam</name>
+        <tag-class>com.ibm.wps.engine.tags.UrlParamTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+			<description>specifies parameters name</description>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>specifies parameters value</description>
+            <name>value</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+			<description>
+				specifies parameters type allowed values are RENDER or ACTION
+			</description>
+            <name>type</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

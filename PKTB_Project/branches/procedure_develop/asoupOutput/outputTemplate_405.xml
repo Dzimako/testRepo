@@ -1,0 +1,37 @@
+<reportOutputTemplate>
+    <title>Выходной отчет</title>
+    <parameters>
+        <parameter>
+            <key>timeS</key>
+            <label>Дата</label>
+        </parameter>
+        <parameter>
+            <key>vidT</key>
+            <label>Вид тяги</label>
+        </parameter>
+        <parameter>
+            <key>serLoc</key>
+            <label>Серия локомотива</label>
+        </parameter>
+        <parameter>
+            <key>rodS</key>
+            <label>Род службы ТПС</label>
+        </parameter>
+        <parameter>
+            <key>rodT</key>
+            <label>Род тока</label>
+        </parameter>
+        <parameter>
+            <key>shirinaKolei</key>
+            <label>Ширина колеи</label>
+        </parameter>
+        <parameter>
+            <key>edVidachi</key>
+            <label>Единица выдачи</label>
+        </parameter>
+        <parameter>
+            <key>error</key>
+            <label>Ошибка</label>
+        </parameter>
+    </parameters>
+</reportOutputTemplate>

@@ -1,0 +1,134 @@
+<reportInputTemplate>
+    <filters>
+        <filter>
+            <label>Период запроса</label>
+            <type>SELECT</type>
+            <key>period</key>
+            <filterValues>
+                <filterValue>
+                    <label>Отчетные сутки</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Текущие сутки</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Дорога приписки бригад</label>
+            <type>SELECT</type>
+            <key>dorPr</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_dor_cod_with_condition</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Депо приписки бригад</label>
+            <type>SELECT</type>
+            <key>depoPr</key>
+            <requestAdress>
+                <serviceOption>
+                    <serviceUID>dict_tn_pasp_depo_without_condition</serviceUID>
+                </serviceOption>
+            </requestAdress>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Объект совершения операции</label>
+            <type>SELECT</type>
+            <key>W4_and_W5</key>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>По станциям и депо дороги</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>По станциям</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>По депо</label>
+                    <paramValue>3</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>По конкретной станции</label>
+                    <paramValue>4</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>По конкретному депо</label>
+                    <paramValue>5</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>concrete_station</key>
+            <defaultValue>0</defaultValue>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>concrete_depo</key>
+            <defaultValue>0</defaultValue>
+        </filter>
+        <filter>
+            <label>Вид тяги</label>
+            <type>SELECT</type>
+            <key>vidT</key>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Электровозы</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Тепловозы</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <label>Род службы серий</label>
+            <type>SELECT</type>
+            <key>W7</key>
+            <filterValues>
+                <filterValue>
+                    <label>Все</label>
+                    <paramValue>*</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Грузовые</label>
+                    <paramValue>1</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Пассажирские</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+                <filterValue>
+                    <label>Маневровые</label>
+                    <paramValue>4</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+    </filters>
+</reportInputTemplate>

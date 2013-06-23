@@ -1,0 +1,97 @@
+<reportInputTemplate>
+    <title>Входной отчет</title>
+
+    <request>
+        <databaseOptions>
+            <dataSource>jdbc/pktb2</dataSource>
+            <procedureName>SPP3061</procedureName>
+        </databaseOptions>
+    </request>
+
+    <filters>
+        <filter>
+            <label>Дорога:</label>
+            <type>HIDDEN</type>
+            <key>rwCode</key>
+            <paramOrderNum>1</paramOrderNum>
+            <paramType>in</paramType>
+            <userDefaultRW>true</userDefaultRW>
+            <paramDataType>12</paramDataType>
+        </filter>
+        <filter>
+            <type>SELECT</type>
+            <label>Время отчета:</label>
+            <key>p1</key>
+            <paramOrderNum>2</paramOrderNum>
+            <paramType>in</paramType>
+            <paramDataType>12</paramDataType>
+            <filterValues>
+                <filterValue>
+                    <label>Номенклатура груза со сроком доставки, просроченым до 3 суток</label>
+                    <paramValue>2</paramValue>
+                </filterValue>
+            </filterValues>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P1</key>
+            <paramOrderNum>3</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>5</paramDataType>
+        </filter>
+        <filter>
+            <type>HIDDEN</type>
+            <key>P2</key>
+            <paramOrderNum>4</paramOrderNum>
+            <paramType>out</paramType>
+            <paramDataType>4</paramDataType>
+        </filter>
+    </filters>
+
+    <tables>
+        <table>
+            <columns>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>1</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>2</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>3</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+                <column>
+                    <operator>
+                        <operatorKey>column</operatorKey>
+                        <arguments>
+                            <argument>
+                                <columnNumber>4</columnNumber>
+                            </argument>
+                        </arguments>
+                    </operator>
+                </column>
+            </columns>
+        </table>
+    </tables>
+</reportInputTemplate>

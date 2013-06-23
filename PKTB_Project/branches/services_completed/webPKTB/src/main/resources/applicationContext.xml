@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
+    <import resource="portalServices.xml"/>
+    <import resource="daoContext.xml"/>
+
+    <!--Сообщения клиентской части -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>/WEB-INF/classes/messages</value>
+            </list>
+        </property>
+        <property name="cacheSeconds" value="60"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <!-- Services -->
+    <bean id="reportService" class="com.digdes.pktb.persistence.services.impl.ReportServiceImpl">
+        <property name="reportDao" ref="reportDao"/>
+        <property name="reportRightsDao" ref="reportRightsDao"/>
+        <property name="userDao" ref="userDao"/>
+        <property name="userGroupDao" ref="userGroupDao"/>
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean id="userService" class="com.digdes.pktb.persistence.services.impl.UserServiceImpl">
+        <property name="pumaHome" ref="pumaHome"/>
+        <property name="userDao" ref="userDao"/>
+        <property name="userGroupDao" ref="userGroupDao"/>
+        <property name="userRoleDao" ref="userRoleDao"/>
+        <property name="railwayDao" ref="railwayDao"/>
+    </bean>
+
+    <bean id="railwayService" class="com.digdes.pktb.persistence.services.impl.RailwayServiceImpl">
+        <property name="railwayDao" ref="railwayDao"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <bean id="userGroupService" class="com.digdes.pktb.persistence.services.impl.UserGroupServiceImpl">
+        <property name="userDao" ref="userDao"/>
+        <property name="userGroupDao" ref="userGroupDao"/>
+    </bean>
+
+    <bean id="reportStatService" class="com.digdes.pktb.persistence.services.impl.ReportStatServiceImpl"
+          p:reportDao-ref="reportDao"
+          p:reportStatDao-ref="reportStatDao"/>
+
+    <!--WebServiceClientForWebSoft-->
+    <bean id="rzdReportsService" class="com.digdes.pktb.persistence.services.impl.RZDReportsServiceImpl">
+        <property name="webServiceTemplate" ref="webServiceTemplateRZDReports"/>
+        <property name="reportDao" ref="reportDao"/>
+        <property name="reportStatDao" ref="reportStatDao"/>
+        <property name="userDao" ref="userDao"/>
+        <property name="rzdReportDao" ref="rzdReportDao"/>
+        <property name="dictionaryDao" ref="dictionaryDao"/>
+        <property name="marshalDataService" ref="marshalDataService"/>
+    </bean>
+
+
+
+    <bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory">
+        <property name="soapVersion">
+            <util:constant static-field="org.springframework.ws.soap.SoapVersion.SOAP_11"/>
+        </property>
+    </bean>
+    <bean id="webServiceTemplateRZDReports" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory"/>
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender"/>
+        </property>
+        <property name="marshaller" ref="marshallerWebSoft"/>
+        <property name="unmarshaller" ref="marshallerWebSoft"/>
+        <property name="defaultUri" value="http://10.245.4.75:9080/RZD-PRTL-WS/services/RZDReports"/>
+        <!--<property name="defaultUri" value="http://10.240.2.221:10038/RZD-PRTL-WS/services/RZDReports"/>-->
+        <!--<property name="defaultUri" value="http://10.240.2.100:9080/RZD-PRTL-WS/services/RZDReports"/>-->
+    </bean>
+
+    <bean id="marshallerWebSoft" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>com.digdes.pktb.persistence.beans.wsbeans.requests.ConsumerBean</value>
+                <value>com.digdes.pktb.persistence.beans.wsbeans.requests.Pair</value>
+                <value>com.digdes.pktb.persistence.beans.wsbeans.requests.Request</value>
+                <value>com.digdes.pktb.persistence.beans.wsbeans.requests.CreateReportRequest</value>
+                <value>com.digdes.pktb.persistence.beans.wsbeans.responses.CreateReportResponse</value>
+
+                <value>com.digdes.pktb.persistence.beans.wsbeans.requests.RetrieveReportRequest</value>
+
+                <value>com.digdes.pktb.persistence.beans.wsbeans.requests.DictionaryRequest</value>
+                <value>com.digdes.pktb.persistence.beans.wsbeans.responses.DictionaryResponse</value>
+            </list>
+        </property>
+
+    </bean>
+
+    <bean id="marshalDataService" class="com.digdes.pktb.persistence.services.impl.MarshalDataServiceImpl">
+        <property name="jaxb2Marshaller" ref="marshallerXMLs"/>
+    </bean>
+
+    <bean id="marshallerXMLs" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+            <property name="classesToBeBound">
+                <list>
+                    <value>com.digdes.pktb.persistence.beans.xml.RetrievedReportXML</value>
+                    <value>com.digdes.pktb.persistence.beans.xml.TableXML</value>
+                    <value>com.digdes.pktb.persistence.beans.xml.ParameterXML</value>
+                    <value>com.digdes.pktb.persistence.beans.xml.RowXML</value>
+                </list>
+            </property>
+
+        </bean>
+
+    <bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="transactionAttributes">
+            <props>
+                <prop key="insert*">PROPAGATION_REQUIRED</prop>
+                <prop key="delete*">PROPAGATION_REQUIRED</prop>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="autoProxyServiceCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+
+        <property name="interceptorNames">
+            <list>
+                <value>transactionInterceptor</value>
+            </list>
+        </property>
+
+        <property name="beanNames">
+            <list>
+                <value>*Service</value>     
+                <value>*Bean</value>
+            </list>
+        </property>
+
+    </bean>
+
+</beans>
